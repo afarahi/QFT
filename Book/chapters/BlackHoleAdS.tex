@@ -1,0 +1,289 @@
+\chapter{Black Hole in Anti de Sitter}
+\label{ch:AdSBlackHole}
+
+\section{Introduction}
+
+In chapter \ref{ch:scalarfieldAdS} we learned how to deal with AdS space and in last section, section \ref{sec:SimpleAdSBlackHole}, we solved the scalar field equation for simple black hole in Anti de Sitter space and studied the behavior of waves near horizon and boundary of black hole. In this chapter we want to study black holes in AdS space more generally. For example in the following section we are going to derive the equations for charged black hole and then we are going to study the behavior of wave function, general solution of scalar field near horizon and boundary. Then we apply this idea to some real systems and try to study the behavior of some condens matter systems by applying this idea to our system.\\
+
+\section{Charged Black Hole in AdS}
+
+In section \ref{sec:SimpleAdSBlackHole} we saw that the metric for simle black hole has the form of,
+
+\begin{equation}
+    ds^2 = - \left( k^2r^2 + 1 - \frac{C}{r^{d-2}} \right)dt^2 + \frac{1}{k^2r^2 + 1 - \frac{C}{r^{d-2}}}dr^2 + r^2 d\Omega^2
+\end{equation}
+
+or,
+
+\begin{equation}
+    ds^2 = \frac{u^2}{L^2} \left[ -(1-(\frac{u_0}{u})^d) dt^2 + \sum\limits_{i=1}^{d-1} dx_i^2 \right] + \frac{L^2 du^2}{u^2 (1-(\frac{u_0}{u})^d)}
+\end{equation}
+
+Now we can add charge to our black hole and make it charged black hole. So the metric changes as,
+
+\begin{equation} \label{eq:ChargedBlackHoleAdSMetric}
+    ds^2 = \frac{r^2}{R^2}(-fdt^2 + d\vec{x}^2) + \frac{R^2}{r^2}\frac{dr^2}{f} \quad , \quad f = 1+\frac{Q^2}{r^{2d-2}}-\frac{M}{r^d}
+\end{equation}
+
+and we can find the radius of horizon,
+
+\begin{equation} \label{eq:radiusHorizonChargedBlackHole}
+    f(r_0) = 0 \rightarrow  M = r^d_0 + \frac{Q^2}{r^{d-2}_0}
+\end{equation}
+
+Also charge, energy, and entropy density have forms of,
+
+\begin{equation}
+    \rho = \frac{2(d-2)}{c_d}\frac{Q}{\kappa^2 R^{d-1}g_F} \quad , \quad \epsilon = \frac{d-1}{2\kappa^2}\frac{M}{R^{d+1}} \quad , \quad s = \frac{2\pi}{\kappa^2}(\frac{r_0}{R})^{d-1}
+\end{equation} 
+
+And temprature of this system is,
+
+\begin{equation}
+    T = \frac{dr_0}{4\pi r^2}(1-\frac{(d-2)Q^2}{dr_0^{2d-2}})
+\end{equation}
+
+For zero temprature, $r_0^{2d-2} = \frac{(d-2)Q^2}{d}$, the redshift factor $f$ gets the form of,
+
+\begin{equation}
+    f = 1- (\frac{r_0}{r})^d + \frac{d}{d-2}(\frac{r_0}{r})^d\bigg((\frac{r_0}{r})^{d-2} - 1\bigg)
+\end{equation}
+
+Near the horizon, $f \rightarrow 0$ or $r \rightarrow r_0$, we can write the taylor series, so we have,
+
+\begin{equation}
+    f = d(d-1)(\frac{r-r_0}{r_0})^2 + \cdots
+\end{equation}
+
+By changing the varibales, $r-r_0 = \frac{\lambda R^2_2}{\zeta}$ and $t = \lambda^{-1}\tau$, which $R^2_2 = \frac{R^2}{d(d-1)}$ we find that the metric becomes,
+
+\begin{equation}
+    ds^2 = \frac{R^2_2}{\zeta^2}(-d\tau^2 + d\zeta^2) + \frac{r^2_0}{R^2}d\vec{x}^2
+\end{equation}
+
+and for low temprature, by replacing $r_0 - r_* = \lambda \frac{R^2_2}{\zeta_0}$, the metric has the form of,
+
+\begin{equation}
+    ds^2 = \frac{R^2_2}{\zeta^2}\bigg(-(1-\frac{\zeta}{\zeta_0})d\tau^2 + \frac{d\zeta^2}{1-\frac{\zeta}{\zeta_0}} \bigg) + \frac{r^2_0}{R^2}d\vec{x}^2
+\end{equation}
+
+and the temprature is,
+
+\begin{align}
+    T &= \frac{dr_0}{4\pi R^2}\bigg(1-\frac{r_*^{2d-2}}{r_0^{2d-2}}\bigg) \\
+      &= \frac{dr_0}{4\pi R^2}\frac{(r_0 - r_*)(r_0^{2d-1} + r_*r_0^{2d} + \cdots r_*^{2d}r_0 + r_*^{2d-1})}{r_0^{2d-2}} \nonumber\\
+      &= \frac{dr_0}{4\pi R^2}\frac{2(d-1)(r_0 - r_*)r_0^{2d-1}}{r_0^{2d-2}} = \frac{1}{2\pi\zeta_0} \nonumber
+\end{align}
+
+For zero temrature and for charged balck hole in AdS space near the horizon the metric tensor has the form of,
+
+\begin{equation} \label{eq:ChargedBlackHoleAdSZeroT_metrictensor}
+    g_{\mu\nu} = 
+    \begin{pmatrix}
+        -\frac{R^2_2}{\zeta^2} & & 0 \\
+        & \begin{pmatrix}
+            \frac{r^2_0}{R^2} & 0 & \cdots & 0 \\
+            0 & \frac{r^2_0}{R^2} & \cdots & 0 \\
+            \vdots  & \vdots  & \ddots & \vdots  \\
+            0 & 0 & \cdots & \frac{r^2_0}{R^2}
+        \end{pmatrix}_{d-1 \times d-1}
+        &\\
+        0 & & \frac{R^2_2}{\zeta^2} 
+    \end{pmatrix}
+\end{equation}
+
+and for low temprature has the form of,
+
+\begin{equation} \label{eq:ChargedBlackHoleAdSLowT_metrictensor}
+    g_{\mu\nu} = 
+    \begin{pmatrix}
+        -\frac{R^2_2}{\zeta^2}\big(1-\frac{\zeta^2}{\zeta^2_0}\big) & & 0 \\
+        & \begin{pmatrix}
+            \frac{r^2_0}{R^2} & 0 & \cdots & 0 \\
+            0 & \frac{r^2_0}{R^2} & \cdots & 0 \\
+            \vdots  & \vdots  & \ddots & \vdots  \\
+            0 & 0 & \cdots & \frac{r^2_0}{R^2}
+        \end{pmatrix}_{d-1 \times d-1}
+        &\\
+        0 & & \frac{R^2_2}{\zeta^2}\frac{1}{1-\frac{\zeta^2}{\zeta^2_0}} 
+    \end{pmatrix}
+\end{equation}
+
+and equation of plain wave for zero and low temprature respectively would be,
+
+\begin{equation}
+    \frac{\zeta^2}{R^2_2}\frac{\partial^2 f(\zeta)}{\partial\zeta^2} + \left[\frac{\zeta^2k^2_t}{R^2_2} - m^2 - \frac{R^2k^2_{\vec{x}}}{r^2_0} \right] f(\zeta) = 0
+\end{equation}
+
+and,
+
+\begin{equation}
+    \frac{\zeta^2\big(1-\frac{\zeta^2}{\zeta^2_0}\big)}{R^2_2}\frac{\partial^2 f(\zeta)}{\partial\zeta^2} - 2\frac{\zeta^3}{R^2_2 \zeta^2_0}\frac{\partial f(\zeta)}{\partial\zeta} + \left[ \frac{\zeta^2k^2_t}{R^2_2(1-\frac{\zeta^2}{\zeta^2_0})} - m^2 - \frac{R^2k^2_{\vec{x}}}{r^2_0} \right] f(\zeta) = 0
+\end{equation}
+
+Now, let's focuse more on our original metric without doing any changing variables or taking any limits. By defining $f = 1+\frac{Q^2}{r^{2d-2}}-\frac{M}{r^d}$, the metric tensor of equation \ref{eq:ChargedBlackHoleAdSMetric} is,
+
+\begin{equation} \label{eq:ChargedBlackHoleAdSLowT_metrictensor}
+    g_{\mu\nu} = 
+    \begin{pmatrix}
+        -\frac{r^2}{R^2}f & & 0 \\
+        & \begin{pmatrix}
+            \frac{r^2}{R^2} & 0 & \cdots & 0 \\
+            0 & \frac{r^2}{R^2} & \cdots & 0 \\
+            \vdots  & \vdots  & \ddots & \vdots  \\
+            0 & 0 & \cdots & \frac{r^2}{R^2}
+        \end{pmatrix}_{d-1 \times d-1}
+        &\\
+        0 & & \frac{R^2}{r^2f} 
+    \end{pmatrix}
+\end{equation}
+
+Now we are able to write the euqation of motion and solve it for scalar field, which describes the behaviour of plain wave in Anti de Sitter space with existance of a charged balck hole. Then we can study the behaviour of plain wave near the horizon and boundary and then we are able to find the Green function. So let's take a look at its differential equation,
+
+\begin{align} \label{eq:equationofmotionchargeblackholeinads}
+    0 =& \frac{1}{R^2}\left[(d+1)r - \frac{(d-3)Q^2}{r^{2d-3}} - \frac{M}{r^{d-1}} \right]\frac{\partial \phi(r)}{\partial r} \nonumber\\ 
+      &+ \frac{r^2f}{R^2}\frac{\partial^2\phi(r)}{\partial r^2} + \left[ \frac{R^2}{r^2f}k^2_t-\frac{R^2}{r^2}k^2_{\vec{x}}-m^2\right]\phi(r)
+\end{align} 
+
+Now we are ready to study the behaviour of our wave function near horizon, $r \rightarrow r_0$, and near boundary, $r \rightarrow \infty$. For $d > 1$, near boundary redshift factor $f$ approaches to $1$ and the equation \ref{eq:equationofmotionchargeblackholeinads} would be simplified as,
+
+\begin{equation}
+    0 = r^2\frac{\partial^2\phi(r)}{\partial r^2} + (d+1)r\frac{\partial \phi(r)}{\partial r} - R^2m^2\phi(r)
+\end{equation}
+
+By substituting $\phi(r) = r^\alpha$ in our differential equation we get, $0 = \alpha^2 + \alpha d -R^2m^2$. So the answer near boundary is looks like,
+
+\begin{equation}
+    \phi(r) = A(k_\mu)r^{\Delta-d} + B(k_\mu)r^{-\Delta} \quad , \quad \Delta = \frac{d}{2} + \sqrt{\frac{d^2}{4} + R^2m^2}
+\end{equation}
+
+Horizon dose not have a zero area so its radius is not zero, too. Equation \ref{eq:radiusHorizonChargedBlackHole} gives us the radius of horizon. Also instead of mass of black hole $M$ in redshift factor $f$ we can substitute $r^d_0 + \frac{Q^2}{r^{d-2}_0}$, so the redshift factor becomes,
+
+\begin{align} \label{eq:redshiftfactorr0r*}
+    f &= (1 - \frac{r^d_0}{r^d}) + \frac{Q^2}{r^d}\left[\frac{1}{r^{d-2}} - \frac{1}{r^{d-2}_0} \right] \\
+      &= (r-r_0) \left[ \frac{r^{d-1} + r^{d-2}r_0 + \cdots + r^{d-2}_0r + r^{d-1}_0 }{r^d} \right \nonumber\\
+      & \qquad \qquad \qquad - \left \frac{Q^2}{r^d}\frac{r^{d-3} + r^{d-4}r_0 + \cdots + r^{d-4}_0r + r^{d-3}_0}{r^{d-2}r^{d-2}_0} \right]
+\end{align}
+
+By defining $Q^2 \equiv \frac{d}{d-2}r^{2d-2}_*$, near horizon we can simplify our differential equation when $r \rightarrow r_0$, and $f \rightarrow (r-r_0)\left[\frac{d}{r_0} - \frac{dr^{2d-2}_*}{r^{2d-1}_0} \right]$,
+
+\begin{equation}
+    0 = \frac{\partial^2 \phi(r)}{\partial r^2} + \frac{1}{(r-r_0)}\frac{\partial \phi(r)}{\partial r} + \frac{1}{(r-r_0)^2} \times \frac{R^4k^2_t}{d^2 \big(1-\frac{r^{2d-2}_*}{r^{2d-2}_0}\big)^2}\phi(r)
+\end{equation}
+
+or simply,
+
+\begin{equation}
+    0 = \frac{\partial^2 \phi(r)}{\partial r^2} + \frac{1}{(r-r_0)} \frac{\partial \phi(r)}{\partial r} + \frac{\beta^2}{(r-r_0)^2} \phi(r)
+\end{equation}
+
+when
+
+\begin{equation}
+    \beta^2 = \frac{R^4k^2_t}{d^2\big(1-\frac{r^{2d-2}_*}{r^{2d-2}_0}\big)^2}
+\end{equation}
+
+And answer of this differential equation is:
+
+\begin{equation} \label{eq:chargedblackholenearhorizonsolution}
+    \phi(r) = A(r-r_0)^{ \sqrt{ - \beta^2}} + B(r-r_0)^{- \sqrt{-\beta^2}} = Ae^{ i\beta \ln{(r-r_0)}} + Be^{- i\beta\ln{(r-r_0)}} 
+\end{equation}
+
+\section{zero temperature}
+
+The last equations are true when we are far from zero temprature. In this part, we are dealing with zero temperature, and then we will study these equations in low temprature, close to zero temprature. Equation \ref{eq:redshiftfactorr0r*} is the red shift factor, $f$, in finit temprature, but in zero temprature its form changes and, as we will see, we get factor of $(r-r_0)^2$. For simplicity, for our purpose we just focus on case $d = 4$, $3$ conventional space direction and one conventional time direction and an other spacelike direction for having $AdS_5/CFT_4$ theory. Zero temprature is when $r_0 = r_*$, so by substituting $Q = \frac{d}{d-2}r_0^{2d-2} $ for red shift factor one gets,
+
+\begin{align} \label{eq:redshiftfactorr0r*zeroT}
+    f &= \frac{(d-2)r^{2d-2} - (2d-2)r_0^{d}r^{d-2} + dr_0^{2d-2}}{(d-2)r^{2d-2}} \quad , \quad d = 4 \nonumber\\
+      &= \frac{(r-r_0)^2(r+r_0)^2(r^2 + 2r_0^2)}{r^6}
+\end{align}
+
+And equation of motion for scalar field has the form of,
+
+\begin{align} \label{eq:equationofmotionchargeblackholeinadsZetorT}
+    0 =& \frac{1}{R^2}\left[\frac{(r-r_0)(r+r_0)(5r^4 + 5r_0^2r^2 + 2r_0^2)}{r^5}\right]\frac{\partial \phi(r)}{\partial r} \nonumber\\
+      &+ \frac{r^2f}{R^2}\frac{\partial^2\phi(r)}{\partial r^2} + \left[ \frac{R^2}{r^2f}k^2_t-\frac{R^2}{r^2}k^2_{\vec{x}}-m^2\right]\phi(r)
+\end{align} 
+
+Note that in this case, zero temprature, $r_0$ is exactly equal to $r_*$. Now we want to find the Green function and behaviour of our function near boundart, $r \rightarrow \infty$ and close to horizon, $r \rightarrow r_0$. Near boundary nothing would change from before, everything we had in last section is true for zero temprature too and we have the same form of answer for zero tamprature. Because $Q$, charge of black hole wich is related to temprature, and $M$, mass of black hole which is related to radius of horizon, do not play any role in the equation of motion, equation \ref{eq:equationofmotionchargeblackholeinads}, near boundary, in case of $r \rightarrow \infty$. Close to horizon, $r \rightarrow r_0$, redshift factor has the form of $f = \frac{12}{r^2_0}(r-r_0)^2$, equation of motion \ref{eq:equationofmotionchargeblackholeinadsZetorT} gets the form of,
+
+\begin{equation}
+    0 = (r-r_0)^4\frac{\partial^2\phi(r)}{\partial r^2} + 2(r-r_0)^3\frac{\partial\phi(r)}{\partial r} + \frac{R^4k^2_t}{144}\phi(r)
+\end{equation}
+
+and the answer has the form of,
+
+\begin{equation}
+    \phi(r,\mu) = C(k_\mu) e^{\frac{i\beta}{r-r_0}} + D(k_\mu) e^{\frac{-i\beta}{r-r_0}} \quad , \quad \beta = \frac{R^2k_t}{12}
+\end{equation}
+
+$e^{\frac{i\beta}{r-r_0}}$ is incoming wave which is going through black hole and $e^{\frac{-i\beta}{r-r_0}}$ is out going wave which is going out of black hole. In our case, we are mostly interested in case that we have just incoming wave and there is no out going wave which go out of black hole. So one need to choos $B = 0$. Then we are able to find the Green's function,
+
+\begin{equation}
+   G(k_\mu) \equiv \frac{B(k_\mu)}{A(k_\mu)} \quad , \quad \phi(r,k_\mu) = A(k_\mu)r^{\Delta-d} + B(k_\mu)r^{-\Delta}  
+\end{equation} 
+
+\section{Charged Scalar Field in Charged Black Hole}
+
+In this section we try to study behaviour of charged scalar field with charged black hole geometry in AdS space. Then we will learn more about the low friquencies, and then one should suggest low friquency limit to avoid breaking of the theory. Low friquency is breaking because of infinit number of degree of freedom. But let's first look at the action of charged scalar field
+
+\begin{equation} \label{eq:ActionChargedScalarField} 
+    S = - \int d^{d+1}x \sqrt{-|g|} \left[ (D_\mu\phi)^*(D^\mu\phi) + m^2\phi^*\phi \right] 
+\end{equation}
+
+where,
+
+\begin{equation}
+    D_\mu = \partial_\mu - iqA_\mu
+\end{equation}
+
+Note that action \ref{eq:ActionChargedScalarField} just depend on $q$ through:
+
+\begin{equation}
+    \mu_q \equiv \mu q 
+\end{equation}
+
+which is the effective chemical potential for the field of charge $q$. We are interested to work on frequency space so we should take fourier trasformation of $\phi(r,x^\mu)$ and writting,
+
+\begin{equation}
+    \phi(r,x^\mu) = \int \frac{d^dk}{\sqrt{(2\pi)^d}} \phi(r,k_\mu) e^{ik_\mu x^\mu} 
+\end{equation}
+
+And from now we work only on frequency space. After taking fourier trasformation we have,
+
+\begin{equation}
+    \frac{-1}{\sqrt{-|g|}} \partial_r (\sqrt{-|g|} g^{rr} \partial_r\phi) + \left[ g^{ii} (k^2 - u^2) + m^2 \right]\phi \quad ,
+\end{equation}
+
+where,
+
+\begin{equation}
+    u(r) = \sqrt{\frac{-g_{ii}}{g_{tt}}}\bigg(\omega + \mu_q(1-\frac{r_0^{d-2}}{r^{d-2}})\bigg) \quad ,
+\end{equation}
+
+If the action is defined by equation \ref{eq:ActionChargedScalarField}. By considering all above equations then for motion equation we get,
+
+\begin{align} \label{eq:equationofmotionchargeblackholeinadsinchargescalarfield}
+    0 =& \frac{r^2f}{R^2}\frac{\partial^2\phi(r)}{\partial r^2} + \frac{1}{R^2}\left[(d+1)r - \frac{(d-3)Q^2}{r^{2d-3}} - \frac{M}{r^{d-1}} \right]\frac{\partial \phi(r)}{\partial r} \nonumber\\ 
+      & + \left[ \frac{R^2}{r^2f}\bigg(k_t + \mu_q(1-\frac{r_0^{d-2}}{r^{d-2}})\bigg)^2-\frac{R^2}{r^2}k_{\vec{x}}-m^2\right]\phi(r) 
+\end{align}
+
+Now we are ready to study $\phi(r,k_\mu)$ in finit temprature near boundary and close to horizon. As we have seen the radius of horizon is $r_0$ and boundary is located at $r \rightarrow \infty$. What ever we had on the last sections is true here. And nothing would be changed in our equation near boundary and close to horizon. By analyzing equation of \ref{eq:equationofmotionchargeblackholeinadsinchargescalarfield} we will get the following answers near boundary and close to horizon respectively,
+
+\begin{equation}
+    \phi(r,k_\mu) = A(k_\mu)(k_\mu)r^{\Delta-d} + B(k_\mu)r^{-\Delta} \quad , \quad for \quad r \rightarrow \infty
+\end{equation}
+
+where $\Delta = \frac{d}{2} + \sqrt{\frac{d^2}{4} + m^2R^2}$ and,
+
+\begin{equation}
+    \phi(r) = C(k_\mu)e^{ i\beta \ln{(r-r_0)}} + D(k_\mu)e^{- i\beta\ln{(r-r_0)}} 
+\end{equation}
+
+where $\beta = \frac{R^2k_t}{d\big(1-\frac{r^{2d-2}_*}{r^{2d-2}_0}\big)}$. In the above equation, as we have seen before, $e^{-i\beta \ln{(r-r_0)}}$ and $e^{i\beta \ln{(r-r_0)}}$ are incoming wave, which goes into the black hole, and out going wave, which is going out of black hole. And finaly Green's function is defined,
+
+\begin{equation}
+   G(k_\mu) \equiv \frac{B(k_\mu)}{A(k_\mu)}  
+\end{equation} 
+
+

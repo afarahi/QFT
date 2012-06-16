@@ -1,0 +1,52 @@
+\documentclass[10pt]{book}
+
+\usepackage{mathtools}  % need for math tools
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+
+\usepackage{mathptmx}  % For Using mathcal
+\usepackage{amssymb}   % For using \Box or symbols  
+
+\usepackage[width=4.375in, height=7.0in, top=1.0in, papersize={5.5in,8.5in}]{geometry}
+
+%\setlength{\baselineskip}{16.0pt}   
+%\setlength{\parskip}{3pt plus 2pt}
+%\setlength{\parindent}{20pt}
+%\setlength{\oddsidemargin}{0.5cm}
+%\setlength{\evensidemargin}{0.5cm}
+%\setlength{\marginparsep}{0.75cm}
+%\setlength{\marginparwidth}{2.5cm}
+%\setlength{\marginparpush}{1.0cm}
+%\setlength{\textwidth}{150mm}
+
+\begin{document}
+
+\frontmatter
+\chapter*{\Huge \center Quantum Field Theory}
+\thispagestyle{empty}
+%{\hspace{0.25in} \includegraphics{./ru_sun.jpg} }
+\section*{\huge \center Arya Farahi}
+\newpage
+\subsection*{\center \normalsize Copyright \copyright 2012 by Arya Farahi}
+\subsection*{\center \normalsize All rights reserved.}
+\subsection*{\center \normalsize ISBN \dots}
+\subsection*{\center \normalsize \dots Publications}
+\chapter*{\center \normalsize To my professor}
+\tableofcontents
+%
+\mainmatter
+
+\begin{center}
+{\large Quantum Field Theory } \\
+\copyright 2012 by Arya Farahi\\
+\end{center}
+
+\input{./chapters/scalarfield.tex} %chapter Classical Scalar Field
+\input{./chapters/scalarfieldAdS.tex} %Scalar Field in AdS space
+\input{./chapters/BlackHoleAdS.tex} %Anti de Sitter Black Hole
+
+\end{document}

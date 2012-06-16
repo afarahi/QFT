@@ -1,0 +1,274 @@
+\chapter{Scalar Field in AdS space}
+\label{ch:scalarfieldAdS}
+
+\section{$n$-dimentional AdS space} \label{sec:n-dimentionalAdSspace}
+
+In chapter \ref{ch:classicalscalarfield} we learned how to solve the scalar field in AdS space in cartesian and spherical coordanate basis. In this chapter, we are looking into this problem further and we discuss about the differenc features of AdS sapce in detail.\\
+
+The metric of $n$-dimentional AdS space for $m$ timelike dimention and $n-m$ sapcelike dimention has the form of,\\
+
+\begin{equation}\label{eq:nAdSmetric}
+    ds^2 = \frac{1}{z^2} \left[ - \sum\limits_{i=1}^{m} dt_i^2 + \sum\limits_{i=1}^{n-m} dx_i^2 \right]
+\end{equation}
+
+Which in this equation we assume that $x_n$ would be $z$ coordinate, so the metric tensor has the form of, 
+
+\begin{equation}\label{eq:nAdSmetrictensor}
+    g_{\mu\nu} = \frac{1}{z^2}
+    \begin{pmatrix}
+        \begin{pmatrix}
+            -1 & 0 & \cdots & 0 \\
+            0 & -1 & \cdots & 0 \\
+            \vdots  & \vdots  & \ddots & \vdots  \\
+            0 & 0 & \cdots & -1
+        \end{pmatrix}_{m \times m}
+         & 0\\
+        0 &
+        \begin{pmatrix}
+            1 & 0 & \cdots & 0 \\
+            0 & 1 & \cdots & 0 \\
+            \vdots  & \vdots  & \ddots & \vdots  \\
+            0 & 0 & \cdots & 1
+        \end{pmatrix} _{(n-m) \times (m-n)}
+    \end{pmatrix}
+\end{equation}
+
+And the determinant of this tensor is $|g_{\mu\nu}| = \frac{(-1)^{m}}{z^n}$. Let's use equation of motion for scalar scalar, equation \ref{eq:MotionScalarField} which was introduced in chapter \ref{ch:scalarfieldAdS}, to derive the differential equation of evolution of field in $n$-dimentional AdS space, 
+
+\begin{equation} \label{eq:MotionScalarField}
+    0 = \left[ \frac{1}{\sqrt{-|g_{\mu\nu}|}} \partial_\mu \sqrt{-|g_{\mu\nu}|} g^{\mu\nu} \partial_\nu - m^2 \right] \phi
+%%WRONGE   \sqrt{- |g_{\mu\nu}|} \left[ \frac{1}{2} g^{\mu\nu}\partial_\mu\partial_\nu\phi - \frac{1}{2}m^2\phi \right]=0
+\end{equation}
+
+\begin{equation}
+    \left[ -z^2 \sum\limits_{i=1}^{m} \frac{\partial^2}{\partial t_i^2} + z^2 \sum\limits_{i=1}^{n-m-1} \frac{\partial^2}{\partial x_i^2} + z^2 \frac{\partial^2}{\partial z^2} + (2-n) z \frac{\partial}{\partial z} - m^2 \right] \phi=0
+\end{equation}
+
+and then we can divide both side of equaion by $z^2$,\\
+
+\begin{equation} \label{eq:nAdSCartesianScalarFieldEq}
+    \sum\limits_{i=1}^{n-m-1} \frac{\partial^2\phi}{\partial x_i^2} + \frac{\partial^2\phi}{\partial z^2} + \frac{2-n}{z} \frac{\partial\phi}{\partial z} - \frac{m^2}{z^2}\phi = \sum\limits_{i=1}^{m}\frac{\partial^2 \phi}{\partial t_i^2}
+\end{equation}
+
+As we saw in chapter \ref{ch:classicalscalarfield} if we use seperation of variables method then there is a simple solution for time and all spetial terms, except $z$ term for $Z$ spatial coordinate. The time and spatial, except $z$, part of field $\phi$ has the form of,
+
+\begin{equation}
+    \phi(x_{\mu}) = e^{ik.x}Z(z) = e^{ik_{\mu}x_{\mu}}Z(z)
+\end{equation}
+
+By substituting $\phi(x_{\mu})$ in equation \ref{eq:nAdSCartesianScalarFieldEq} we have,
+
+\begin{equation}\label{eq:ZnAdSCartesianScalarFieldEq}
+    \frac{\partial^2Z(z)}{\partial z^2} + \frac{2-n}{z} \frac{\partial Z(z)}{\partial z} + \left[k^2 - \frac{m^2}{z^2} \right]Z(z) = 0
+\end{equation}
+
+Let's say $Z(z) = z^{\alpha}f(z)$, then $\frac{\partial Z(z)}{\partial z} = \alpha z^{\alpha-1}f(z) + z^{\alpha}\frac{\partial f(z)}{\partial z}$ and $\frac{\partial^2 Z(z)}{\partial z^2} = \alpha(\alpha-1)z^{\alpha-2}f(z) + 2\alpha z^{\alpha-1}\frac{\partial f(z)}{\partial z} + z^{\alpha}\frac{\partial^2 f(z)}{\partial z^2}$. Then by substituting these three equation in equation \ref{eq:ZnAdSCartesianScalarFieldEq} we have,
+
+\begin{align}
+    \alpha(\alpha-1)z^{\alpha-2}f(z) &+ 2\alpha z^{\alpha-1}\frac{\partial f(z)}{\partial z} + z^{\alpha}\frac{\partial^2 f(z)}{\partial z^2} \\ 
+    &+ \frac{2-n}{z} \left[ \alpha z^{\alpha-1}f(z) + z^{\alpha}\frac{\partial f(z)}{\partial z} \right] + \left[k^2 - \frac{m^2}{z^2}\right]z^{\alpha}f(z) = 0 \nonumber
+\end{align}
+
+And then,
+
+\begin{equation}
+    z^{2}\frac{\partial^2 f(z)}{\partial z^2} + (2\alpha+2-n)z\frac{\partial f(z)}{\partial z} + \left[k^2 z^2 - (m^2 + \alpha(n-1-\alpha))\right]f(z) = 0 
+\end{equation}
+
+By choosing $\alpha = \frac{n-1}{2}$, we get the Bessel differential equation and the general answer has the form of,
+
+\begin{align}
+    \phi(x_i,z) =& A_1e^{(ik_\mu x_\mu)}z^{\frac{n-1}{2}}J_{\nu}(kz) \\
+                & +A_2e^{(ik_\mu x_\mu)}z^{\frac{n-1}{2}}Y_{\nu}(kz) \quad , \quad \nu = \sqrt{m^2 + \frac{(n-1)^2}{4}} \nonumber  
+\end{align}
+
+Which $k_\mu$'s can be complex numbers and $A_1$ and $A_2$ are just normalization facors which depends on boundary condition.\\
+
+Let's see what happened for our field when it approached to $z=0$ and $z\rightarrow\infty$. Bsed of definition of Bessel function in the Literature,  
+
+\begin{align}
+    z^{\frac{n-1}{2}}J_{\nu}(kz) &= z^{\frac{n-1}{2}} \sum\limits_{i=0}^{\infty} \frac{(-1)^i}{i!\Gamma(i+\nu+1)}(\frac{k}{2}z)^{(2i+\nu)} \\
+    \text{and, } \nonumber\\
+    z^{\frac{n-1}{2}}Y_{\nu}(kz) &= z^{\frac{n-1}{2}} \frac{J_{\nu}(kz)\cos{(\nu\pi)}-J_{-\nu}(z)}{\sin{(\nu\pi)}}
+\end{align}
+
+Then,
+
+\begin{align}
+    \lim\limits_{z\rightarrow 0} z^{\frac{n-1}{2}}J_{\nu}(kz) &= z^{\frac{n-1}{2}+ \nu} \times \frac{k^\nu}{2^\nu\Gamma(\nu+1)}  &, \quad \nu = \sqrt{m^2 + \frac{n^2-2n+1}{4}}\\
+    \text{and,} \nonumber\\
+    \lim\limits_{z\rightarrow 0} z^{\frac{n-1}{2}}Y_{\nu}(kz) &= -z^{\frac{n-1}{2}- \nu} \times \frac{\Gamma(\nu)2^\nu}{k^\nu\pi}  &, \quad \nu = \sqrt{m^2 + \frac{n^2-2n+1}{4}}
+\end{align}
+
+or simply,
+
+\begin{align}
+    \lim\limits_{z\rightarrow 0} z^{\frac{n-1}{2}}J_{\nu}(kz) &= C z^{\frac{n-1}{2}+\sqrt{m^2 + \frac{(n+1)^2}{4}}} \\
+    \lim\limits_{z\rightarrow 0} z^{\frac{n-1}{2}}Y_{\nu}(kz) &= C' z^{\frac{n-1}{2}-\sqrt{m^2 + \frac{(n-1)^2}{4}}}
+\end{align}
+
+For case $n=4$, it would be,
+
+\begin{equation}
+    \lim\limits_{z\rightarrow 0} z^{\frac{n-1}{2}}J_{\nu}(kz) = C z^{\frac{3}{2}+\sqrt{m^2 + \frac{9}{4}}}
+\end{equation}
+
+and,
+
+\begin{equation}
+    \lim\limits_{z\rightarrow 0} z^{\frac{n-1}{2}}Y_{\nu}(kz) = C' z^{\frac{3}{2}-\sqrt{m^2 + \frac{9}{4}}}
+\end{equation}
+
+\section{Black hole in Anti de Sitter space}
+
+In theoretical physics, an AdS black hole is a black hole solution of general relativity  or its extensions which represents an isolated massive object, but with a negative cosmological constant. Such a solution asymptotically approaches Anti de Sitter space at spatial infinity, and is a generalization of the Kerr vacuum solution, which asymptotically approaches Minkowski spacetime at spatial infinity.\\
+
+In $3+1$ dimensions, the metric is given by,
+
+\begin{equation}
+    ds^2 = - \left( k^2r^2 + 1 - \frac{C}{r} \right)dt^2 + \frac{1}{k^2r^2 + 1 - \frac{C}{r}}dr^2 + r^2 d\Omega^2
+\end{equation}
+
+where $t$ is the time coordinate, $r$ is the radial coordinate, $\Omega$ are the polar coordinates, $C$ is a constant and $k$ is the AdS curvature.\\
+
+In general, in $d+1$ dimensions, the metric is given by,
+
+\begin{equation}
+    ds^2 = - \left( k^2r^2 + 1 - \frac{C}{r^{d-2}} \right)dt^2 + \frac{1}{k^2r^2 + 1 - \frac{C}{r^{d-2}}}dr^2 + r^2 d\Omega^2
+\end{equation}
+
+According to the AdS/CFT correspondence, if gravity were quantized, an AdS black hole would be dual to a thermal state on the conformal boundary. In the context of say, AdS/QCD, this would correspond to the deconfinement phase of the quark-gluon plasma.\\
+
+Also we can write the black hole's metric in $d+1$ dimention AdS space in another format which may be more useful,
+
+\begin{equation}
+    ds^2 = \frac{u^2}{L^2} \left[ -(1-(\frac{u_0}{u})^d) dt^2 + \sum\limits_{i=1}^{d-1} dx_i^2 \right] + \frac{L^2 du^2}{u^2 (1-(\frac{u_0}{u})^d)}
+\end{equation}
+
+From now we assume that we have just one time like coordinate, though it would be easy to expand this idea into, let's say $m$-domantional time like space. That $u=u_0$ is its horizon and $u\rightarrow\infty$ is its boundary. And the metric tensor has the form of,
+
+\begin{equation}\label{eq:nAdSmetrictensor}
+    g_{\mu\nu} = 
+    \begin{pmatrix}
+        -\frac{u^2}{L^2}\big(1-(\frac{u_0^2}{u^2})^d\big) & & 0 \\
+        & \begin{pmatrix}
+            \frac{u^2}{L^2} & 0 & \cdots & 0 \\
+            0 & \frac{u^2}{L^2} & \cdots & 0 \\
+            \vdots  & \vdots  & \ddots & \vdots  \\
+            0 & 0 & \cdots & \frac{u^2}{L^2}
+        \end{pmatrix}_{d-1 \times d-1}
+        &\\
+        0 & & \frac{L^2}{u^2\big(1-(\frac{u_0^2}{u^2})^d\big)} 
+    \end{pmatrix}
+\end{equation}
+
+The determinant of this matrix is $-(\frac{u}{L})^{d-1}$. Now we want to solve the equation of motion for scalar field for this metric.
+
+\begin{align} \label{eq:BlackHoleAdSMotionEquationu0/u}
+   0 =& - \frac{L^2}{u^2 (1-(\frac{u_0}{u})^d)}\frac{\partial^2 \phi}{\partial t^2} + \frac{L^2}{u^2}\frac{\partial^2 \phi}{\partial x_i^2} + \frac{u^2 (1-(\frac{u_0}{u})^d)}{L^2}\frac{\partial^2 \phi}{\partial u^2} \nonumber\\
+   & + (\frac{L}{u})^{d-1} \left[ \frac{u^{d-4}(d-3)}{L^{d-3} (1-(\frac{u_0}{u})^d)} - d \frac{1}{u} (\frac{u_0}{u})^{d} \frac{u^{d-3}}{L^{d-3} (1-(\frac{u_0}{u})^d)^2} \right] \frac{\partial \phi}{\partial u}
+\end{align}
+
+We use the same method to solve equation \label{eq:BlackHoleAdSMotionEquationu0/u}. And we can assume that $\frac{\partial^2 \phi}{\partial t^2}$ and $\frac{\partial^2 \phi}{\partial x_i^2}$ are all constant. It is the same as we say we want to solve the $d$-dimentional wave equation for AdS black hole. So we have,
+
+\begin{align}
+   0 =& \left[ \frac{k_t^2 L^2}{u^2 (1-(\frac{u_0}{u})^d)} - k_i^2 \frac{L^2}{u^2} \right]f(u) + \frac{u^2 (1-(\frac{u_0}{u})^d)}{L^2}\frac{d^2 f(u)}{d u^2} \nonumber\\
+   & + (\frac{L}{u})^{d-1} \left[ \frac{L^{2}(d-3)}{u^{3} (1-(\frac{u_0}{u})^d)} - d \frac{1}{u} (\frac{u_0}{u})^{d} \frac{L^{2}}{u^{2} (1-(\frac{u_0}{u})^d)^2} \right] \frac{d f(u)}{d u}
+\end{align}
+
+and then, 
+
+\begin{align}
+   0 =& \left[ k_t^2 - k_i^2 (1-(\frac{u_0}{u})^d) \right] f(u) + \frac{u^4 (1-(\frac{u_0}{u})^d)^2}{L^4}\frac{d^2 f(u)}{d u^2} \nonumber\\
+   & + L^{d-1} \left[ \frac{(d-3)}{u^d} - \frac{du_0^d}{u^{2d}} \frac{1}{(1-(\frac{u_0}{u})^d)} \right] \frac{d f(u)}{d u}
+\end{align}
+ 
+Now let's change the variable $u$ into $\frac{u_0}{w}$. This form would be more useful in this context, because our horizon and boundary changes from $w=1$ to $w=0$. And one can expande the answer near $w=1$ and/or $w=0$. The metric has the form of,
+
+\begin{equation}
+    ds^2 = L^2 \left[ \frac{u_0^2}{L^4w^2} \left[ -(1-w^d) dt^2 + \sum\limits_{i=1}^{d-1} dx_i^2 \right] + \frac{d^2w}{w^2 (1-w^d)} \right]
+\end{equation}
+
+After rescaling time, and $x_i$ coordinates we get,
+
+\begin{equation}
+    ds^2 = \frac{L^2}{w^2} \left[ -(1-w^d) dt^2 + \sum\limits_{i=1}^{d-1} dx_i^2 + \frac{d^2w}{w^2 (1-w^d)} \right]
+\end{equation}
+
+and the metric tensor would be,
+
+\begin{equation}\label{eq:nAdSmetrictensor}
+    g_{\mu\nu} = 
+    \begin{pmatrix}
+        -\frac{L^2}{w^2}(1-w^d) & & 0 \\
+        & \begin{pmatrix}
+            \frac{L^2}{w^2} & 0 & \cdots & 0 \\
+            0 & \frac{L^2}{w^2} & \cdots & 0 \\
+            \vdots  & \vdots  & \ddots & \vdots  \\
+            0 & 0 & \cdots & \frac{L^2}{w^2}
+        \end{pmatrix}_{d-1 \times d-1}
+        &\\
+        0 & & \frac{L^2}{w^2(1-w^d)} 
+    \end{pmatrix}
+\end{equation}
+
+The determinant of this matrix is $-(\frac{L}{w})^{2d+2}$. Now we want to solve the equation of motion of scalar field for this metric.
+
+\begin{align} \label{eq:BlackHoleAdSMotionEquationw}
+   0 =& - \frac{w^2}{L^2(1-w^d)}\frac{\partial^2 \phi}{\partial t^2} + \frac{w^2}{L^2}\frac{\partial^2 \phi}{\partial x_i^2} + \frac{w^2 (1-w^d)}{L^2}\frac{\partial^2 \phi}{\partial w^2} \nonumber\\
+   & + \frac{w}{L^2} \left[ 1-d -w^d  \right] \frac{\partial \phi}{\partial w} - m^2 \phi
+\end{align}
+
+We use the seperation of variables method to solve equation \label{eq:BlackHoleAdSMotionEquationw}. And we can assume that $\frac{\partial^2 \phi}{\partial t^2}$ and $\frac{\partial^2 \phi}{\partial x_i^2}$ are all constant. Let's say $\phi(t,x_i,w) = Ae^{ik.x}f(w) + Be^{-ik.x}g(w)$. For finding $f(w)$ and $g(w)$, first we assume that $B=0$ and the we can find $f(w)$ then we assume that $A=0$ and we can find $g(w)$. By substituting $\phi(t,x_i,w)$ in the equation and assuming $B=0$ we get,
+
+\begin{align} \label{eq:BlackHoleAdSMotionEquationw2}
+   0 =& \frac{w^2}{L^2(1-w^d)}k^2_t f(w) - \sum\limits_{i=1}^{d-1}\frac{w^2}{L^2}k^2_{x_i} f(w) + \frac{w^2 (1-w^d)}{L^2}\frac{\partial^2 f(w)}{\partial w^2} \nonumber\\
+   & + \frac{w}{L^2} \left[ 1-d -w^d  \right] \frac{\partial f(w)}{\partial w} - m^2 f(w)
+\end{align}
+
+Now let's focous on the behaiviour of our function near boundary and near horizon. When $w \rightarrow 0$ it approaches to boundary. And when $w \rightarrow 1$ it approaches to horizon. Near boundary our ordinary diffrential equation has the form of,
+
+\begin{equation} 
+   0 = w^2\frac{\partial^2 f(w)}{\partial w^2} + w(1-d)\frac{\partial f(w)}{\partial w} + \left[(k^2_t - \sum\limits_{i=1}^{d-1}k^2_{x_i})w^2 - L^2 m^2 \right] f(w)
+\end{equation}
+
+And this is a Bessel function which we have solved it before in section \ref{sec:n-dimentionalAdSspace} we solved this equation and showed that it has two independent answer, $w^{\frac{d}{2}}J_{\nu}(kw)$ and $w^{\frac{d}{2}}Y_{\nu}(kw)$ that $\nu = \sqrt{m^2 + \frac{d^2}{4}} $, and also we proved that for $w \rightarrow 0$ the function behave,
+
+\begin{align}
+    \lim\limits_{w\rightarrow 0} w^{\frac{d}{2}}J_{\nu}(kw) &\rightarrow w^{\frac{d}{2}+\sqrt{m^2 + \frac{d^2}{4}}} \\
+    \lim\limits_{w\rightarrow 0} w^{\frac{d}{2}}Y_{\nu}(kw) &\rightarrow w^{\frac{d}{2}-\sqrt{m^2 + \frac{d^2}{4}}}
+\end{align}
+
+Near horizon it is a little more tricky. First we need to expand the coefficient of $f(w)$ and $\frac{\partial f(w)}{\partial w}$ near $w=1$ and then one should try to find the behaviour of differential equation and function of $f(w)$. Let's divide both side of equation \ref{eq:BlackHoleAdSMotionEquationw2} by coefficient of $\frac{\partial^2 f(w)}{\partial w^2}$,
+
+\begin{align}
+   0 =& \frac{\partial^2f(w)}{\partial w^2} + \left[\frac{1-d-w^d}{w(1-w^d)}\right]\frac{\partial f(w)}{\partial w} \\
+   & + \left[ \frac{1}{(1-w^d)^2}k^2_t - \frac{1}{1-w^d}\sum\limits_{i=1}^{d-1}k^2_{x_i} - \frac{L^2m^2}{w^2(1-w^d)}\right] f(w) \nonumber
+\end{align}
+
+Now one should try to expand the coefficient of $f(w)$ and $\frac{\partial f(w)}{\partial w}$ near $w=1$. And ignore the terms which approach to zero,
+
+\begin{align}
+   0 =& \frac{\partial^2f(w)}{\partial w^2} + \left[- \frac{d}{1-w^d} + \frac{1-d}{2d}(1-w^d) + \dotsb \right]\frac{\partial f(w)}{\partial w} \\
+   & + \left[ \frac{1}{(1-w^d)^2}k^2_t - \frac{1}{1-w^d}\sum\limits_{i=1}^{d-1}k^2_{x_i} - L^2m^2\big( -\frac{1}{1-w^d} -\frac{2}{d} + \dotsb\big) \right] f(w) \nonumber
+\end{align}
+
+As one takes the limit of this function when $w \rightarrow 1$, $\frac{1}{(1-w^d)^2}$ approaches to $\infty$ faster than $\frac{1}{1-w^d}$. So close to $w=1$ the diffrential equation has the form of,
+
+\begin{equation}
+   0 = \frac{\partial^2f(w)}{\partial w^2} - \frac{d}{1-w^d}\frac{\partial f(w)}{\partial w} + \frac{k^2_t}{(1-w^d)^2}f(w)
+\end{equation}
+
+or,
+
+\begin{equation}
+   0 = \frac{\partial^2f(w)}{\partial w^2} - \frac{1}{1-w}\frac{\partial f(w)}{\partial w} + \frac{k^2_t}{(1-w)^2d^2} f(w)
+\end{equation}
+
+So the answer has the form of,
+
+\begin{equation}
+   f(w) = A (1-w)^{ik_t} + B (1-w)^{-ik_t} = A e^{ik_t \ln{(1-w)}} + B e^{-ik_t \ln{(1-w)}} 
+\end{equation}
+
+$e^{-ik_t \ln{(1-w)}}$ is incoming wave which go into the black hole and $e^{ik_t \ln{(1-w)}}$ is outcoming wave which coming out of black hole. If we choose $A = 0$ then there is no out comeing term so all information, wave, is just going into the black hole and nothing come back.

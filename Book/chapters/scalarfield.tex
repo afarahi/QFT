@@ -1,0 +1,560 @@
+\chapter{Classical Scalar Field}
+\label{ch:classicalscalarfield}
+
+\section{Scalar field theory}
+
+In theoretical physics, scalar field theory can refer to a classical or quantum theory of scalar fields. A field which is invariant under any Lorentz transformation is called a "scalar", in contrast to a vector or tensor field. The quanta of the quantized scalar field are spin-zero particles, and as such are bosons. \\
+
+No fundamental scalar fields have been observed in nature, though the Higgs boson may yet prove the first example. However, scalar fields appear in the effective field theory descriptions of many physical phenomena. An example is the pion, which is actually a "pseudoscalar", which means it is not invariant under parity transformations which invert the spatial directions, distinguishing it from a true scalar, which is parity-invariant. Because of the relative simplicity of the mathematics involved, scalar fields are often the first field introduced to a student of classical or quantum field theory.\\
+
+In this article, the repeated index notation indicates the Einstein summation convention for summation over repeated indices. The theories described are defined in flat, D-dimensional Minkowski space, with (D-1) spatial dimension and one time dimension and are, by construction, relativistically covariant. The Minkowski space metric, $\eta_{\mu\nu}$, has a particularly simple form: it is diagonal, and here we use the $[- + + +]$ sign convention.\\
+
+\section{Classical Scalar Field Theory}
+
+\subsection{Linear (free) theory}
+
+The most basic scalar field theory is the linear theory. The action for the free relativistic scalar field theory is:\\
+
+\begin{equation}
+    \mathcal{S}=\int \mathrm{d}^{D-1}x \mathrm{d}t \mathcal{L} = \int \mathrm{d}^{D-1}x \mathrm{d}t \left[ \frac{1}{2}\eta^{\mu\nu}\partial_\mu\phi\partial_\nu\phi -\frac{1}{2} m^2\phi^2 \right] 
+    =\int \mathrm{d}^{D-1}x \mathrm{d}t \left[\frac{1}{2}( - \partial_t\phi)^2 + \frac{1}{2}\delta^{ij}\partial_i\phi \partial_j\phi -\frac{1}{2} m^2\phi^2 \right],
+\end{equation}
+
+where $\mathcal{L}$ is known as a Lagrangian density. This is an example of a quadratic action, since each of the terms is quadratic in the field, $\phi$. The term proportional to $m^2$ is sometimes known as a mass term, due to its interpretation in the quantized version of this theory in terms of particle mass.\\
+
+The equation of motion for this theory is obtained by extremizing the action above. It takes the following form, linear in $\phi$:\\
+
+\begin{equation}
+    \eta^{\mu\nu}\partial_\mu\partial_\nu\phi-m^2\phi=-\partial^2_t\phi+\nabla^2\phi-m^2\phi=0
+\end{equation}
+
+Note that this is the same as the Klein-Gordon equation, but that here the interpretation is as a classical field equation, rather than as a quantum mechanical wave equation.\\
+
+\subsection{Nonlinear (interacting) theory}
+
+The most common generalization of the linear theory above is to add a scalar potential $V(\phi)$ to the equations of motion, where typically, $V$ is a polynomial in $\phi$ of order 3 or more (often a monomial). Such a theory is sometimes said to be interacting, because the Euler-Lagrange equation is now nonlinear, implying a self-interaction. The action for the most general such theory is\\
+
+\begin{align}
+    \mathcal{S}&=\int \mathrm{d}^{D-1}x \mathrm{d}t \mathcal{L} = \int \mathrm{d}^{D-1}x \mathrm{d}t \left[\frac{1}{2}\eta^{\mu\nu}\partial_\mu\phi\partial_\nu\phi - V(\phi) \right] \nonumber \\
+    &=\int \mathrm{d}^{D-1}x \mathrm{d}t \left[\frac{1}{2}(- \partial_t\phi)^2 + \frac{1}{2}\delta^{ij}\partial_i\phi\partial_j\phi - \frac{1}{2}m^2\phi^2-\sum_{n=3}^\infty \frac{1}{n!} g_n\phi^n \right]
+\end{align}
+
+The $n!$ factors in the expansion are introduced because they are useful in the Feynman diagram expansion of the quantum theory, as described below. The corresponding Euler-Lagrange equation of motion is:
+
+\begin{equation}
+    \eta^{\mu\nu}\partial_\mu\partial_\nu\phi + V'(\phi)= - \partial^2_t\phi + \nabla^2\phi + V'(\phi) = \Box\phi + V'(\phi)= 0
+\end{equation}
+
+We can define the new operator, let say box or $\Box$, which is useful when we want to use general relativity ideas in quantum feild theory.
+
+\begin{equation}
+    \Box\phi = \eta^{\mu\nu}\partial_\mu\partial_\nu\phi = - \partial^2_t\phi + \nabla^2\phi 
+\end{equation}
+
+
+\section{Dimensional analysis and scaling}
+
+Physical quantities in these scalar field theories may have dimensions of length, time or mass, or some combination of the three. However, in a relativistic theory, any quantity $t$, with dimensions of time, can be 'converted' into a length, $l=ct$, by using the velocity of light, $c$.\\
+
+Similarly, any length $l$ is equivalent to an inverse mass, $l=\frac{\hbar}{mc}$, using Planck's constant, $\hbar$. Heuristically, one can think of a time as a length, or either time or length as an inverse mass. In short, one can think of the dimensions of any physical quantity as defined in terms of just one independent dimension, rather than in terms of all three. This is most often termed the mass dimension of the quantity.\\
+
+One objection is that this theory is classical, and therefore it is not obvious that Planck's constant should be a part of the theory at all. In a sense this is a valid objection, and if desired one can indeed recast the theory without mass dimensions at all. However, this would be at the expense of making the connection with the quantum scalar field slightly more obscure. Given that one has dimensions of mass, Planck's constant is thought of here as an essentially arbitrary fixed quantity with dimensions appropriate to convert between mass and inverse length.\\
+
+\subsection{Scaling Dimension}
+
+The classical scaling dimension, or mass dimension, $\Delta$, of $\phi$ describes the transformation of the field under a rescaling of coordinates:\\
+
+\begin{align}
+    x\rightarrow\lambda x \\
+    \phi\rightarrow\lambda^{-\Delta}\phi
+\end{align}
+
+The units of action are the same as the units of $\hbar$, and so the action itself has zero mass dimension. This fixes the scaling dimension of $\phi$ to be
+
+\begin{equation}
+    \Delta =\frac{D-2}{2}.
+\end{equation}
+
+\section{Scale Invariance}
+
+There is a specific sense in which some scalar field theories are scale-invariant. While the actions above are all constructed to have zero mass dimension, not all actions are invariant under the scaling transformation\\
+
+\begin{align}
+    x\rightarrow\lambda x \\
+    \phi\rightarrow\lambda^{-\Delta}\phi
+\end{align}
+
+The reason that not all actions are invariant is that one usually thinks of the parameters $m$ and $g_n$ as fixed quantities, which are not rescaled under the transformation above. The condition for a scalar field theory to be scale invariant is then quite obvious: all of the parameters appearing in the action should be dimensionless quantities. In other words, a scale invariant theory is one without any fixed length scale (or equivalently, mass scale) in the theory.\\
+
+For a scalar field theory with $D$ spacetime dimensions, the only dimensionless parameter $g_n$ satisfies $n=\frac{2D}{D-2}$. For example, in $D=4$ only $g_4$ is classically dimensionless, and so the only classically scale-invariant scalar field theory in $D=4$ is the massless $\phi^4$ theory. Classical scale invariance normally does not imply quantum scale invariance. See the discussion of the beta function below.
+
+\subsection{Conformal Invariance}
+
+A transformation:\\
+
+\begin{equation}
+    x\rightarrow \tilde{x}(x)
+\end{equation}
+
+is said to be conformal if the transformation satisfies:\\
+
+\begin{equation}
+    \frac{\partial\tilde{x^\mu}}{\partial x^\rho}\frac{\partial\tilde{x^\nu}}{\partial x^\sigma}\eta_{\mu\nu}=\lambda^2(x)\eta_{\rho\sigma}
+\end{equation}
+
+for some function $\lambda^2(x)$. The conformal group contains as subgroups the isometries of the metric $\eta_{\mu\nu}$ (the Poincaré group) and also the scaling transformations considered above. In fact, the scale-invariant theories in the previous section are also conformally-invariant.\\
+
+\section{$\phi^4$ theory}
+
+Massive $\phi^4$ theory illustrates a number of interesting phenomena in scalar field theory.\\
+
+The Lagrangian density is:\\
+
+\begin{equation}
+    \mathcal{L}=\frac{1}{2}(\partial_t\phi)^2 -\frac{1}{2}\delta^{ij}\partial_i\phi\partial_j\phi - \frac{1}{2}m^2\phi^2-\frac{g}{4!}\phi^4.
+\end{equation}
+
+\subsection{Spontaneous symmetry breaking}
+
+This Lagrangian has a $Z_2$ symmetry under the transformation $\phi\rightarrow-\phi$.\\
+
+This is an example of an internal symmetry, in contrast to a space-time symmetry.\\
+
+If $m^2$ is positive, the potential $V(\phi)=\frac{1}{2}m^2\phi^2 +\frac{g}{4!}\phi^4$ has a single minimum, at the origin. The solution $\phi=0$ is clearly invariant under the $Z_2$ symmetry. Conversely, if $m^2$ is negative, then one can readily see that the potential $V(\phi)=\frac{1}{2}m^2\phi^2+\frac{g}{4!}\phi^4$ has two minima. This is known as a double well potential, and the lowest energy states (known as the vacua, in quantum field theoretical language) in such a theory are not invariant under the $Z_2$ symmetry of the action (in fact it maps each of the two vacua into the other). In this case, the $Z_2$ symmetry is said to be spontaneously broken.\\
+
+\subsection{Kink solutions}
+
+The $\phi^4$ theory with a negative $m^2$ also has a kink solution, which is a canonical example of a soliton. Such a solution is of the form:\\
+
+\begin{equation}
+    \phi(\vec{x},t)=\pm\frac{m}{2\sqrt{g}}\tanh\left(\frac{m(x-x_0)}{\sqrt{2}}\right)
+\end{equation}
+
+where $x$ is one of the spatial variables ($\phi$ is taken to be independent of $t$, and the remaining spatial variables). The solution interpolates between the two different vacua of the double well potential. It is not possible to deform the kink into a constant solution without passing through a solution of infinite energy, and for this reason the kink is said to be stable. For $D>2$, i.e. theories with more than one spatial dimension, this solution is called a domain wall.\\
+
+Another well-known example of a scalar field theory with kink solutions is the sine-Gordon theory.\\
+
+\section{Complex scalar field theory}
+
+In a complex scalar field theory, the scalar field takes values in the complex numbers, rather than the real numbers. The action considered normally takes the form:\\
+
+\begin{equation}
+    \mathcal{S}=\int \mathrm{d}^{D-1}x \mathrm{d}t \mathcal{L} = \int \mathrm{d}^{D-1}x \mathrm{d}t \left[\eta^{\mu\nu}\partial_\mu\phi^*\partial_\nu\phi -V(|\phi|^2)\right]
+\end{equation}
+
+This has a $U(1)$ symmetry, whose action on the space of fields rotates $\phi\rightarrow e^{i\alpha}\phi$, for some real phase angle $\alpha$.\\
+
+As for the real scalar field, spontaneous symmetry breaking is found if $m^2$ is negative. This gives rise to a Mexican hat potential which is analogous to the double-well potential in real scalar field theory, but now the choice of vacuum breaks a continuous $U(1)$ symmetry instead of a discrete one. This leads to a Goldstone boson.\\
+
+\section{$O(N)$ theory}
+
+One can express the complex scalar field theory in terms of two real fields, $\phi^1=Re{\phi}$ and $\phi^2=Im{\phi}$ which transform in the vector representation of the $U(1)=O(2)$ internal symmetry. Although such fields transform as a vector under the internal symmetry, they are still Lorentz scalars. This can be generalised to a theory of $N$ scalar fields transforming in the vector representation of the $O(N)$ symmetry. The Lagrangian for an $O(N)$-invariant scalar field theory is typically of the form:\\
+
+\begin{equation}
+    \mathcal{L}=\frac{1}{2}\eta^{\mu\nu}\partial_\mu\phi\cdot\partial_\nu\phi -V(\phi\cdot\phi)
+\end{equation}
+
+using an appropriate $O(N)$-invariant inner product.\\
+
+\section{Quantum scalar field theory}
+
+In quantum field theory, the fields, and all observables constructed from them, are replaced by quantum operators on a Hilbert space. This Hilbert space is built on a vacuum state, and dynamics are governed by a Hamiltonian, a positive operator which annihilates the vacuum. A construction of a quantum scalar field theory may be found in the canonical quantization article, which uses canonical commutation relations among the fields as a basis for the construction. In brief, the basic variables are the field $\phi$ and its canonical momentum π. Both fields are Hermitian. At spatial points $\vec{x}$, $\vec{y}$ at equal times, the canonical commutation relations are given by
+
+\begin{equation}
+    [\phi(\vec{x}),\phi(\vec{y})]=[\pi(\vec{x}),\pi(\vec{y})]=0 , and [\phi(\vec{x}),\pi(\vec{y})]=i \delta(\vec{x}-\vec{y})
+\end{equation}
+
+and the free Hamiltonian is:\\
+
+\begin{equation}
+    H=\int d^3x \left[{1\over 2}\pi^2+{1\over 2}(\nabla \phi)^2+{m^2\over 2}\phi^2\right]
+\end{equation}
+
+A spatial Fourier transform leads to momentum space fields:\\
+
+\begin{equation}
+    \tilde{\phi}(\vec{k})=\int d^3x e^{-i\vec{k}\cdot\vec{x}}\phi(\vec{x}) , and \tilde{\pi}(\vec{k})=\int d^3x e^{-i\vec{k}\cdot\vec{x}}\pi(\vec{x})
+\end{equation}
+
+which are used to define annihilation and creation operators:\\
+
+\begin{equation}
+    a(\vec{k})=\left(E\tilde{\phi}(\vec{k})+i\tilde{\pi}(\vec{k})\right) , a^\dagger(\vec{k})=\left(E\tilde{\phi}(\vec{k})-i\tilde{\pi}(\vec{k})\right),
+\end{equation}
+
+where $E=\sqrt{k^2+m^2}$. These operators satisfy the commutation relations:\\
+
+\begin{equation}
+    [a(\vec{k}_1),a(\vec{k}_2)]=[a^\dagger(\vec{k}_1),a^\dagger(\vec{k}_2)]=0 , [a(\vec{k}_1),a^\dagger(\vec{k}_2)]=(2\pi)^3 2E \delta(\vec{k}_1-\vec{k}_2)
+\end{equation}
+
+The state $|0>$ annihilated by all of the operators a is identified as the bare vacuum, and a particle with momentum $\vec{k}$ is created by applying $a^\dagger(\vec{k})$ to the vacuum. Applying all possible combinations of creation operators to the vacuum constructs the Hilbert space. This construction is called Fock space. The vacuum is annihilated by the Hamiltonian:\\
+
+\begin{equation}
+    H=\int {d^3k\over (2\pi)^3}\frac{1}{2} a^\dagger(\vec{k}) a(\vec{k})  
+\end{equation}
+
+where the zero-point energy has been removed by Wick ordering.\\
+
+Interactions can be included by adding an interaction Hamiltonian. For a $\phi^4$ theory, this corresponds to adding a Wick ordered term $g:\phi^4:/4!$ to the Hamiltonian, and integrating over $x$. Scattering amplitudes may be calculated from this Hamiltonian in the interaction picture. These are constructed in perturbation theory by means of the Dyson series, which gives the time-ordered products, or n-particle Green's functions $\langle 0|\mathcal{T}\{{\phi}(x_1)\cdots {\phi}(x_n)\}|0\rangle$ as described in the Dyson series article. The Green's functions may also be obtained from a generating function that is constructed as a solution to the Schwinger-Dyson equation.\\
+
+\subsection{Feynman Path Integral}
+
+The Feynman diagram expansion may be obtained also from the Feynman path integral formulation. The time ordered vacuum expectation values of polynomials in $\phi$, known as the n-particle Green's functions, are constructed by integrating over all possible fields, normalized by the vacuum expectation value with no external fields:\\
+
+\begin{equation}
+    \langle 0|\mathcal{T}\{{\phi}(x_1)\cdots {\phi}(x_n)\}|0\rangle=\frac{\int \mathcal{D}\phi \phi(x_1)\cdots \phi(x_n) e^{i\int d^4x \left({1\over 2}\partial^\mu \phi \partial_\mu \phi -{m^2 \over 2}\phi^2-{g\over 4!}\phi^4\right)}}{\int \mathcal{D}\phi e^{i\int d^4x \left({1\over 2}\partial^\mu \phi \partial_\mu \phi -{m^2 \over 2}\phi^2-{g\over 4!}\phi^4\right)}}
+\end{equation}
+
+All of these Green's functions may be obtained by expanding the exponential in $J(x)\phi(x)$ in the generating function\\
+
+\begin{equation}
+    Z[J] =\int \mathcal{D}\phi e^{i\int d^4x \left({1\over 2}\partial^\mu \phi \partial_\mu \phi -{m^2 \over 2}\phi^2-{g\over 4!}\phi^4+J\phi\right)} = Z[0] \sum_{n=0}^{\infty} \frac{i^n J(x_1) \cdots J(x_n)}{n!} \langle 0|\mathcal{T}\{{\phi}(x_1)\cdots {\phi}(x_n)\}|0\rangle
+\end{equation}
+
+A Wick rotation may be applied to make time imaginary. Changing the signature to $(++++)$ then turns the Feynman integral into a statistical mechanics partition function in Euclidean space:\\
+
+\begin{equation}
+    Z[J]=\int \mathcal{D}\phi e^{-\int d^4x \left({1\over 2}(\nabla\phi)^2+{m^2 \over 2}\phi^2+{g\over 4!}\phi^4+J\phi\right)}
+\end{equation}
+
+Normally, this is applied to the scattering of particles with fixed momenta, in which case, a Fourier transform is useful, giving instead:\\
+
+\begin{equation}
+    \tilde{Z}[\tilde{J}]=\int \mathcal{D}\tilde\phi e^{-\int d^4p \left({1\over 2}(p^2+m^2)\tilde\phi^2+{\lambda\over 4!}\tilde\phi^4-\tilde{J}\tilde\phi\right)}
+\end{equation}
+
+The standard trick to evaluate this functional integral is to write it as a product of exponential factors, schematically:
+
+\begin{equation}
+    \tilde{Z}[\tilde{J}]\sim\int \mathcal{D}\tilde\phi \prod_p \left[e^{-(p^2+m^2)\tilde\phi^2/2} e^{-g\tilde\phi^4/4!} e^{\tilde{J}\tilde\phi}\right]
+\end{equation}
+
+The second two exponential factors can be expanded as power series, and the combinatorics of this expansion can be represented graphically. The integral with $\lambda = 0$ can be treated as a product of infinitely many elementary Gaussian integrals, and the result may be expressed as a sum of Feynman diagrams, calculated using the following Feynman rules:\\
+
+    * Each field $\tilde{\phi}(p)$ in the n-point Euclidean Green's function is represented by an external line (half-edge) in the graph, and associated with momentum $p$.\\
+    * Each vertex is represented by a factor $-g$.\\
+    * At a given order $g^k$, all diagrams with n external lines and k vertices are constructed such that the momenta flowing into each vertex is zero. Each internal line is represented by a propagator $1/(q2 + m2)$, where $q$ is the momentum flowing through that line.\\
+    * Any unconstrained momenta are integrated over all values.\\
+    * The result is divided by a symmetry factor, which is the number of ways the lines and vertices of the graph can be rearranged without changing its connectivity.\\
+    * Do not include graphs containing "vacuum bubbles", connected subgraphs with no external lines.\\
+
+The last rule takes into account the effect of dividing by $\tilde{Z}[0]$. The Minkowski-space Feynman rules are similar, except that each vertex is represented by $-ig$, while each internal line is represented by a propagator $frac{i}{(q^2-m^2 + i\epsilon)}$, where the ε term represents the small Wick rotation needed to make the Minkowski-space Gaussian integral converge.\\
+
+\subsection{Renormalization}
+
+The integrals over unconstrained momenta, called "loop integrals", in the Feynman graphs typically diverge. This is normally handled by renormalization, which is a procedure of adding divergent counter-terms to the Lagrangian in such a way that the diagrams constructed from the original Lagrangian and counter-terms is finite. A renormalization scale must be introduced in the process, and the coupling constant and mass become dependent upon it.\\
+
+The dependence of a coupling constant $g$ on the scale $\lambda$ is encoded by a beta function, $\beta(g)$, defined by the relation:\\
+
+\begin{equation}
+    \beta(g) = \lambda\frac{\partial g}{\partial \lambda}
+\end{equation}
+
+This dependence on the energy scale is known as the running of the coupling parameter, and theory of this kind of scale-dependence in quantum field theory is described by the renormalization group.\\
+
+Beta-functions are usually computed in an approximation scheme, most commonly perturbation theory, where one assumes that the coupling constant is small. One can then make an expansion in powers of the coupling parameters and truncate the higher-order terms (also known as higher loop contributions, due to the number of loops in the corresponding Feynman graphs).\\
+
+The beta-function at one loop (the first perturbative contribution) for the $\phi^4$ theory is:\\
+
+\begin{equation}
+    \beta(g)=\frac{3}{16\pi^2}g^2+O(g^3)
+\end{equation}
+
+The fact that the sign in front of the lowest-order term is positive suggests that the coupling constant increases with energy. If this behavior persists at large couplings, this would indicate the presence of a Landau pole at finite energy, or quantum triviality. The question can only be answered non-perturbatively, since it involves strong coupling.\\
+
+A quantum field theory is trivial when the running coupling, computed through its beta function, goes to zero when the cutoff is removed. Consequently, the propagator becomes that of a free particle and the field is no longer interacting. Alternatively, the field theory may be interpreted as an effective theory, in which the cutoff is not removed, giving finite interactions but leading to a Landau pole at some energy scale. For a $\phi^4$ interaction, Michael Aizenman proved that the theory is indeed trivial for space-time dimension $D\ge 5$. For $D=4$ the triviality has yet to be proven rigorously, but lattice computations have confirmed this. (See Landau pole for details and references.) This fact is relevant as the Higgs field, for which triviality bounds are used to set limits on the Higgs mass, based on the new physics must enter at a higher scale (perhaps the Planck scale) to prevent the Landau pole from being reached.\\
+
+\section{Scalar Field equation for general metrics}
+
+Until here we learnd how to deal with scalar field equation in Minkowski-space. Now we want to focous more about scalar field equation in curved spaces, and solve the equation for some well known curved spaces which has specific metrics, such as Schwarzschild, FRW, and Anti de Sitter metric.\\
+
+The metric tensor is such an important object in curved space that is given a new symbol, let say $g_{\mu\nu}$, while $\eta_{\mu\nu}$ specificly be used for Minkowski space as a metric symbol. $g_{\mu\nu}$ should obey some rules to be considered as metric. First of all it should be a symmetric $(0,2)$ matrix, or more generaly tensor. Second, it usually taked non-degenerate, it meas that its determinant does not vanish, $g = |g_{\mu\nu}|$. If the determinant is not zero, then obviously the matrix, tensor, has its own inverse, which is uniqe:\\
+
+\begin{equation}
+    g^{\mu\nu}g_{\nu\sigma} = \delta^\nu_\sigma
+\end{equation}
+	
+In minkowski-space we difined the line elemet:\\
+
+\begin{equation}
+    ds = \eta_{\mu\nu} dx^\mu dx^\nu
+\end{equation}
+
+Respactively, it is possible to define the line element in the same way, which is more general and it can be use for any kind of curved space or flat space:\\
+
+\begin{equation}
+    ds = g_{\mu\nu} dx^\mu dx^\nu
+\end{equation}
+
+Based on the new metric, we want to deveplope the new scalar field equation of motion. Lagrangian has the form of,\\
+
+\begin{equation} \label{eq:LagrangianofScalarField}
+    \mathcal{L} = \sqrt{-|g_{\mu\nu}|} \left[ \frac{1}{2}g^{\mu\nu}\partial_\mu\phi\partial_\nu\phi -\frac{1}{2} m^2\phi^2 \right]
+\end{equation}
+
+The next step, we have to derive the equation of motion from Lagrangian, equation \ref{eq:LagrangianofScalarField},\\
+
+\begin{align}
+    0 =& \frac{\partial\mathcal{L}}{\partial\phi} - \frac{\partial}{\partial\mu}\frac{\mathcal{L}}{\partial\phi_\mu}\rightarrow \nonumber\\
+    0 =& \frac{\partial}{\partial\mu} \sqrt{-|g_{\mu\nu}|} g^{\mu\nu} \frac{\partial\phi}{\partial\nu} -\sqrt{-|g_{\mu\nu}|} m^2 \phi 
+\end{align}
+
+So the motion equation for scalar field has the form of,\\
+
+\begin{equation} \label{eq:MotionScalarField}
+    0 = \left[ \frac{1}{\sqrt{-|g_{\mu\nu}|}} \partial_\mu \sqrt{-|g_{\mu\nu}|} g^{\mu\nu} \partial_\nu - m^2 \right] \phi
+%%WRONGE   \sqrt{- |g_{\mu\nu}|} \left[ \frac{1}{2} g^{\mu\nu}\partial_\mu\partial_\nu\phi - \frac{1}{2}m^2\phi \right]=0
+\end{equation}
+
+For few sections we just introduce some famous metrics and their tensors and after that we would try to solve the equation of motion for scalar field, equation \ref{eq:MotionScalarField}.
+
+\subsection{Schwarzschild Metric}
+
+\begin{equation} \label{eq:SchwarzschildMetric}
+    ds^2 = -V(r) dt^2 + V(r)^{-1} dr^2 + r^2 d\Omega^2_{D-2}
+\end{equation}
+
+For example the Schwartzschild black hole of mass $M$ is describedd by the metric:
+
+\begin{equation} \label{eq:SchwarzschildMetric}
+    ds^2 = -(1 - \frac{2 M}{r}) dt^2 + (1 - \frac{2 M}{r})^{-1} dr^2 + r^2 d\Omega^2
+\end{equation}
+
+The Schwarzschild metric describes the spacetime around a spherically symmetric body, such as a planet, or a black hole. With coordinates $(x^0, x^1, x^2, x^3)=(ct, r, \theta, \phi)$ , we can write the metric as:\\
+
+\begin{equation} \label{eq:SchwarzschildSphericalMetricTensor}
+    (g_{\mu\nu}) = 
+    \begin{pmatrix}
+        -(1-\frac{2GM}{rc^2}) & 0 & 0 & 0\\
+        0 & (1-\frac{2GM}{r c^2})^{-1} & 0 & 0 \\
+        0 & 0 & r^2 & 0 \\
+        0 & 0 & 0 & r^2 \sin^2 \theta 
+    \end{pmatrix} 
+\end{equation}
+
+The intresting point about the metric of Schwarzschild is that if one puts the mass of black hole equal to zero the metric would become similar to Minkowski's metric. Because when the mass is equal to zero it means that there is no black hole so the metric should be the same as Minkowski's metric.\\
+
+\subsection{FRW Metric}
+
+Friadmann-Rabertson-Walker, or simpely FRW, metric describe homogeneous, isotropic universe, including, to a good degree of approximation, the portion we have seen of our own universe. The metric, in spherical coordinate, has the form of:\\
+
+\begin{equation} \label{eq:FRWMetric}
+    ds^2 = -dt^2 + a(t)^2 \big( \frac{dr^2}{1-kr^2} + r^2 d\Omega^2 \big)
+\end{equation}
+
+and the tensor of FRW metric has the form of:\\
+
+\begin{equation} \label{eq:FRWSphericalMetricTensor}
+    (g_{\mu\nu}) = 
+    \begin{pmatrix}
+        -1 & 0 & 0 & 0 \\
+        0 & \frac{a(t)}{1-k^2r^2} & 0 & 0 \\
+        0 & 0 & a(t) r^2 & 0 \\
+        0 & 0 & 0 & a(t) r^2 \sin{(\theta)}^2 \\
+    \end{pmatrix}
+\end{equation}
+
+In these equations $a(t)$ is the scale factor, cosmic scale factor or sometimes the Robertson-Walker scale factor parameter of the Friedmann equations is a function of time which represents the relative expansion of the universe. Modern observations suggests that the universe is expanding and introducing $a(t)$ is the way the help us to consider the expantion of our univerce in our equations. And the relation of scale factor and Hubble parameter has the form of:\\
+
+\begin{equation}
+    H = \frac{\dot{a}(t)}{a(t)} 
+\end{equation}
+
+\subsection{Anti de Sitter space}
+
+In mathematics and physics, n-dimensional anti de Sitter space, sometimes written $AdS_n$, is a maximally symmetric Lorentzian manifold with constant negative scalar curvature. It is the Lorentzian analogue of n-dimensional hyperbolic space, just as Minkowski space and de Sitter space are the analogues of Euclidean and elliptical spaces respectively.\\
+
+It is best known for its role in the $AdS/CFT$ correspondence.\\
+
+In the language of general relativity, anti de Sitter space is a maximally symmetric, vacuum solution of Einstein's field equation with a negative (attractive) cosmological constant $\Lambda$ (corresponding to a negative vacuum energy density and positive pressure).\\
+
+In mathematics, anti de Sitter space is sometimes defined more generally as a space of arbitrary signature $(p,q)$. Generally in physics only the case of one timelike dimension is relevant. Because of differing sign conventions, this may correspond to a signature of either $(n−1, 1)$ or $(1, n−1)$.\\
+
+A coordinate patch covering part of the space gives the half-space coordinatization of anti de Sitter space. The metric for this patch is:\\
+
+\begin{equation} \label{eq:AdSCartesianMetric}
+    ds^2=\frac{1}{z^2} \left(- dt^2 + dx^2 + dy^2 + dz^2 \right)
+\end{equation}
+
+We easily see that this metric is conformally equivalent to a flat half-space Minkowski spacetime.\\
+
+The constant time slices of this coordinate patch are hyperbolic spaces in the Poincaré half-plane metric. In the limit as $z = 0$, this half-space metric reduces to a Minkowski metric $dz^2=dt^2-dx^2-dy^2$; thus, the anti-de Sitter space contains a conformal Minkowski space at infinity ("infinity" having y-coordinate zero in this patch).\\
+
+In AdS space time is periodic, and the universal cover has non-periodic time. The coordinate patch above covers half of a single period of the spacetime.\\
+
+Because the conformal infinity of AdS is timelike, specifying the initial data on a spacelike hypersurface would not determine the future evolution uniquely (i.e. deterministically) unless there are boundary conditions associated with the conformal infinity.\\
+
+The "half-space" region of anti de Sitter space and its boundary.\\
+
+Another commonly used coordinate system which covers the entire space is given by the coordinates $t$, $r$ $\geqslant$ $0$ and the hyperpolar coordinates $\alpha$, $\theta$ and $\phi$.
+
+\begin{align} \label{eq:AdSSphericalMetric}
+    ds^2 &= - \left( k^2r^2 + 1\right)dt^2 + \frac{1}{k^2r^2+1}dr^2 + r^2 d\Omega^2 \\
+         &= - \left( k^2r^2 + 1\right)dt^2 + \frac{1}{k^2r^2+1}dr^2 + r^2 \left( d\theta^2 + \sin{(\theta)}^2 d\phi^2 \right) \nonumber
+\end{align}
+
+The image on the right represents the "half-space" region of anti deSitter space and its boundary. The interior of the cylinder corresponds to Anti de Sitter spacetime, while its cylindrical boundary corresponds to its conformal boundary. The green shaded region in the interior corresponds to the region of AdS covered by the half-space coordinates and it is bounded by two null, aka lightlike, geodesic hyperplanes; the green shaded area on the surface corresponds to the region of conformal space covered by Minkowski space.\\
+
+The green shaded region covers half of the AdS space and half of the conformal spacetime; the left ends of the green discs will touch in the same fashion as the right ends.\\
+
+\subsection{Scalar Field in Anti de Sitter space}
+
+Now we want to find the general solution of the equation of motion, \ref{eq:MotionScalarField} , in Anti de Sitter space, from now AdS, space. First we focuse on general solution in Cartesian coordinate system and after that we figure out how to find the general solution of equation of motion for AdS space with Spherical coordinate basis.\\
+
+Equation \ref{eq:AdSCartesianMetric} shows the metric of AdS space in Caretesian coordinate system. Based on equation \ref{eq:AdSCartesianMetric} the metric tensor has the form of:\\
+
+\begin{equation} \label{eq:AdSCartesianMetricTensor}
+    (g_{\mu\nu}) = 
+    \begin{pmatrix}
+        -\frac{1}{z^2} & 0 & 0 & 0 \\
+        0 & \frac{1}{z^2} & 0 & 0 \\
+        0 & 0 & \frac{1}{z^2} & 0 \\
+        0 & 0 & 0 & \frac{1}{z^2} \\
+    \end{pmatrix}
+\end{equation}
+
+Determinant of tensor $g_{\mu\nu}$, equation \ref{eq:AdSCartesianMetricTensor}, is $|g_{\mu\nu}| = - \frac{1}{z^8}$. So the for the scalar fields and in AdS space with cartesian coordinate system the equation of motion, equation \ref{eq:MotionScalarField}, would be,\\
+
+\begin{equation}
+    \left[ - z^2 \frac{\partial^2}{\partial t^2} + z^2 \frac{\partial^2}{\partial x^2} + z^2 \frac{\partial^2}{\partial y^2} + z^2 \frac{\partial^2}{\partial z^2} - 2 z \frac{\partial}{\partial z} - m^2 \right] \phi=0
+\end{equation}
+
+and then we can divide both side of equaion by $z^2$,\\
+
+\begin{equation} \label{eq:AdSCartesianScalarFieldEq}
+    \frac{\partial^2\phi}{\partial x^2} + \frac{\partial^2\phi}{\partial y^2} + \frac{\partial^2\phi}{\partial z^2} - \frac{2}{z} \frac{\partial\phi}{\partial z} - \frac{m^2}{z^2}\phi = \frac{\partial^2 \phi}{\partial t^2}
+\end{equation}
+
+Now, we can use seperation of variables method to find the solution of equation of motion in AdS space with cartesian coordinate system, equation \ref{eq:AdSCartesianScalarFieldEq}. Based on this method, $\phi(t,x,y,z) = T(r)X(x)Y(y)Z(z)$, and by substituting the new function in our equation, equation \ref{eq:AdSCartesianScalarFieldEq}, and then divide both side of equation by $\phi$, $T(r)X(x)Y(y)Z(z)$, we would have: \\
+
+\begin{equation}
+    \frac{\frac{\partial^2X(x)}{\partial x^2}}{X(x)} + \frac{\frac{\partial^2Y(y)}{\partial y^2}}{Y(y)} + \frac{\frac{\partial^2Z(z)}{\partial z^2} - \frac{2}{z}\frac{\partial Z(z)}{\partial z} - \frac{m^2}{ z^2}Z(z)}{Z(z)} = \frac{\frac{\partial^2 T(t)}{\partial t^2}}{T(t)}
+\end{equation}
+
+There are four terms, three spatial terms and one time term, which that each ones depend just on one varibale. So we can easily conclude that, as you may learned on basic courses like partial differential equation, each term should be constant. Lest say $C_1$, $C_2$, and $C_3$ for spatial terms and $C$ for time term. Then we have to solve each term seperately fo find the answers. This equation is very similar to equation of wave, like what we have in electrodynamics. The differenc is that one of our spatial terms is not similar what we had before on wave problems. But we use the same method to find the solution for this partial differencial equation. Let's do the calculations.\\
+
+For time term, it would be like,\\
+
+\begin{equation}
+    C = \frac{\frac{\partial^2 T(t)}{\partial t^2}}{T(t)}
+\end{equation}
+
+and then,\\
+
+\begin{equation}
+    T(t) = a_1 e^{i\omega t} + a_2 e^{i\omega't}
+\end{equation}
+
+which $\omega$ and $\omega'$ can be complex number. Here, for simplicity, we assume that $T(t) = a_1 e^{i\omega t}$, then the constant, $C$, would be equal to $-\omega^2$ and $a_1$ is just a normalization factor. For the next step we try to find the solution of spatial terms. The first two spatial terms, $X(x)$ and $Y(y)$, are the same as time term and we can solve them like time term, so for this two term we have:\\
+
+\begin{align} \label{eq:AdSCartesianScalarFieldSolution}
+    X(x) &= b_1 e^{ik_{1} x} + b_2 e^{k_{12} x}  \\
+    Y(y) &= b_3 e^{ik_{2} y} + b_4 e^{k_{22} y}  \nonumber
+\end{align}
+
+and like the time term for simplicity we can assume that the second terms are zero. So, $C_1$ and $C_2$ are $k_1^2$ and $k_2^2$ respectively. $b_1$ and $b_3$ are just normalization factors. The most important part of the equation is the last spatial time which make difference between Minkowski's space and AdS space. The differencial equation for the second term has the form of,\\
+
+\begin{equation} \label{eq:3thtermAdSI}
+    \frac{\partial^2Z(z)}{\partial z^2} - \frac{2}{z}\frac{\partial Z(z)}{\partial z} - (C_3 + \frac{m^2}{z^2})Z(z) = 0 
+\end{equation}
+
+and $C_3$ is a constant that related with $C_2$, $C_3$, and $C$ with the following relationship,\\
+
+\begin{equation}
+    C_3 = C - C_1 - C_2 = -[\omega^2 - k_1^2 - k_2^2] = - k^2
+\end{equation}
+
+If we multiply quation \label{eq:3thtermAdSI} by $z^2$ then it becomes famous Bessel differencial equation, which its answers are Bessel functions.
+
+\begin{equation} \label{eq:3thtermAdSII}
+    z^2 \frac{\partial^2Z(z)}{\partial z^2} - 2 z\frac{\partial Z(z)}{\partial z} - (z^2 C_3 + m^2)Z(z) = 0 
+\end{equation}
+
+and the asnwer of this equation has the form of,\\
+
+\begin{equation}
+    Z(z) = d_1 z^{\frac{3}{2}} J_{m}(\sqrt{k^2} z) + d_2 z^{\frac{3}{2}} Y_{m}(\sqrt{k^2} z)
+\end{equation}
+
+That $d_1$ and $d_2$ are just normalization factors. So the complete solution of motion equation for scalr field in AdS space with cartesian coordinate basis has the form of, \\
+
+\begin{equation}
+    \phi(t,x,y,z) = A_1 e^{ik_\mu x_\mu} z^{\frac{3}{2}} J_{m}(\sqrt{k^2} z) + A_2 e^{ik_\mu x_\mu} z^{\frac{3}{2}} Y_{m}(\sqrt{k^2} z)
+\end{equation}
+
+That $A_1$ and $A_2$ are just normalization factors and $k_\mu x_\mu$ is $\omega t + k_1 x + k_2 y$ and $\omega$, $k_1$, and $k_2$ can be complex numbers.\\
+
+Now, lets use the same method to find the solution of motion equation for scalar field in AdS space with Spherical coordinate basis. Equation \ref{eq:AdSSphericalMetric} shows the metric of AdS space in Spherica coordinate system. Based on equation \ref{eq:AdSSphericalMetric} the metric tensor is:
+
+\begin{equation} \label{eq:AdSSphericalMetricTensor}
+    (g_{\mu\nu}) = 
+    \begin{pmatrix}
+        -\left( k^2r^2 + 1\right) & 0 & 0 & 0 \\
+        0 & \frac{1}{k^2r^2+1} & 0 & 0 \\
+        0 & 0 & r^2 & 0 \\
+        0 & 0 & 0 & r^2 \sin{(\theta)}^2 \\
+    \end{pmatrix}
+\end{equation}
+
+Determinant of tensor $g_{\mu\nu}$, equation \ref{eq:AdSSphericalMetricTensor}, is $|g_{\mu\nu}| = - r^4 \sin{(\theta)}^2$. So the equation of motion for scalar field in AdS space with spherical coordinate system basis, equation \ref{eq:MotionScalarField}, has the form of,\\
+
+\begin{equation} \label{eq:AdSSphericalScalarFieldEq}
+    - \frac{1}{\left( k^2r^2 + 1\right)} \frac{\partial^2\phi}{\partial t^2} + (k^2r^2+1) \frac{\partial^2\phi}{\partial r^2} + (4k^2r+\frac{2}{r})\frac{\partial\phi}{\partial r} + \frac{1}{r^2} \frac{\partial^2 \phi}{\partial \Omega^2} - m^2\phi =0 \nonumber
+\end{equation}
+
+In case of spherical symmetry we can seperate the angular varibales from radial and time variables, $r$ and $t$. In basic quantum mechanics courses and partial differenctial courses it is proved that for spherical symmetry the eigenvalue of angular part is: $l(l+1)$. So we can divide $\phi$ into two part, angular part and time-radial part, $\phi(t,r,\theta,\Phi) = X(t,r)Y^m_l(\theta,\Phi)$, also is is possible to show that $\frac{\partial^2 Y^m_l(\theta,\Phi)}{\partial \Omega^2} = l(l+1)$. On the other hand we can assume that function of $X(t,r)$ are sparetable into to function of $R(r)$ and $T(t)$. Then simply we can rewrite equation of motion,
+
+\begin{align}
+    - \frac{R(r)}{\left( k^2r^2 + 1\right)} \frac{\partial^2T(t)}{\partial t^2} &+ (k^2r^2+1) T(t) \frac{\partial^2 R(r)}{\partial r^2} \\
+    & + (4k^2r+\frac{2}{r})T(t)\frac{\partial R(r)}{\partial r} + (\frac{l(l+1)}{r^2} - m^2)R(r)T(t) = 0 \nonumber
+\end{align}
+
+or,
+
+\begin{align}
+    (k^2r^2+1)^2 \frac{\frac{\partial^2 R(r)}{\partial r^2}}{R(r)} &+ (k^2r^2 + 1)(4k^2r+\frac{2}{r})\frac{\frac{\partial R(r)}{\partial r}}{R(r)} \\
+     &+ \frac{l(l+1)}{r^2} + (k^2l(l+1)- m^2)= \frac{\frac{\partial^2T(t)}{\partial t^2}}{T(t)} \nonumber
+\end{align}
+
+Becasue one side of the equation is function of time and the other side is function of $r$ then, for having solution, both side should be constant, like $C$. The solution for time term is:
+
+\begin{equation}
+    T(t) = A_1e^{i \omega t} + A_2e^{i \omega' t}
+\end{equation}
+
+Which for simplicity we assume the the second term is zero then, we have $T(t) = A_1e^{i \omega t}$ that $A_1$ is a normalization factor, and $\omega$ can be a complex number. On the othr hand, our constant, $C$, would be $-\omega^2$. So differential equation for radial term is,
+
+\begin{align} \label{eq:RadialAdSMotion}
+    (k^2r^2+1)^2 \frac{\partial^2 R(r)}{\partial r^2} &+ (k^2r^2 + 1)(4k^2r+\frac{2}{r})\frac{\partial R(r)}{\partial r}\\
+    & + \left[ \frac{l(l+1)}{r^2} + (k^2l(l+1) + \omega^2 - m^2) \right]R(r) = 0 \nonumber
+\end{align}
+
+We can solve this differential equation with series method. In series method we assume that, $R(r) = \sum\limits_{-\infty}^{+\infty} a_n r^n$, and all $n$'s should be integer. First we substitute $a_0$ in our differential equation and we get $a_0 = constant$. We do the same thing for $n > 0$ and we get $a_n = 0$, for $n>0$, because based on boundary condition in large radios the function should approaches to zero, based on this argument all for positive $n$'s we should get zero. Now let's focous on $n<0$. By substituting $\sum a_{-n} r^{-n}$ in equation \ref{eq:RadialAdSMotion} we get,
+
+\begin{align}
+    0 = \sum\limits_{n=0}^{\infty} & a_{-n}n(n+1)k^4r^{-n+2} + a_{-n}2k^2 n(n+1)r^{-n} + a_{-n} n(n+1)r^{-n-2} \nonumber\\
+                                   & - a_{-n}4nk^2r^{-n+2} - a_{-n}6nk^2r^{-n} - a_{-n}nr^{-n-2} \\
+                                   & - a_{-n}l(l+1)k^4r^{-n-2} + a_{-n}\left[k^2l(l+1)+\omega^2-m^2\right]r^{-n} \nonumber
+\end{align}
+
+Then the coefficient of each $r^{n}$ should be zero, so we have,
+
+\begin{align}
+    0 = & a_{-n-2}(n+2)(n+3)k^4r^{-n} + a_{-n}2k^2 n(n+1)r^{-n} + a_{-n} (n-2)(n-1)r^{-n} \nonumber\\
+        & - a_{-n-2}4(n+2)k^2r^{-n} - a_{-n}6nk^2r^{-n} - a_{-n}(n-2)r^{-n} \\
+        & - a_{-n+2}l(l+1)k^4r^{-n} + a_{-n}\left[ k^2 l(l+1) + \omega^2 - m^2 \right] r^{-n} \nonumber
+\end{align}
+
+Finaly, we can find all $a_n$'s, if we have boundari condition,
+
+\begin{equation}
+    a_{-n-2} =\frac{a_{-n}\left[(-2n^2+4n-l(l+1))k^2+m^2-\omega^2\right] + a_{-n+2}\left[l(l+1)-n^2+3n-2\right]}{(n^2+n-2)k^4}
+\end{equation}
+
+\section{Questions}
+
+1. Derive the partial differential equation for equation of motion in Schwarzschild space with spherical coordinate basis.\\
+
+2. Derive the partial differential equation for equation of motion in FRW space with spherical coordinate basis.\\
+
