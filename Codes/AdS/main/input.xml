@@ -1,0 +1,21 @@
+<data>
+  <black_hole_properties>
+    <rs>0.25</rs>
+    <r0>1.0</r0>
+    <R>1.0</R>
+  </black_hole_properties>
+  <field_properties>
+    <kx>0.0</kx>
+    <kt_complex>0.0</kt_complex>
+    <kt_real>1.0</kt_real>
+    <muq_complex>0.0</muq_complex>
+    <muq_real>0.0</muq_real>
+    <Rm2>-3.0</Rm2>
+  </field_properties>
+  <dimention>4</dimention>
+  <grid_size>
+    <h>5e-4</h>
+    <rmax>10.0</rmax>
+  </grid_size>
+</data>
+
