@@ -6,8 +6,8 @@ from matplotlib.pyplot import *
 from matplotlib        import rc
 from cmath             import exp, cos, sin
 from curvfit           import *
-from readdata         import read_data
-from RK_solver        import RK_solver
+from readdata          import read_data
+from RK_solver         import RK_solver
 
 #Constants
 (rs,r0,R2,kx,kt,Rm2,d,h3,h2,h1,rmax,Q,M,v,muq) = read_data('input.xml')

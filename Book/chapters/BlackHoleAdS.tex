@@ -161,8 +161,8 @@ Horizon dose not have a zero area so its radius is not zero, too. Equation \ref{
 
 \begin{align} \label{eq:redshiftfactorr0r*}
     f &= (1 - \frac{r^d_0}{r^d}) + \frac{Q^2}{r^d}\left[\frac{1}{r^{d-2}} - \frac{1}{r^{d-2}_0} \right] \\
-      &= (r-r_0) \left[ \frac{r^{d-1} + r^{d-2}r_0 + \cdots + r^{d-2}_0r + r^{d-1}_0 }{r^d} \right \nonumber\\
-      & \qquad \qquad \qquad - \left \frac{Q^2}{r^d}\frac{r^{d-3} + r^{d-4}r_0 + \cdots + r^{d-4}_0r + r^{d-3}_0}{r^{d-2}r^{d-2}_0} \right]
+      &= (r-r_0) \left[ \frac{r^{d-1} + r^{d-2}r_0 + \cdots + r^{d-2}_0r + r^{d-1}_0 }{r^d} \right. \nonumber\\
+      & \qquad \qquad \qquad - \left. \frac{Q^2}{r^d}\frac{r^{d-3} + r^{d-4}r_0 + \cdots + r^{d-4}_0r + r^{d-3}_0}{r^{d-2}r^{d-2}_0} \right]
 \end{align}
 
 By defining $Q^2 \equiv \frac{d}{d-2}r^{2d-2}_*$, near horizon we can simplify our differential equation when $r \rightarrow r_0$, and $f \rightarrow (r-r_0)\left[\frac{d}{r_0} - \frac{dr^{2d-2}_*}{r^{2d-1}_0} \right]$,
@@ -271,7 +271,7 @@ If the action is defined by equation \ref{eq:ActionChargedScalarField}. By consi
 Now we are ready to study $\phi(r,k_\mu)$ in finit temprature near boundary and close to horizon. As we have seen the radius of horizon is $r_0$ and boundary is located at $r \rightarrow \infty$. What ever we had on the last sections is true here. And nothing would be changed in our equation near boundary and close to horizon. By analyzing equation of \ref{eq:equationofmotionchargeblackholeinadsinchargescalarfield} we will get the following answers near boundary and close to horizon respectively,
 
 \begin{equation}
-    \phi(r,k_\mu) = A(k_\mu)(k_\mu)r^{\Delta-d} + B(k_\mu)r^{-\Delta} \quad , \quad for \quad r \rightarrow \infty
+    \phi(r,k_\mu) = A(k_\mu)r^{\Delta-d} + B(k_\mu)r^{-\Delta} \quad , \quad for \quad r \rightarrow \infty
 \end{equation}
 
 where $\Delta = \frac{d}{2} + \sqrt{\frac{d^2}{4} + m^2R^2}$ and,
@@ -286,4 +286,27 @@ where $\beta = \frac{R^2k_t}{d\big(1-\frac{r^{2d-2}_*}{r^{2d-2}_0}\big)}$. In th
    G(k_\mu) \equiv \frac{B(k_\mu)}{A(k_\mu)}  
 \end{equation} 
 
+Let's be more accurate close to boundary and horizon. We want to expand the equations near boundary and horizon and find more terms to make our theory more accurate. Let's do it first for boundary. But becasue we are intrested in cases which $d =4$, $4$-dimentional cases, so here we do not solve the problem for general $d$-dimentional case. We can rewrite redshift factor, 
 
+\begin{align}
+    f(r) =& \frac{r-r_0}{r^6r_0^2} \left[ (4r_0^7-4r_*^6r_0) + (14r_0^6-2r_*^6)(r-r_0) + 20r_0^5(r-r_0)^2 \right. \nonumber\\
+          &  \left. + 15r_0^4(r-r_0)^3 + 6r_0^3(r-r_0)^4 + r_0^2(r-r_0)^5 \right]
+\end{align}
+
+and the coefficient of $\frac{\partial\phi}{\partial r}$, let's call it $g(r)$, is
+
+\begin{align}
+    g(r) =& \frac{1}{r^5r_0^2} \left[ (4r_0^8-4r_0^2r_*^6) + (28r_0^7-4r_0r_*^6)(r-r_0) + (74r_0^6-2r_*^6)(r-r_0)^2 \right. \nonumber\\
+          &  \left. + 100r_0^5(r-r_0)^3 + 75r_0^4(r-r_0)^4 + 30r_0^3(r-r_0)^5 + 5r_0^2(r-r_0)^6 \right]
+\end{align}
+
+In all of our equation $\phi$ is a function of $r$, $k_{\vec{x}}$, and $k_t=\omega$ and for simplicity we just write $\phi(r)$. But we are aware that actualy it is function of all of these terms through frourier trasformation. So now we are able to rewrite the equation of motion in $(r-r_0)^n$ terms, when $r \rightarrow r_0$,
+
+\begin{align}
+    0 =& \frac{(r-r_0)^2}{R^2r_0^{14}}\left[16(r_0^7-r_*^6r_0)^2 + 16(r_0^7-r_*^6r_0)(14r_0^6-2r_*^6)(r-r_0) \right. \nonumber\\
+       & \qquad \qquad \qquad  \left. + (14r_0^6-2r_*^6)^2(r-r_0)^2 + \cdots \right] \frac{\partial^2\phi(r)}{\partial r^2} \nonumber\\
+       & + \frac{(r-r_0)}{R^2r_0^{14}}\left[16(r_0^7-r_*^6r_0)^2 + 12(r_0^7-r_*^6r_0)(14r_0^6-2r_*^6)(r-r_0) \right. \nonumber\\
+       & \qquad \qquad \qquad \left. + 2(14r_0^6-2r_*^6)^2(r-r_0)^2 + \cdots \right] \frac{\partial\phi(r)}{\partial r} \nonumber\\
+       & + \left[ \frac{R^2}{r_0^2}\left(\omega+\mu_q(1-\frac{r_0^{d-2}}{r^{d-2}})\right)^2 - \frac{r-r_0}{r_0^2} \left[(4r_0^7-4r_*^6r_0)\right.\right. \nonumber\\
+       & \qquad \quad \quad \left.\left. + (14r_0^6-2r_*^6)(r-r_0) + \cdots \right] \left( \frac{R^2}{r^2}k_{\vec{x}}^2 + m^2 \right) \right] \phi(r)
+\end{align}
