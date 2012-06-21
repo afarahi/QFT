@@ -12,24 +12,57 @@ from RK_solver         import RK_solver
 #Constants
 (rs,r0,R2,kx,kt,Rm2,d,h3,h2,h1,rmax,Q,M,v,muq) = read_data('input.xml')
 #k   = 1.0
-mm    = 10
+Scale = 1
+mm    = int((rmax-r0)*Scale/5)
+Delta = d/2 + sqrt(d**2/4 + Rm2)
+pow_r = [-Delta,Delta-d]
 
-[r,fr] = RK_solver()
+[r,fr] = RK_solver(rs,r0,R2,kx,kt,Rm2,d,h3,h2,h1,rmax,Q,M,v,muq,Scale)
 
 f_real = zeros(len(fr))
 for i in range(0, len(fr)):
    f_real[i] = fr[i].real
-print f_real
 
 f_imag = zeros(len(fr))
 for i in range(0, len(fr)):
    f_imag[i] = fr[i].imag
-print f_imag
 
+for i in range(0, len(r)):
+   r[i] = r[i]-r0
 figure(1)
 semilogx(r,f_real,'b',label='Real Part')
+figure(2)
 semilogx(r,f_imag,'r',label='Imaginary Part')
 
+
+#legend(loc=1)
+#savefig('plot4.pdf')
+
+'''
+xList = r[len(r)-mm:len(r)]
+yList = fr[len(r)-mm:len(r)]     
+a = polyFit(xList,yList,pow_r)
+
+aHat = a[0]
+bHat = a[1]
+
+x = linspace(rmax-(rmax-r0)*0.5,rmax,100)
+y = aHat*x**pow_r[0] + bHat*x**pow_r[1]
+
+y_real = zeros(len(y))
+for i in range(0, len(y)):
+   y_real[i] = y[i].real
+
+y_imag = zeros(len(y))
+for i in range(0, len(y)):
+   y_imag[i] = y[i].imag
+
+figure(1)
+semilogx(x,y_real,'g',label='Real Part Curve Fit')
+figure(2)
+semilogx(x,y_imag,'g',label='Imaginary Part Curve Fir')
+'''
+show()
 
 ###########################################################################
 ###########################################################################
@@ -39,7 +72,7 @@ semilogx(r,f_imag,'r',label='Imaginary Part')
 
 #legend(loc=1)
 #savefig('plot4.pdf')
-show()
+#show()
 
 #a = GN_solver(w[len(w)-mm:len(w)],ff[len(w)-mm:len(w)],[-1,1])
 #x = linspace(0,0.5,50)
@@ -48,16 +81,16 @@ show()
 #print 'Fit equation is :%4.5f*x^3 + %4.5f*x' % (a[0],a[1])
 
 
-xList = r[len(r)-mm:len(r)]
-yList = fr[len(r)-mm:len(r)]     
+#xList = r[len(r)-mm:len(r)]
+#yList = fr[len(r)-mm:len(r)]     
 #a = polyFit(xList,yList,order=4)
 #a = polyFit(xList,yList,v,k,d)
-a = 1
-b = -1
+#a = 1
+#b = -1
 #[a,b] = Gauss_Newton_Solver(xList,yList,v,kt,d,a,b)
 
-aHat = a
-bHat = b
+#aHat = a
+#bHat = b
 #cHat = a[2]
 #dHat = a[3]
 #eHat = a[4]

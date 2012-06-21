@@ -44,8 +44,8 @@ def read_data(file_name = 'input.xml'):
    xmlTag = dom.getElementsByTagName('h')[0].toxml()
    h   = float(xmlTag.replace('<h>','').replace('</h>',''))
    h3  = h
-   h2  = 10*h
-   h1  = 100*h
+   h2  = 100*h
+   h1  = 1000*h
 
    xmlTag = dom.getElementsByTagName('rmax')[0].toxml()
    rmax= float(xmlTag.replace('<rmax>','').replace('</rmax>',''))

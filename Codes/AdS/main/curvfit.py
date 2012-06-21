@@ -3,7 +3,6 @@ from cmath             import exp, cos, sin
 from scipy.special     import *
 #from scipy.optimize    import curve_fit
 
-
 from pylab             import *
 from matplotlib.pyplot import *
 from matplotlib        import rc
@@ -86,6 +85,24 @@ def Gauss_Newton_Solver(x,y,v,k,d,a,b):
     print deltap
     return [a,b]
 
+def polyFit(xList,yList,A):
+#   '''fit the data using a least squares and polynomial'''
+#    fList = [(lambda x,n=n: x**n) for n in range(order,-1,-4)]
+    fList = [(lambda x,n=n: x**n) for n in A]
+#   fList = [(lambda x,n=n: x**(d/2.0)*J_v(n*v,k*x)) for n in (1,-1)]
+    # build row for each element in y
+    bList = []
+    A_List = []
+    for (thisX,thisY) in zip(xList,yList):
+        bList.append(thisY)
+        A_Row = [f(thisX) for f in fList]
+        A_List.append(A_Row)
+    b = matrix(bList).T
+    A = matrix(A_List)
+    w = inv(A.T*A)*A.T*b
+    return w.T.tolist()[0]
+
+
 '''
 a = 1
 b = 1
@@ -105,26 +122,4 @@ plot(x,y,'b')
 plot(x,yp,'r')
 show()
 '''
-#def polyFit(xList,yList,v,k,d):
-#   '''fit the data using a least squares and polynomial'''
-#    fList = [(lambda x,n=n: x**n) for n in range(order,-1,-4)]
-#    fList = [(lambda x,n=n: x**n) for n in (1,-1)]
-'''   fList = [(lambda x,n=n: x**(d/2.0)*J_v(n*v,k*x)) for n in (1,-1)]
-    # build row for each element in y
-    bList = []
-    A_List = []
-    for (thisX,thisY) in zip(xList,yList):
-        bList.append(thisY)
-        A_Row = [f(thisX) for f in fList]
-        A_List.append(A_Row)
-    b = matrix(bList).T
-    A = matrix(A_List)
-    w = inv(A.T*A)*A.T*b
-    return w.T.tolist()[0]
 
-def f1(x,d,v,k):
-    y = x**(d/2.0)*J_v(v,kx)
-
-def f2(x,d,v,k):
-    y = x**(d/2.0)*Y_v(v,kx)
-'''

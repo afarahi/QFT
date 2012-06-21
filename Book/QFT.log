@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.1.7)  18 JUN 2012 18:24
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.1.7)  20 JUN 2012 20:04
 entering extended mode
  %&-line parsing enabled.
 **QFT.tex
@@ -1094,7 +1094,17 @@ LaTeX Warning: Reference `sec:SimpleAdSBlackHole' on page 31 undefined on input
 
 [31
 
-] [32] [33] [34] [35] [36] [37] [38]) (./QFT.bbl [39] [40
+] [32] [33] [34] [35] [36] [37] [38]
+Overfull \hbox (14.7484pt too wide) in paragraph at lines 312--312
+[] 
+ []
+
+
+Overfull \hbox (14.1619pt too wide) in paragraph at lines 321--321
+[] 
+ []
+
+) (./QFT.bbl [39] [40
 
 ]
 
@@ -1112,8 +1122,8 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4786 strings out of 256216
- 64969 string characters out of 1917073
+ 4788 strings out of 256216
+ 64995 string characters out of 1917073
  132023 words of memory out of 1500000
  7731 multiletter control sequences out of 10000+200000
  53387 words of font info for 115 fonts, out of 1200000 for 2000
@@ -1128,9 +1138,9 @@ rw/symbol/usyr.pfb></usr/share/texmf/fonts/type1/urw/symbol/usyr.pfb></usr/shar
 e/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/time
 s/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 mf/fonts/type1/urw/times/utmri8a.pfb>
-Output written on QFT.pdf (47 pages, 270304 bytes).
+Output written on QFT.pdf (47 pages, 272062 bytes).
 PDF statistics:
- 647 PDF objects out of 1000 (max. 8388607)
- 232 named destinations out of 1000 (max. 131072)
+ 649 PDF objects out of 1000 (max. 8388607)
+ 234 named destinations out of 1000 (max. 131072)
  265 words of extra memory for PDF output out of 10000 (max. 10000000)
 

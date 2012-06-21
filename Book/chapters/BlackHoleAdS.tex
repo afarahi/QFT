@@ -168,7 +168,7 @@ Horizon dose not have a zero area so its radius is not zero, too. Equation \ref{
 By defining $Q^2 \equiv \frac{d}{d-2}r^{2d-2}_*$, near horizon we can simplify our differential equation when $r \rightarrow r_0$, and $f \rightarrow (r-r_0)\left[\frac{d}{r_0} - \frac{dr^{2d-2}_*}{r^{2d-1}_0} \right]$,
 
 \begin{equation}
-    0 = \frac{\partial^2 \phi(r)}{\partial r^2} + \frac{1}{(r-r_0)}\frac{\partial \phi(r)}{\partial r} + \frac{1}{(r-r_0)^2} \times \frac{R^4k^2_t}{d^2 \big(1-\frac{r^{2d-2}_*}{r^{2d-2}_0}\big)^2}\phi(r)
+    0 = \frac{\partial^2 \phi(r)}{\partial r^2} + \frac{1}{(r-r_0)}\frac{\partial \phi(r)}{\partial r} + \frac{1}{(r-r_0)^2} \times \frac{R^4k^2_t}{d^2r_0^2 \big(1-\frac{r^{2d-2}_*}{r^{2d-2}_0}\big)^2}\phi(r)
 \end{equation}
 
 or simply,
@@ -180,7 +180,7 @@ or simply,
 when
 
 \begin{equation}
-    \beta^2 = \frac{R^4k^2_t}{d^2\big(1-\frac{r^{2d-2}_*}{r^{2d-2}_0}\big)^2}
+    \beta^2 = \frac{R^4k^2_t}{d^2r_0^2\big(1-\frac{r^{2d-2}_*}{r^{2d-2}_0}\big)^2}
 \end{equation}
 
 And answer of this differential equation is:
@@ -201,7 +201,7 @@ The last equations are true when we are far from zero temprature. In this part, 
 And equation of motion for scalar field has the form of,
 
 \begin{align} \label{eq:equationofmotionchargeblackholeinadsZetorT}
-    0 =& \frac{1}{R^2}\left[\frac{(r-r_0)(r+r_0)(5r^4 + 5r_0^2r^2 + 2r_0^2)}{r^5}\right]\frac{\partial \phi(r)}{\partial r} \nonumber\\
+    0 =& \frac{1}{R^2}\left[\frac{(r-r_0)(r+r_0)(5r^4 + 5r_0^2r^2 + 2r_0^4)}{r^5}\right]\frac{\partial \phi(r)}{\partial r} \nonumber\\
       &+ \frac{r^2f}{R^2}\frac{\partial^2\phi(r)}{\partial r^2} + \left[ \frac{R^2}{r^2f}k^2_t-\frac{R^2}{r^2}k^2_{\vec{x}}-m^2\right]\phi(r)
 \end{align} 
 
@@ -286,7 +286,7 @@ where $\beta = \frac{R^2k_t}{d\big(1-\frac{r^{2d-2}_*}{r^{2d-2}_0}\big)}$. In th
    G(k_\mu) \equiv \frac{B(k_\mu)}{A(k_\mu)}  
 \end{equation} 
 
-Let's be more accurate close to boundary and horizon. We want to expand the equations near boundary and horizon and find more terms to make our theory more accurate. Let's do it first for boundary. But becasue we are intrested in cases which $d =4$, $4$-dimentional cases, so here we do not solve the problem for general $d$-dimentional case. We can rewrite redshift factor, 
+Let's be more accurate close to the boundary and horizon. We want to expand the equations near boundary and horizon and find more terms to make our theory more accurate. Let's do it first for boundary. But becasue we are intrested in cases which $d =4$, $4$-dimentional cases, so here we do not solve the problem for general $d$-dimentional case. We can rewrite redshift factor, 
 
 \begin{align}
     f(r) =& \frac{r-r_0}{r^6r_0^2} \left[ (4r_0^7-4r_*^6r_0) + (14r_0^6-2r_*^6)(r-r_0) + 20r_0^5(r-r_0)^2 \right. \nonumber\\
@@ -305,8 +305,35 @@ In all of our equation $\phi$ is a function of $r$, $k_{\vec{x}}$, and $k_t=\ome
 \begin{align}
     0 =& \frac{(r-r_0)^2}{R^2r_0^{14}}\left[16(r_0^7-r_*^6r_0)^2 + 16(r_0^7-r_*^6r_0)(14r_0^6-2r_*^6)(r-r_0) \right. \nonumber\\
        & \qquad \qquad \qquad  \left. + (14r_0^6-2r_*^6)^2(r-r_0)^2 + \cdots \right] \frac{\partial^2\phi(r)}{\partial r^2} \nonumber\\
-       & + \frac{(r-r_0)}{R^2r_0^{14}}\left[16(r_0^7-r_*^6r_0)^2 + 12(r_0^7-r_*^6r_0)(14r_0^6-2r_*^6)(r-r_0) \right. \nonumber\\
+       & + \frac{(r-r_0)}{R^2r_0^{14}}\left[16(r_0^7-r_*^6r_0)^2 + 12(r_0^7-r_*^6r_0)(14r_0^6-2r_*^6)(r-r_0) \right. \\
        & \qquad \qquad \qquad \left. + 2(14r_0^6-2r_*^6)^2(r-r_0)^2 + \cdots \right] \frac{\partial\phi(r)}{\partial r} \nonumber\\
-       & + \left[ \frac{R^2}{r_0^2}\left(\omega+\mu_q(1-\frac{r_0^{d-2}}{r^{d-2}})\right)^2 - \frac{r-r_0}{r_0^2} \left[(4r_0^7-4r_*^6r_0)\right.\right. \nonumber\\
-       & \qquad \quad \quad \left.\left. + (14r_0^6-2r_*^6)(r-r_0) + \cdots \right] \left( \frac{R^2}{r^2}k_{\vec{x}}^2 + m^2 \right) \right] \phi(r)
+       & + \left[ \frac{R^2}{r_0^2}\left(\omega^2+2\omega\mu_q\frac{2}{r_0}(r-r_0)+ \mu_q^2\frac{4}{r_0^2}(r-r_0)^2 +\cdots\right) \right. \nonumber\\
+       & \qquad \left. - \frac{r-r_0}{r_0^8} \left[(4r_0^7-4r_*^6r_0) + (14r_0^6-2r_*^6)(r-r_0) + \cdots \right] \left( \frac{R^2}{r_0^2}k_{\vec{x}}^2 + m^2 \right) \right] \phi(r) \nonumber
 \end{align}
+
+The solution has the form of,
+
+\begin{align}
+%    \phi(r) =& A(k_\mu,\omega)\left[e^{-i\beta\ln{(r-r_0)}}+(r-r_0)^{\alpha_1}+ (r-r_0)^{\alpha_2}\right] \nonumber\\
+%            & \qquad + B(k_\mu,\omega)\left[e^{i\beta\ln{(r-r_0)}}+(r-r_0)^{\alpha'_1} + (r-r_0)^{\alpha'_2} \right]
+    \phi(r) =& A(k_\mu,\omega)\left[e^{-i\beta\ln{(r-r_0)}}+a_1e^{-i\beta\ln{(r-r_0)}}(r-r_0)+ a_2e^{-i\beta\ln{(r-r_0)}}(r-r_0)^2\right] \nonumber\\
+            & \qquad + B(k_\mu,\omega)\left[e^{i\beta\ln{(r-r_0)}}+a_1e^{i\beta\ln{(r-r_0)}}(r-r_0)+ a_2e^{i\beta\ln{(r-r_0)}}(r-r_0)^2\right]
+\end{align}
+
+if $\tilde{M} = \frac{R^4}{r_0^2}k_{\vec{x}}^2+R^2m^2$, $\tilde{r}=\frac{r_*}{r_0}$, and $n = \mp i\beta$ then,
+
+%\begin{align}
+%    \beta  =& \frac{R^2\omega}{4r_0 \lambda}  \qquad , \qquad  && \lambda = 1 - \frac{r_*^6}{r_0^6} \\
+%    \alpha_1 , \alpha'_1  =& \frac{1}{8} \pm \sqrt{\frac{1}{64} - \frac{\lambda^2}{4}} \quad , \quad && \lambda^2 = \frac{\omega\mu_qR^4}{(1-\frac{r_*^6}{r_0^6})(7-\frac{r_*^6}{r_0^6})r_0^2} - \frac{R^2}{(14-2\frac{r_*^6}{r_0^6})}\left[\frac{R^2}{r_0^2}k_{\vec{x}}^2 + m^2\right]\nonumber\\	
+%     \alpha_2 , \alpha'_2  =& -1 \pm \sqrt{\frac{1}{4} - \lambda^2} \quad , \quad && \lambda^2 = \frac{\mu_q^2R^4}{(7-\frac{r_*^6}{r_0^6})^2r_0^2} - \frac{R^2}{(14-2\frac{r_*^6}{r_0^6})}\left[\frac{R^2}{r_0^2}k_{\vec{x}}^2 + m^2\right]\nonumber
+%\end{align}
+
+\begin{align}
+    a_1 =& -\frac{8(7-\tilde{r}^6)(n^2-n)+6(7-\tilde{r}^6)n+\frac{\omega\mu_qR^4}{r_0^2(1-\tilde{r}^6)}-\tilde{M}}{16(n^2+n)+16(n+1)+\frac{R^4\omega^2}{r_0^2(1-\tilde{r}^6)}} \times \frac{4}{r_0} \nonumber\\      
+%    
+    a_2 =& -\left[4(7-\tilde{r}^6)^2(n^2-n) + 8(7-\tilde{r}^6)^2n + 4\frac{R^4\mu_q^2}{r_0^2} - 2(7-\tilde{r}^6)\tilde{M} \right.\nonumber\\
+         & \qquad \left. + 4r_0a_1\left((1-\tilde{r}^6)(7-\tilde{r}^6)(8n^2+14n+6) + \omega\mu_q\frac{R^4}{r_0^2} - (1-\tilde{r}^6)\tilde{M} \right) \right] \nonumber\\
+         & \times \left[ 16r_0^2(1-\tilde{r}^6)^2(n^2 + 4n + 4) + \omega^2R^4 \right]^{-1} 
+\end{align}
+
+We can continue whay we have done above to find the higher order temrs of $\phi(r)$ near horizon. For our perpose these terms are more than enough.
