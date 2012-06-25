@@ -329,11 +329,30 @@ if $\tilde{M} = \frac{R^4}{r_0^2}k_{\vec{x}}^2+R^2m^2$, $\tilde{r}=\frac{r_*}{r_
 %\end{align}
 
 \begin{align}
-    a_1 =& -\frac{8(7-\tilde{r}^6)(n^2-n)+6(7-\tilde{r}^6)n+\frac{\omega\mu_qR^4}{r_0^2(1-\tilde{r}^6)}-\tilde{M}}{16(n^2+n)+16(n+1)+\frac{R^4\omega^2}{r_0^2(1-\tilde{r}^6)}} \times \frac{4}{r_0} \nonumber\\      
-%    
+    a_1 =& -\frac{8(7-\tilde{r}^6)(n^2-n)+6(7-\tilde{r}^6)n+\frac{\omega\mu_qR^4}{r_0^2(1-\tilde{r}^6)}-\tilde{M}}{16(n^2+n)+16(n+1)+\frac{R^4\omega^2}{r_0^2(1-\tilde{r}^6)}} \times \frac{4}{r_0} \nonumber\\    
     a_2 =& -\left[4(7-\tilde{r}^6)^2(n^2-n) + 8(7-\tilde{r}^6)^2n + 4\frac{R^4\mu_q^2}{r_0^2} - 2(7-\tilde{r}^6)\tilde{M} \right.\nonumber\\
          & \qquad \left. + 4r_0a_1\left((1-\tilde{r}^6)(7-\tilde{r}^6)(8n^2+14n+6) + \omega\mu_q\frac{R^4}{r_0^2} - (1-\tilde{r}^6)\tilde{M} \right) \right] \nonumber\\
          & \times \left[ 16r_0^2(1-\tilde{r}^6)^2(n^2 + 4n + 4) + \omega^2R^4 \right]^{-1} 
 \end{align}
 
-We can continue whay we have done above to find the higher order temrs of $\phi(r)$ near horizon. For our perpose these terms are more than enough.
+We can continue whay we have done above to find the higher order temrs of $\phi(r)$ near horizon. For our perpose these terms are more than enough. For the next step we are interested to calculate more terms near boundary. So let's look at equation of motion one more time when we are in $n$-dimentional space,
+
+\begin{align}
+    0 =& \left[r^4 - \frac{2M}{r^{d-4}} + \frac{(d-3)2Q^2}{r^{2d-6}} + \frac{M^2}{r^{2d-4}} - \frac{Q^2M}{r^{3d-6}} + \frac{(d-3)Q^4}{r^{4d-8}}\right] \frac{\partial^2\phi(r)}{\partial r^2} \nonumber\\
+       & \left[(d+1)r^3 - \frac{(d+2)M}{r^{d-3}} + \frac{4Q^2}{r^{2d-5}} + \frac{(d-4)MQ^2}{r^{3d-3}} + \frac{M^2}{r^{2d-3}} - \frac{(d-3)Q^4}{r^{3d-5}} \right] \frac{\partial\phi(r)}{\partial r} \nonumber\\
+       & \left[\left(R^4 \left(k_t +\mu_q(1-\frac{r_0^{d-2}}{r^{d-2}})\right)^2 - R^4k_{\vec{x}}^2\right)-R^2m^2\left(r^2 + \frac{Q^2}{r^{2d}} - \frac{M}{r^{d-2}}\right)\right] \phi(r)
+\end{align}
+
+For case $d =4$ answer has the form of, 
+
+\begin{align}
+    \phi(r) =& A(k_\mu,\omega)r^{\Delta-4}\left[1 + a_1\frac{1}{r^2} + a_2\frac{1}{r^4} + \cdots\right]\nonumber\\
+             & B(k_\mu,\omega)r^{-\Delta} \left[1 + a'_1\frac{1}{r^2}+ a'_2\frac{1}{r^4}+ \cdots\right]
+\end{align}
+
+where, $n =\Delta-d$ and $-\Delta$ respectivly for $a_1$, $a_2$ and $a'_1$, $a'_2$.
+
+\begin{align}
+    a_1 , a'_1 =& -\frac{R^4(k_t+\mu_q)^2 - R^4k_{\vec{x}}}{n^2-4- R^2m^2}\nonumber\\
+    a_2 , a'_2 =&  \frac{2M(n^2+2n)-a_2\left(R^4(k_t+\mu_q)^2 - R^4k_{\vec{x}}\right) + MR^2m^2}{n^2-4n - R^2m^2}
+\end{align}
