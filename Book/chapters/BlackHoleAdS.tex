@@ -147,13 +147,13 @@ Now we are able to write the euqation of motion and solve it for scalar field, w
 
 Now we are ready to study the behaviour of our wave function near horizon, $r \rightarrow r_0$, and near boundary, $r \rightarrow \infty$. For $d > 1$, near boundary redshift factor $f$ approaches to $1$ and the equation \ref{eq:equationofmotionchargeblackholeinads} would be simplified as,
 
-\begin{equation}
+\begin{equation} \label{eq:appsolutoinnearboundary}
     0 = r^2\frac{\partial^2\phi(r)}{\partial r^2} + (d+1)r\frac{\partial \phi(r)}{\partial r} - R^2m^2\phi(r)
 \end{equation}
 
 By substituting $\phi(r) = r^\alpha$ in our differential equation we get, $0 = \alpha^2 + \alpha d -R^2m^2$. So the answer near boundary is looks like,
 
-\begin{equation}
+\begin{equation} \label{eq:appsolutoinnearhorizon}
     \phi(r) = A(k_\mu)r^{\Delta-d} + B(k_\mu)r^{-\Delta} \quad , \quad \Delta = \frac{d}{2} + \sqrt{\frac{d^2}{4} + R^2m^2}
 \end{equation}
 
@@ -189,7 +189,7 @@ And answer of this differential equation is:
     \phi(r) = A(r-r_0)^{ \sqrt{ - \beta^2}} + B(r-r_0)^{- \sqrt{-\beta^2}} = Ae^{ i\beta \ln{(r-r_0)}} + Be^{- i\beta\ln{(r-r_0)}} 
 \end{equation}
 
-\section{zero temperature}
+\section{Zero Temperature}
 
 The last equations are true when we are far from zero temprature. In this part, we are dealing with zero temperature, and then we will study these equations in low temprature, close to zero temprature. Equation \ref{eq:redshiftfactorr0r*} is the red shift factor, $f$, in finit temprature, but in zero temprature its form changes and, as we will see, we get factor of $(r-r_0)^2$. For simplicity, for our purpose we just focus on case $d = 4$, $3$ conventional space direction and one conventional time direction and an other spacelike direction for having $AdS_5/CFT_4$ theory. Zero temprature is when $r_0 = r_*$, so by substituting $Q = \frac{d}{d-2}r_0^{2d-2} $ for red shift factor one gets,
 
@@ -223,7 +223,7 @@ $e^{\frac{i\beta}{r-r_0}}$ is incoming wave which is going through black hole an
    G(k_\mu) \equiv \frac{B(k_\mu)}{A(k_\mu)} \quad , \quad \phi(r,k_\mu) = A(k_\mu)r^{\Delta-d} + B(k_\mu)r^{-\Delta}  
 \end{equation} 
 
-\section{Charged Scalar Field in Charged Black Hole}
+\section{Charged Scalar Field in Charged Black Hole} \label{sec:ChargedScalarFieldinChargedBlackHole}
 
 In this section we try to study behaviour of charged scalar field with charged black hole geometry in AdS space. Then we will learn more about the low friquencies, and then one should suggest low friquency limit to avoid breaking of the theory. Low friquency is breaking because of infinit number of degree of freedom. But let's first look at the action of charged scalar field
 
@@ -314,19 +314,11 @@ In all of our equation $\phi$ is a function of $r$, $k_{\vec{x}}$, and $k_t=\ome
 The solution has the form of,
 
 \begin{align}
-%    \phi(r) =& A(k_\mu,\omega)\left[e^{-i\beta\ln{(r-r_0)}}+(r-r_0)^{\alpha_1}+ (r-r_0)^{\alpha_2}\right] \nonumber\\
-%            & \qquad + B(k_\mu,\omega)\left[e^{i\beta\ln{(r-r_0)}}+(r-r_0)^{\alpha'_1} + (r-r_0)^{\alpha'_2} \right]
     \phi(r) =& A(k_\mu,\omega)\left[e^{-i\beta\ln{(r-r_0)}}+a_1e^{-i\beta\ln{(r-r_0)}}(r-r_0)+ a_2e^{-i\beta\ln{(r-r_0)}}(r-r_0)^2\right] \nonumber\\
             & \qquad + B(k_\mu,\omega)\left[e^{i\beta\ln{(r-r_0)}}+a_1e^{i\beta\ln{(r-r_0)}}(r-r_0)+ a_2e^{i\beta\ln{(r-r_0)}}(r-r_0)^2\right]
 \end{align}
 
 if $\tilde{M} = \frac{R^4}{r_0^2}k_{\vec{x}}^2+R^2m^2$, $\tilde{r}=\frac{r_*}{r_0}$, and $n = \mp i\beta$ then,
-
-%\begin{align}
-%    \beta  =& \frac{R^2\omega}{4r_0 \lambda}  \qquad , \qquad  && \lambda = 1 - \frac{r_*^6}{r_0^6} \\
-%    \alpha_1 , \alpha'_1  =& \frac{1}{8} \pm \sqrt{\frac{1}{64} - \frac{\lambda^2}{4}} \quad , \quad && \lambda^2 = \frac{\omega\mu_qR^4}{(1-\frac{r_*^6}{r_0^6})(7-\frac{r_*^6}{r_0^6})r_0^2} - \frac{R^2}{(14-2\frac{r_*^6}{r_0^6})}\left[\frac{R^2}{r_0^2}k_{\vec{x}}^2 + m^2\right]\nonumber\\	
-%     \alpha_2 , \alpha'_2  =& -1 \pm \sqrt{\frac{1}{4} - \lambda^2} \quad , \quad && \lambda^2 = \frac{\mu_q^2R^4}{(7-\frac{r_*^6}{r_0^6})^2r_0^2} - \frac{R^2}{(14-2\frac{r_*^6}{r_0^6})}\left[\frac{R^2}{r_0^2}k_{\vec{x}}^2 + m^2\right]\nonumber
-%\end{align}
 
 \begin{align}
     a_1 =& -\frac{8(7-\tilde{r}^6)(n^2-n)+6(7-\tilde{r}^6)n+\frac{\omega\mu_qR^4}{r_0^2(1-\tilde{r}^6)}-\tilde{M}}{16(n^2+n)+16(n+1)+\frac{R^4\omega^2}{r_0^2(1-\tilde{r}^6)}} \times \frac{4}{r_0} \nonumber\\    
@@ -356,3 +348,104 @@ where, $n =\Delta-d$ and $-\Delta$ respectivly for $a_1$, $a_2$ and $a'_1$, $a'_
     a_1 , a'_1 =& -\frac{R^4(k_t+\mu_q)^2 - R^4k_{\vec{x}}}{n^2-4- R^2m^2}\nonumber\\
     a_2 , a'_2 =&  \frac{2M(n^2+2n)-a_2\left(R^4(k_t+\mu_q)^2 - R^4k_{\vec{x}}\right) + MR^2m^2}{n^2-4n - R^2m^2}
 \end{align}
+
+
+\subsection{Exeptional Cases}
+In this part we talk about some exeptional cases, for example when $\Delta-d=-\Delta$ then our both independent answer become dependent and they are not different solutions of our differential equation. And we know that for second order differential equation we have to get two independent solution.\\
+
+So for case $\Delta-d=-\Delta$, or in other word $\Delta = \frac{d}{2}$ or $-\frac{d^2}{4} = R^2m^2$, our solution bear boundary has the form of, 
+
+\begin{equation}
+   \phi(r) = A(k_{\mu},\omega)r^{-\Delta} + B(k_{\mu},\omega)r^{-\Delta}~\ln{(r)}
+\end{equation}
+
+and for more general cases, when we are looking for more terms near boundary and $\Delta=k$ and $k$ in an integer number and $d = 4$, answer has the form of,
+
+\begin{align}
+   \phi(r) =&~A_1(k_{\mu},\omega)r^{\Delta-4} + r^{\Delta-6}\left[A_{21}(k_{\mu},\omega) + A_{22}(k_{\mu},\omega)~\ln{(r)}\right] \nonumber\\
+    &+ r^{\Delta-8}\left[A_{31}(k_{\mu},\omega) + A_{32}(k_{\mu},\omega)~\ln{(r)} + A_{33}(k_{\mu},\omega)~\ln^2{(r)}\right] \nonumber\\
+    &+ \cdots 
+\end{align}
+
+which we have just two independent coefficent, lets say $A_1$ and $A_{21}$, and the other are dependent to these two coefficient.
+
+\section{Numerical Approach}
+
+Equation of motion of form \ref{eq:equationofmotionchargeblackholeinadsinchargescalarfield} is hard, or in other word is impossible, to solve analyticaly so far, cunsequently for studying the features of Green function one needs to solve the motion equation by numerical methods. In this section, we try to introduce an appropriate numerical method for solving this equation and then we use that method for studying the Green function under different conditions. Our aim is developing a numerical method which use near horizon condition to calculate the Green function.\\
+
+One of the best numerical method with hight accuracy is Runge-Kutta method. For the first time, this technique were developed and used by the German mathematicians C. Runge and M.W. Kutta. Let's define our initial value problem as following,
+
+\begin{equation}
+    \phi(k_\mu,\omega,r_i) = \phi_i \quad , \quad \frac{\partial \phi(k_\mu,\omega,r_i)}{\partial r} = \dot{\phi}_i
+\end{equation}
+
+For initial condition we want to start from horizon, or it is better to say near horizon, and calculate the Green funtion. In section \ref{sec:ChargedScalarFieldinChargedBlackHole} we learned that the solution near horizon has the form of,
+
+\begin{align}
+    \phi(k_\mu,\omega,r) =& A(k_\mu,\omega)e^{-i\beta\ln{(r-r_0)}}\left[1+a_1(r-r_0)+ a_2(r-r_0)^2 + \cdots \right] \nonumber\\
+             & + B(k_\mu,\omega)e^{i\beta\ln{(r-r_0)}}\left[1+a_1(r-r_0)+ a_2(r-r_0)^2 + \cdots \right]
+\end{align}
+
+Exactly in $r=r_0$ the fuction is not difined so one should start somewhere close to $r_0$. We will start from point $r = r_0 + h$, lets call it start point, as our initial condition. So for initial condition we have, 
+
+\begin{align}
+    \phi_i(k_\mu,\omega,r_0 + h) =& A(k_\mu,\omega)e^{-i\beta\ln{(h)}}\left[1+a_1(h)+ a_2(h)^2 + \cdots \right] \nonumber\\
+             & + B(k_\mu,\omega)e^{i\beta\ln{(h)}}\left[1+a_1(h)+ a_2(h)^2 + \cdots \right] \nonumber\\
+    \dot{\phi}_i(k_\mu,\omega,r_0 + h) =& -i\beta A(k_\mu,\omega)\frac{e^{-i\beta\ln{(h)}}}{h}\left[1+a_1(h)+ a_2(h)^2 + \cdots \right] \nonumber\\
+             & + i\beta B(k_\mu,\omega)\frac{e^{i\beta\ln{(h)}}}{h}\left[1+a_1(h)+ a_2(h)^2 + \cdots \right] \nonumber\\
+             & + A(k_\mu,\omega)e^{-i\beta\ln{(h)}}\left[a_1+ 2a_2(h) + \cdots \right] \nonumber\\
+             & + B(k_\mu,\omega)e^{i\beta\ln{(h)}}\left[a_1+ 2a_2(h) + \cdots \right]
+\end{align}
+
+We will use Runge-Kutta scheme to find the value of $\phi(k_\mu,\omega,r)$ in each point. We will start from start point and continue going forward in $r$ direction untile we get to the aim point, let's say $r_f$. In each step we use forth order Runge-Kutta scheme to find the next point. If we have the derivative of $n^{th}$ point then we are able to use the following formula to calculate the $(n+1)^{th}$ point,
+
+\begin{align}
+    \phi_{n+1}       &= \phi_n  + \frac{k_1+2k_2+2k_3+k_4}{6} \nonumber\\
+    \dot{\phi}_{n+1} &= \dot{\phi}_n + \frac{l_1+2l_2+2l_3+l_4}{6}
+\end{align}
+
+where,
+
+\begin{align}
+    RH_{cons}(r,\phi,\dot{\phi}) &= \frac{\partial^2\phi}{\partial r^2} \nonumber\\
+              &= - \frac{1}{f}\left[\frac{d+1}{r}-\frac{(d-3)Q^2}{r^{2d-1}}-\frac{M}{r^{d+1}}\right]\dot{\phi} \nonumber\\ 
+              & - \left[\frac{R^4}{r^4f^2}\left(k_t + \mu_q(1-\frac{r_0^{d-2}}{r^{d-2}})\right)^2-\frac{R^4}{r^4f}k_{\vec{x}}-\frac{R^2m^2}{r^2f}\right]\phi \nonumber\\
+    l_1 &= h~RH_{cons}(r_n,\phi_n,\dot{\phi}_n) \nonumber\\
+    k_1 &= h~\dot{\phi_n} \nonumber\\
+    l_2 &= h~RH_{cons}( r_n+0.5h , \phi_n+0.5k_1 , \dot{\phi}_n+0.5l_1) \nonumber\\
+    k_2 &= h~(\dot{\phi}_n+0.5l_1) \nonumber\\
+    l_3 &= h~RH_{cons}( r_n+0.5h , \phi_n+0.5k_2 , \dot{\phi}_n+0.5l_2) \nonumber\\
+    k_3 &= h~(\dot{\phi}_n+0.5l_2) \nonumber\\
+    l_4 &= h~RH_{cons}( r_n+h , \phi_n+k_3 , \dot{\phi}+l_3) \nonumber\\ 
+    k_4 &= h~(\dot{\phi}+0.5l_3) \nonumber\\
+\end{align}
+
+This method is $4^{th}$ order Runge-Kutta method, say RK4, and its error is $\frac{1}{120}h^5\phi^{5}(\xi)$ which $\xi$ is between $r_n$ and $r_{n+1}$, and $\phi^{5}(\xi)$ is $5^{th}$ derivative of function $\phi$.
+
+\subsection{Adaptive grid size}
+
+In Runge-Kutta scheme it is easy to change the grid size in each step of solution. In each step we can use a independent grid size of $h$, which means that this grid size do not depent on its last grid size and its following grid size. In prolem like this which in some rigions like near horizon the equations has flactuating features for not loosing the details and get the approprate solutions, one need to have a small grid size and close to boundary which it is a smooth function without any flactuating behaviour small grid size slow down the computational process and make the code time expensive. So one need to find a way to deal with the grid size regard to feature of our function, make the grid size small when we have a fluctuations and/or make the grid size when we have a smooth function. We can change our varibale to new ones to make our function smooth in all regions to use the same grid size. Always this method is not working because it is hard to find an appropriate coordinates to change our function to a simple smooth function. The best way is that introduce a way to deal with grid size directly. In each step it would be good to find an appropriate grid size independently and apply that grid size for that specific step. And we do the same process for each step, then we can controle the error of our answer by changing the grid size into appropriate one.\\
+
+First of all, we are looking at the error of each step. As we may know the error of $4^{th}$ order Runge-Kutta is,
+
+\begin{equation} \label{eq:RK4err}
+    err = \frac{1}{120}h^5\phi^{5}(\xi) \qquad , \qquad \phi^{5}(\xi) = \frac{\partial^5\phi(r)}{\partial r^5}
+\end{equation}
+
+so we can consider specific error for each step and then we are able to calculate step size. The problem is that we don't know exactly the value of $\phi^{5}(\xi)$. In maximume $\phi^{5}(\xi)$ is the maximum of $5^{th}$ derivative of $\phi(\xi)$ between $r_{i}$ and $r_{i+1}$, but even we don't know the maximume value of $\phi^{5}(\xi)$. So we need to define another constrain for $h$. We know that for this specific differential equations the solution near horizon is flactuating so rapidly but as it going forward to infinity it gets smoother, by smoother we mean that its higher derivative gets smaller and smaller. So approximatly it is possible to find the maximume of $5^{th}$ derivative by finding the $5^{th}$ derivative of approximate solution near horizon. By useing equation \ref{eq:appsolutoinnearhorizon} and considering incomeing wave for $5^{th}$ derivative we gets,
+
+\begin{equation} \label{eq:nearhorizon5thdervitaive}
+    \frac{(10\beta^2+5\beta^4) + (24\beta+\beta^5)i}{(r-r_0)^5}~e^{-i\beta~ln(r-r_0)}
+\end{equation}
+
+If we start our solution from $r_0+h_1$ then from equation \label{eq:nearhorizon5thdervitaive} it would be obvious that maximume of $5^{th}$ derivative is $\sqrt{(10\beta^2+5\beta^4)^2 + (24\beta+\beta^5)^2}~h_1^{-5}$. We can use this fomula and equation \ref{eq:RK4err} to calculate the step size $h_*$ near horizon. So for $h$ we get:
+
+\begin{equation}
+    h_* = h_1~\left[\frac{120~err}{\sqrt{(10\beta^2+5\beta^4)^2 + (24\beta+\beta^5)^2}}\right]^{1/5}
+\end{equation}
+
+and for all of our domain we can calculate the grid size $h$,
+
+\begin{equation}
+    h = min(h_* , \left[\frac{120~err}{\sqrt{(10\beta^2+5\beta^4)^2 + (24\beta+\beta^5)^2}}\right]^{1/5} , 1.0) = 
+\end{equation}

@@ -27,5 +27,8 @@
 \contentsline {chapter}{\numberline {3}Black Hole in Anti de Sitter}{31}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduction}{31}{section.3.1}
 \contentsline {section}{\numberline {3.2}Charged Black Hole in AdS}{31}{section.3.2}
-\contentsline {section}{\numberline {3.3}zero temperature}{35}{section.3.3}
+\contentsline {section}{\numberline {3.3}Zero Temperature}{35}{section.3.3}
 \contentsline {section}{\numberline {3.4}Charged Scalar Field in Charged Black Hole}{37}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Exeptional Cases}{40}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}Numerical Approach}{41}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Adaptive grid size}{43}{subsection.3.5.1}

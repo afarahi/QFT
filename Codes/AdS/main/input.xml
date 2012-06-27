@@ -15,7 +15,7 @@
   <dimention>4</dimention>
   <grid_size>
     <h>1e-4</h>
-    <rmax>1000.0</rmax>
+    <rmax>100.0</rmax>
   </grid_size>
 </data>
 

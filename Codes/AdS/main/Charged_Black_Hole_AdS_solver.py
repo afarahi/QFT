@@ -7,7 +7,7 @@ from matplotlib        import rc
 from cmath             import exp, cos, sin
 from curvfit           import *
 from readdata          import read_data
-from RK_solver         import RK_solver
+from RK_solver         import RK4_solver, Adaptive_RK4_solver
 
 #Constants
 (rs,r0,R2,kx,kt,Rm2,d,h3,h2,h1,rmax,Q,M,v,muq) = read_data('input.xml')
@@ -17,8 +17,87 @@ mm    = int((rmax-r0)*Scale/5)
 Delta = d/2 + sqrt(d**2/4 + Rm2)
 pow_r = [-Delta,Delta-d]
 
-[r,fr] = RK_solver(rs,r0,R2,kx,kt,Rm2,d,h3,h2,h1,rmax,Q,M,v,muq,Scale)
+err = 1e-9
+[r,fr,tot_err]= Adaptive_RK4_solver(rs,r0,R2,kx,kt,Rm2,d,rmax,Q,M,v,muq,err)
+print "Total Error is " , tot_err
 
+f_real = zeros(len(fr))
+for i in range(0, len(fr)):
+   f_real[i] = fr[i].real
+
+f_imag = zeros(len(fr))
+for i in range(0, len(fr)):
+   f_imag[i] = fr[i].imag
+
+for i in range(0, len(r)):
+   r[i] = r[i]-r0
+figure(1)
+semilogx(r,f_real,'g',label='Real Part')
+figure(2)
+semilogx(r,f_imag,'g',label='Imaginary Part')
+
+err = 1e-12
+[r,fr,tot_err]= Adaptive_RK4_solver(rs,r0,R2,kx,kt,Rm2,d,rmax,Q,M,v,muq,err)
+print "Total Error is " , tot_err
+
+f_real = zeros(len(fr))
+for i in range(0, len(fr)):
+   f_real[i] = fr[i].real
+
+f_imag = zeros(len(fr))
+for i in range(0, len(fr)):
+   f_imag[i] = fr[i].imag
+
+for i in range(0, len(r)):
+   r[i] = r[i]-r0
+figure(1)
+semilogx(r,f_real,'m',label='Real Part')
+figure(2)
+semilogx(r,f_imag,'m',label='Imaginary Part')
+
+
+err = 1e-15
+[r,fr,tot_err]= Adaptive_RK4_solver(rs,r0,R2,kx,kt,Rm2,d,rmax,Q,M,v,muq,err)
+print "Total Error is " , tot_err
+
+f_real = zeros(len(fr))
+for i in range(0, len(fr)):
+   f_real[i] = fr[i].real
+
+f_imag = zeros(len(fr))
+for i in range(0, len(fr)):
+   f_imag[i] = fr[i].imag
+
+for i in range(0, len(r)):
+   r[i] = r[i]-r0
+figure(1)
+semilogx(r,f_real,'m',label='Real Part')
+figure(2)
+semilogx(r,f_imag,'m',label='Imaginary Part')
+
+
+err = 1e-18
+[r,fr,tot_err]= Adaptive_RK4_solver(rs,r0,R2,kx,kt,Rm2,d,rmax,Q,M,v,muq,err)
+print "Total Error is " , tot_err
+
+f_real = zeros(len(fr))
+for i in range(0, len(fr)):
+   f_real[i] = fr[i].real
+
+f_imag = zeros(len(fr))
+for i in range(0, len(fr)):
+   f_imag[i] = fr[i].imag
+
+for i in range(0, len(r)):
+   r[i] = r[i]-r0
+figure(1)
+semilogx(r,f_real,'m',label='Real Part')
+figure(2)
+semilogx(r,f_imag,'m',label='Imaginary Part')
+
+
+'''
+[r,fr] = RK4_solver(rs,r0,R2,kx,kt,Rm2,d,h3,h2,h1,rmax,Q,M,v,muq,1)
 f_real = zeros(len(fr))
 for i in range(0, len(fr)):
    f_real[i] = fr[i].real
@@ -32,8 +111,8 @@ for i in range(0, len(r)):
 figure(1)
 semilogx(r,f_real,'b',label='Real Part')
 figure(2)
-semilogx(r,f_imag,'r',label='Imaginary Part')
-
+semilogx(r,f_imag,'b',label='Imaginary Part')
+'''
 
 #legend(loc=1)
 #savefig('plot4.pdf')
