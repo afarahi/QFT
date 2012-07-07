@@ -32,11 +32,11 @@ for i in range(0, len(fr)):
 for i in range(0, len(r)):
    r[i] = r[i]-r0
 figure(1)
-semilogx(r,f_real,'g',label='Real Part')
+semilogx(r,f_real,'g',label='Real Part, ERR=%f'%(err))
 figure(2)
-semilogx(r,f_imag,'g',label='Imaginary Part')
+semilogx(r,f_imag,'g',label='Imaginary Part, ERR=%f'%(err))
 
-err = 1e-12
+err = 1e-3
 [r,fr,tot_err]= Adaptive_RK4_solver(rs,r0,R2,kx,kt,Rm2,d,rmax,Q,M,v,muq,err)
 print "Total Error is " , tot_err
 
@@ -51,12 +51,12 @@ for i in range(0, len(fr)):
 for i in range(0, len(r)):
    r[i] = r[i]-r0
 figure(1)
-semilogx(r,f_real,'m',label='Real Part')
+semilogx(r,f_real,'b',label='Real Part, ERR=%f'%(err))
 figure(2)
-semilogx(r,f_imag,'m',label='Imaginary Part')
+semilogx(r,f_imag,'b',label='Imaginary Part, ERR=%f'%(err))
 
 
-err = 1e-15
+err = 1e-6
 [r,fr,tot_err]= Adaptive_RK4_solver(rs,r0,R2,kx,kt,Rm2,d,rmax,Q,M,v,muq,err)
 print "Total Error is " , tot_err
 
@@ -71,12 +71,12 @@ for i in range(0, len(fr)):
 for i in range(0, len(r)):
    r[i] = r[i]-r0
 figure(1)
-semilogx(r,f_real,'m',label='Real Part')
+semilogx(r,f_real,'r',label='Real Part, ERR=%f'%(err))
 figure(2)
-semilogx(r,f_imag,'m',label='Imaginary Part')
+semilogx(r,f_imag,'r',label='Imaginary Part, ERR=%f'%(err))
 
 
-err = 1e-18
+err = 1e-10
 [r,fr,tot_err]= Adaptive_RK4_solver(rs,r0,R2,kx,kt,Rm2,d,rmax,Q,M,v,muq,err)
 print "Total Error is " , tot_err
 
@@ -91,10 +91,10 @@ for i in range(0, len(fr)):
 for i in range(0, len(r)):
    r[i] = r[i]-r0
 figure(1)
-semilogx(r,f_real,'m',label='Real Part')
+semilogx(r,f_real,'b',label='Real Part, ERR=%f'%(err))
 figure(2)
-semilogx(r,f_imag,'m',label='Imaginary Part')
-
+semilogx(r,f_imag,'b',label='Imaginary Part, ERR=%f'%(err))
+legend(loc=1)
 
 '''
 [r,fr] = RK4_solver(rs,r0,R2,kx,kt,Rm2,d,h3,h2,h1,rmax,Q,M,v,muq,1)

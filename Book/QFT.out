@@ -24,7 +24,7 @@
 \BOOKMARK [0][-]{chapter.2}{Scalar Field in AdS space}{}
 \BOOKMARK [1][-]{section.2.1}{n-dimentional AdS space}{chapter.2}
 \BOOKMARK [1][-]{section.2.2}{Black hole in Anti de Sitter space}{chapter.2}
-\BOOKMARK [0][-]{chapter.3}{Black Hole in Anti de Sitter}{}
+\BOOKMARK [0][-]{chapter.3}{Scalar Field in Black Hole Anti de Sitter}{}
 \BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}
 \BOOKMARK [1][-]{section.3.2}{Charged Black Hole in AdS}{chapter.3}
 \BOOKMARK [1][-]{section.3.3}{Zero Temperature}{chapter.3}
@@ -32,3 +32,13 @@
 \BOOKMARK [2][-]{subsection.3.4.1}{Exeptional Cases}{section.3.4}
 \BOOKMARK [1][-]{section.3.5}{Numerical Approach}{chapter.3}
 \BOOKMARK [2][-]{subsection.3.5.1}{Adaptive grid size}{section.3.5}
+\BOOKMARK [0][-]{chapter.4}{Dirac Equation in Black Hole AdS}{}
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Lorentz Lie Algebra}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.2.1}{Gamma matrices in n-dimentional space}{section.4.2}
+\BOOKMARK [2][-]{subsection.4.2.2}{Gamma matrices in Curved space-time}{section.4.2}
+\BOOKMARK [1][-]{section.4.3}{Dirac Equation for curved space-time}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{NOT RELATED TO THE PROJECT}{}
+\BOOKMARK [1][-]{section.5.1}{SELF NOTES FOR MY RECORD}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.1.1}{Is the nature Lorentz Invariance ?}{section.5.1}
+\BOOKMARK [2][-]{subsection.5.1.2}{Black Rings in 5-dimention}{section.5.1}
