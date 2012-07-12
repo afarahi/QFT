@@ -1,0 +1,434 @@
+\chapter{Dirac Equation in Black Hole AdS}
+\label{ch:DiracAdSBlackHole}
+
+\section{Introduction}
+
+In chapter \ref{ch:AdSBlackHole} we learned how to deal with Scalar Field in Black Hole AdS geometry. Now, in the following chapter we go farther and will look at Dirac Equation and its solution in Black Hole AdS geometry, whose description gove rise to fermionic spin $1/2$ systems. First we will look at Lorentz Lie Algebra which is creating the basis for our discussion then try to derive dirac equation of motion for Black Hole AdS and then we will learn more about the behaviour of the wave function solution near boundary and close to horizon, and for the next step we will try to solve the equation of motion completely, by applying appropriate numerical method to our proble. At the end we bring our results and discuss about them.\\
+
+\section{Lorentz Lie Algebra} \label{sec:LorentzLieAlgebra}
+Nature is Lorentz invariance so the realistic theory is a theory that obey Lorentz invariance.We are just interested in theories that hold Lorentz transofomation, and consequently obeys Lorentz Lie Algebra. Field can be in form of scalars, vectors, or in more comlicated cases tensors. We learned how to deal with Lorentz transformation in scalar Fields and as we have seen Klein-Gordon equation is scalar equation for discribing the motion of waves with zero spin that is Lorentz invariance. So for studying systems with zero spins Klein-Gordon equation can be an appropriate choice. For spin $1/2$ systems, fermionic systems, Dirac Equation is our choice because as we will see it is hold after Lorents trasformation. We get back to this issue later. Now we have to focouse more one Lorentz trasformation for the vector field, because fermionic systems are discribed with vector fields. Assume that $\phi^{\mu}$'s are component of vector $\Phi$, then for vectore $\Phi$ Lorentz transformation has the form of,
+
+\begin{equation}
+   \phi^{\mu} \rightarrow \phi'^{\mu}(x') = \Lambda^{\mu}_{~~\nu} \phi^{\nu}(\Lambda^{-1}x)
+\end{equation}      
+
+note that $x$ is a vector itself, it means that each component of vector $\phi^{\mu}(x)$ is a fucntion of vector $x$. In $4$-dimentional case $x = (x^0,x^1,x^2,x^3)$.\\
+
+For creating a Lie Algebra we need to to look at infinitestimal trasformation. For infinitestiamal Lorentz trasformation we have,
+
+\begin{equation}
+    \Lambda^{\mu}_{~~\nu} = \delta^{\mu}_{~~\nu} + \omega^{\mu}_{~~\nu}
+\end{equation}
+
+and for general cases we can define our Algebra,
+
+\begin{equation} \label{eq:LorentzLieAlgebra}
+   \left[\mathcal{M}^{\mu\nu} , \mathcal{M}^{\rho\sigma}\right] = i\left[g^{\nu\rho}\mathcal{M}^{\mu\sigma} - g^{\mu\rho}\mathcal{M}^{\nu\sigma} + g^{\mu\sigma}\mathcal{M}^{\nu\rho} - g^{\nu\sigma}\mathcal{M}^{\mu\rho} \right]
+\end{equation}
+
+then Lorentz trasformation can be expressed  as exponential,
+
+\begin{equation}
+   \Lambda = \exp{(-i\theta_{\mu\nu}\mathcal{M}^{\mu\nu})}
+\end{equation}
+
+where $\mathcal{M}^{\mu\nu}$'s are basis elements of Lorentz trasfomation group and $\theta_{\mu\nu}$'s are some numbers which tells what kind of Lorentz trasformation we are doing, let's say for each basis what value we assigned. For example we can say that for boost basis in $x^1$ direction we speed up the coordinate with $v$, or the coordiantes in $(x,y)$ plain are rotated clockwise with $\omega$.\\
+
+It was the representation of Lorentz trasfomation in finite-dimention. Now, we are intrested to find the representation corresponding to spin $1/2$. For that perpose we use Dirac Algebra. The Dirac Algebra says,
+
+\begin{equation} \label{eq:DiracAlgebra}
+   \{\gamma^{\mu} , \gamma^{\nu}\} \equiv \gamma^{\mu}\gamma^{\nu} + \gamma^{\nu}\gamma^{\nu} = 2g^{\mu\nu} \times \mathbf{1}_{n\times n}
+\end{equation}
+
+and spin operator is defined by,
+
+\begin{equation} \label{eq:SpinOperator}
+   S^{\mu\nu} = \frac{i}{4}\left[ \gamma^{\mu} , \gamma^{\nu} \right]
+\end{equation}
+
+Having Dirac Algebra, equation \ref{eq:DiracAlgebra}, and definition of Spin operator, equation \ref{eq:SpinOperator}, it is easy to show that $S^{\mu\nu}$ obey the Lorentz Lie Algebra \label{eq:LorentzLieAlgebra}. For $4$-dimentional Minkowski space, one form of respresentation of $\gamma^j$, and $\gamma^0$ is,
+
+\begin{equation}
+   \gamma^0 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \\ \end{pmatrix}
+   , \quad
+   \gamma^i = \begin{pmatrix}  0 & \sigma^i \\ -\sigma^i & 0 \\ \end{pmatrix}
+\end{equation}
+
+where $\sigma^i$'s are Pauli's sigma matrices, and by useing the definition of Spin operators, we get, 
+
+\begin{equation}
+   S^{0i} = \frac{i}{4}\left[\gamma^0,\gamma^i\right] = -\frac{i}{2}
+   \begin{pmatrix} \sigma^i & 0 \\ 0 & \sigma^i \\ \end{pmatrix}
+   , \quad
+   S^{ij} = \frac{i}{4}\left[\gamma^i,\gamma^j\right] = \frac{1}{2}\epsilon^{ijk}
+   \begin{pmatrix} \sigma^k & 0 \\ 0 & \sigma^k \\ \end{pmatrix}
+\end{equation}
+
+and consequently one can check that for $4$-dimentional curved space for $\gamma^j$ and Spin operator, $S^{ij}$, the following equations hold the Dirac Algebra and Spin operators.
+
+\begin{equation}
+   \gamma^0 = \sqrt{-g^{00}} \begin{pmatrix} 0 & 1 \\ 1 & 0 \\ \end{pmatrix}
+   , \quad
+   \gamma^i = \sqrt{g^{ii}} \begin{pmatrix} 0 & \sigma^i \\ -\sigma^i & 0 \\ \end{pmatrix}
+\end{equation}
+
+and,
+
+\begin{equation}
+   S^{0i} = -\sqrt{-g^{00}g^{ii}}\frac{i}{2}
+   \begin{pmatrix}
+      \sigma^i &   0 \\
+          0    & \sigma^i \\
+   \end{pmatrix}
+   , \quad
+   S^{ij} = \sqrt{g^{jj}g^{ii}}\frac{1}{2}\epsilon^{ijk}
+   \begin{pmatrix}
+      \sigma^k &    0 \\
+          0    & \sigma^k \\
+   \end{pmatrix}
+\end{equation}
+
+Note that metric should be diagonal matrix, $g^{\mu\nu} = g^{\nu\mu}$, in most of physics problems we are interested to curved space which has a diagonal matrix. Also for non-diagonal metrics, as we will show, we can find appropriate basis to change it to diagonal one. So this constrain is not hurting the generality of our problem.\\
+
+We know that the determinant of matrix of metric is not zero, becasue they are acting on independet basises. And we are able to find the eighen vectores of matrix of the metric, and they are all independent basises. Then by appropriate tranfromation of basis we get the diagonal metric. For eah point of our curveture there, one can respresent its metric with a diagonal matrix. Now we can come back to our main problem.\\
+
+Note that $\gamma^0$ is hermitian and $\gamma^i$'s are anti-hermitian. $\gamma^0$ and $\gamma^i$ are related to timelike coordinate and spacelike coordinate, respectively, so if one want to add another dimention to theory should choose $\gamma^j$, which related to that extra coordinate, hermitian if it is timelike coordinate or anti-hermitian if it is spacelike coordinate.\\  
+
+In $5$-dimention, like $AdS_5$ the representation of $\gamma^i$ matrices is a little different. Because we have 1 more extra dimention, which is spacelike dimention, then we need to define another matrix, say $\gamma^4$,
+
+\begin{align}
+   &\gamma^0 = \sqrt{-g^{00}} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix}, \quad
+   \gamma^1 = \sqrt{g^{11}} \begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix}, \quad
+   \gamma^2 = \sqrt{g^{22}} \begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix}, \nonumber\\
+   &\gamma^3 = \sqrt{g^{33}} \begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix}, \quad
+   \gamma^4 = i\sqrt{g^{44}} \begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix}
+\end{align}
+
+and the $\sigma^i$'s are the Pauli matrices, which given by,
+
+\begin{equation}
+   \sigma^1 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \\ \end{pmatrix}, \quad
+   \sigma^2 = \begin{pmatrix} 0 &-i \\ i & 0 \\ \end{pmatrix}, \quad
+   \sigma^3 = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ \end{pmatrix}
+\end{equation}
+
+\subsection{Gamma matrices in n-dimentional space}
+
+Clifford Algebra, or Dirac Algebra, in general dimentions nad Minkowski space-time has the form of,
+
+\begin{equation}
+   \left[\gamma^{\mu},\gamma^{\nu}\right] = \gamma^{\mu}\gamma^{\nu} + \gamma^{\nu}\gamma^{\mu} = 2\eta^{\mu\nu}\mathbf{1}
+\end{equation}
+
+and one specific representation of Gamma martices is,
+
+\begin{align}
+   \gamma^{0} =& \mathbf{1}\otimes\mathbf{1}\otimes\mathbf{1}\otimes\cdots \nonumber\\
+   \gamma^{1} =& \sigma_1\otimes\mathbf{1}\otimes\mathbf{1}\otimes\cdots \nonumber\\
+   \gamma^{2} =& \sigma_2\otimes\mathbf{1}\otimes\mathbf{1}\otimes\cdots \nonumber\\
+   \gamma^{3} =& \sigma_3\otimes\sigma_1\otimes\mathbf{1}\otimes\cdots   \nonumber\\
+   \gamma^{4} =& \sigma_3\otimes\sigma_2\otimes\mathbf{1}\otimes\cdots   \nonumber\\
+   \gamma^{5} =& \sigma_3\otimes\sigma_3\otimes\sigma_1\otimes\cdots     \nonumber\\
+   \cdots     =& \cdots
+\end{align}
+
+Where $\sigma_i$ is Pauli's matrices. now we are able to find gamma matrices for arbitrary dimention. Note that all of these matrices are Hermition matrices so to chage these matrices into Anti-Hermition, one can multiply the whole matric by $i$. Now we are able to creat spacelike or timelike gamma matrices.
+
+\subsection{Gamma matrices in Curved space-time}
+
+In this section we will focuse on $d$-dimentional curved space-time gamma matrices. From General Relativity, we know that in each point of $p$ in manifold, there is sets of basises which in these basises the matric gets the form of Minkowski metric, lets call them Vielbein basis. It is easy to show that the law of trasfomation of basis for metrics has the following form,
+
+\begin{equation}
+   \eta_{\alpha\beta} v^{\alpha}_i v^{\beta}_j = g_{ij}
+\end{equation}
+
+where,
+
+\begin{equation}
+   v^{\alpha}_{\mu} = \partial_{\mu} \xi^{\alpha}
+\end{equation}
+
+If $\gamma^{\alpha}$ be the gamma martix in vielbein coordinate basis and $\tilde{\gamma}^{\mu}$ be the gamma matric in the original coordinate basis the the relation between these to is,
+
+\begin{equation}
+   \tilde{\gamma}^{\mu} = v^{\alpha}_{\mu} \gamma^{\alpha}
+\end{equation}
+
+then one can check that the gamma matrices, $\tilde{\gamma}^{\mu}$, holds the Clifford Algebra in curved space-time
+
+\begin{equation}
+   \{\tilde{\gamma}^{\mu},\tilde{\gamma}^{\nu}\} = 2g^{\mu\nu}
+\end{equation}
+
+So for any diagonal mertic one can find the $\gamma^{\mu}$ matrices with,
+
+\begin{equation}
+   \gamma^{\mu} = \sqrt{|g^{\mu\mu}|}\tilde{\gamma^{\mu}}
+\end{equation}
+
+Lets define $\mathbf{sgn}~g_{ij}=[- + + + +]$. We are intrested in $AdS_5$ space and Charged Black Hole $AdS_5$. The metrics, respectively have forms of,
+
+\begin{align}
+   ds^2 = \frac{r^2}{L^2}(-dt^2 + dx^2 + dy^2 + dz^2) + \frac{L^2}{r^2}(dr^2)
+\end{align}
+
+and 
+
+\begin{align}
+   ds^2 = \frac{r^2}{L^2}(-f(r)dt^2 + dx^2 + dy^2 + dz^2) + \frac{L^2}{r^2f(r)}(dr^2)
+\end{align}
+
+where,
+
+\begin{equation}
+   f(r) = 1 + \frac{Q^2}{r^{2d-2}} - \frac{M}{r^d}
+\end{equation}
+
+and gamma matrices for simple $AdS_5$ 
+
+\begin{align} \label{eq:GammaMetricesMinkowski5d}
+   &\tilde{\gamma}^0 = i\frac{L}{r}\begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix}, \quad
+   \tilde{\gamma}^1  = i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix}, \quad
+   \tilde{\gamma}^2  = i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix}, \nonumber\\
+   &\tilde{\gamma}^3 = i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix}, \quad
+   \tilde{\gamma}^5  =  \frac{r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix}
+\end{align}
+
+and for Charged Blach Hole $AdS_5$ is,
+
+\begin{align} \label{eq:GammaMetricesMinkowski5d}
+   &\tilde{\gamma}^0 = i\frac{L}{\sqrt{f(r)}r}\begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix}, \quad
+   \tilde{\gamma}^1  = i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix}, \quad
+   \tilde{\gamma}^2  = i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix}, \nonumber\\
+   &\tilde{\gamma}^3 = i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix}, \quad
+   \tilde{\gamma}^5  =  \frac{\sqrt{f(r)}r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix}
+\end{align}
+
+\section{Dirac Equation for curved space-time}
+
+In this section we try to derive the theory of fermiones for curved space-time by considering the Lorentz invariance operators and fields, that were explained in detial on section \ref{sec:LorentzLieAlgebra}. Scalar feild equation, Klain-Gordon, presents a great idea how to develope theory of fermions. So we are intrested in a theory which is looks like Klein-Gordon theory, but the vecor field version of that one. In section \ref{sec:LorentzLieAlgebra}, we learnd how to do Lorentz transformation for spin $1/2$ particles in curves space-time, now we apply those trasfomations to derive Lorentz invariance theory.\\
+
+For getting Dirac equation in curved space-time we need to find covariant derivative of for the spinor field $\psi$, in spin space. Dirac equation has the form of,
+
+\begin{equation}
+   \left[\tilde{\gamma}^{\mu}D_{\mu} - m\right]\psi = 0
+\end{equation}
+
+where $D_{\mu}$ is covariant derivative of for the spinor field $\psi$, and for case which one have electrical field Dirac equation get the form of,
+
+\begin{equation}
+   \left[i\gamma^{\mu}(D_{\mu} - ieA_{\mu}) - m\right]\psi = 0
+\end{equation}
+
+The covariant derivative for spinor is,
+
+\begin{equation}
+   D_{\mu} \psi = \left(\partial_{\mu} + \frac{i}{4}\omega^{\alpha\beta}_{\mu}\sigma_{\alpha\beta}\right) \psi
+\end{equation}
+
+where,
+
+\begin{equation}
+   \sigma_{\alpha\beta} = \frac{1}{2i}[\gamma_{\alpha},\gamma_{\beta}]
+\end{equation}
+
+and $\omega^{\alpha\beta}_{\mu}$ has the form of,
+
+\begin{equation}
+   \omega^{\alpha\beta}_{\mu} = \frac{1}{2}\left(v^{\alpha}_{\nu}\partial_{\mu}g^{\nu\nu'}v^{\beta}_{\nu'} + v^{\alpha}_{\nu}g^{\sigma\sigma'}v^{\beta}_{\sigma'}\Gamma^{\nu}_{\sigma\mu} - (\alpha \leftrightarrow \beta)\right)
+\end{equation}
+
+where,
+
+\begin{equation}
+   \Gamma^{\lambda}_{\mu\nu} = \frac{1}{2}g^{\lambda\rho}(\partial_{\mu}g_{\nu\rho}+\partial_{\nu}g_{\rho\mu}-\partial_{\rho}g_{\mu\nu})
+\end{equation}
+
+For diagonal metrics, we can simplify $\omega^{\alpha\beta}_{\mu}$ to,
+
+\begin{equation}
+   \omega^{\alpha\beta}_{\mu} = \frac{1}{2}\left[v^{\alpha}_{\alpha}v^{\beta}_{\beta}g^{\alpha\alpha}g^{\beta\beta}(\partial_{\beta}g_{\alpha\mu}-\partial_{\alpha}g_{\beta\mu})\right]
+\end{equation}
+
+this simplifiyed $\omega$ is true for all kind of diagonal metrics. From above equation it is obvious that for diagonal metric $\omega$ is anti-symmetric. Now, lets do the calculations for Charged Black Hole in $AdS_5$. $v^{\alpha}_{\beta}$ is,
+
+\begin{align}
+   v^{i}_{j} =& 0 \qquad i \neq j,&    \qquad  v^{0}_{0} =& \frac{\sqrt{f}r}{L}& \nonumber\\
+   v^{i}_{i} =& \frac{r}{L}  \qquad i = 1,~2,~3,& \qquad v^{5}_{5} =& \frac{L}{\sqrt{f}r}& \nonumber\\
+\end{align}
+
+For this spce the only non-zero terms for $\omega$ are,
+
+\begin{equation}
+   \omega^{05}_{0} = -\omega^{50}_{0} = \partial_r \frac{r^2f}{2L^2}, \qquad 
+   \omega^{i5}_{i} = -\omega^{5i}_{i} = \frac{\sqrt{f}r}{L^2} ~~~ i=1,~2,~3
+\end{equation}
+
+and,
+
+\begin{align} \label{eq:GammaMetricesMinkowski5d}
+   &\sigma^{50} = \begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} = -\sigma^{05}, \quad \nonumber\\
+   &\sigma^{5i} = \begin{pmatrix} 0 & -\sigma^i \\ -\sigma^i & 0 \\ \end{pmatrix}= -\sigma^{i5} ~~~ i=1,~2,~3 
+\end{align}
+
+\subsection{Diran Equation solution for simple $AdS_5$ space}
+
+Dirac equation has the form of,
+
+\begin{equation}
+   \left[\tilde{\gamma}^{\mu}D_{\mu} - m\right]\psi = 0
+\end{equation}
+
+where,
+
+\begin{equation}
+   D_{\mu} \psi = \left(\partial_{\mu} + \frac{i}{4}\omega^{\alpha\beta}_{\mu}\sigma_{\alpha\beta}\right) \psi
+\end{equation}
+
+and,
+
+\begin{equation}
+   \omega^{05}_{0} = -\omega^{50}_{0} = \frac{r}{L^2}, \qquad 
+   \omega^{i5}_{i} = -\omega^{5i}_{i} = \frac{r}{L^2} ~~~ i=1,~2,~3
+\end{equation}
+
+and,
+
+\begin{align}
+   &\sigma^{50} = \begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} = -\sigma^{05}, \quad \nonumber\\
+   &\sigma^{5i} = \begin{pmatrix} 0 & -\sigma^i \\ -\sigma^i & 0 \\ \end{pmatrix}= -\sigma^{i5} ~~~ i=1,~2,~3 
+\end{align}
+
+so we get,
+
+\begin{align}
+   0 =& \left[ \tilde{\gamma}^0 \left(\partial_t - i\frac{r}{2L^2}\sigma^{50} \right) + \tilde{\gamma}^1 \left(\partial_x - i\frac{r}{2L^2}\sigma^{51} \right) + \tilde{\gamma}^2 \left(\partial_y - i\frac{r}{2L^2}\sigma^{52} \right) \right. \nonumber\\
+      & ~~~  \left. + \tilde{\gamma}^3 \left(\partial_z - i\frac{r}{2L^2}\sigma^{53} \right) + \tilde{\gamma}^5 \partial_r - m\right] \psi
+\end{align}
+
+$\psi$ is a four component vector which represnet ... ?!. Lets derive the equations for each component and try to solve them, 
+
+\begin{align}
+   0 =& \left[ i\frac{L}{r} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[ \partial_t - i\frac{r}{2L^2}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} \right] \right.\nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix} \left[ \partial_x + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^1 \\ \sigma^1 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix} \left[ \partial_y + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^2 \\ \sigma^2 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix} \left[ \partial_z + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^3 \\ \sigma^3 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ \left. + \frac{r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \partial_r - m \begin{pmatrix} I & 0 \\ 0 & I \\ \end{pmatrix} \right] \psi
+\end{align}
+
+For the first step lets assume that we have a plane wave in $x$, $y$, $z$, and $t$ direction, then we try to solve the equations for $r$ and at the end we are able to use fourier trasformation to sum up all plane waves to get the whole answer. $\psi$, which is a for component vector has the form of,
+
+\begin{align}
+   0 =& \left[ i\frac{L}{r} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[ P_t - i\frac{r}{2L^2}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} \right] \right.\nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix} \left[ P_x + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^1 \\ \sigma^1 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix} \left[ P_y + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^2 \\ \sigma^2 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix} \left[ P_z + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^3 \\ \sigma^3 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ \left. + \frac{r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \partial_r - m \begin{pmatrix} I & 0 \\ 0 & I \\ \end{pmatrix} \right] \psi(P,r)
+\end{align}
+
+and then,
+
+\begin{align}
+   0 =& \left[ i\frac{L}{r} \begin{pmatrix} 0 & P_t + P_i\sigma^i \\ P_t - P_i\sigma^i & 0 \\ \end{pmatrix} + \frac{1}{2L}\begin{pmatrix} -2I & 0 \\ 0 & 2I \\ \end{pmatrix} \right] \psi(P,r)\nonumber\\
+      & ~~~ + \left[ \begin{pmatrix} (\frac{r}{L}\partial_r-m)I & 0 \\ 0 & -(\frac{r}{L}\partial_r+m)I \\ \end{pmatrix}  \right] \psi(P,r)
+\end{align}
+
+Finaly we get,
+
+\begin{align}
+   0 =& \left[ -\frac{1}{L} + \frac{r}{L}\partial_r - m \right]I\Psi_1 + i\frac{L}{r}(P_t I + P_i\sigma^i)\Psi_2 \nonumber\\
+   0 =& \left[ \frac{1}{L} - \frac{r}{L}\partial_r - m \right]I\Psi_2 + i\frac{L}{r}(P_t I - P_i\sigma^i)\Psi_1
+\end{align}
+
+$\Psi$ is two component vector and its differential equation is,
+
+\begin{align}
+   0 =& \left[ \frac{1}{L} - \frac{r}{L}\partial_r - m \right]\left[ -\frac{1}{L} + \frac{r}{L}\partial_r - m \right]I\Psi_1 + \frac{L}{r}(P_t I + P_i\sigma^i)\frac{L}{r}(P_t I - P_i\sigma^i)\Psi_1 \nonumber\\
+\end{align}
+
+\begin{equation}
+   0 = \left[ m^2 - \left(\frac{1}{2L} - \frac{r}{L}\partial_r \right)^2 + \frac{L^2}{r^2}\left(P_t^2 - P_i^2 \right) \right]\Psi_1
+\end{equation}
+
+
+\subsection{Diran Equation solution for Charged Black Hole in $AdS_5$ space}
+
+Dirac equation has the form of,
+
+\begin{equation}
+   \left[\tilde{\gamma}^{\mu}D_{\mu} - m\right]\psi = 0
+\end{equation}
+
+where,
+
+\begin{equation}
+   D_{\mu} \psi = \left(\partial_{\mu} + \frac{i}{4}\omega^{\alpha\beta}_{\mu}\sigma_{\alpha\beta}\right) \psi
+\end{equation}
+
+and,
+
+\begin{equation}
+   \omega^{05}_{0} = -\omega^{50}_{0} = \partial_r \frac{fr^2}{2L^2} = \frac{2fr+f'r^2}{2L^2}, \qquad 
+   \omega^{i5}_{i} = -\omega^{5i}_{i} = \frac{\sqrt{f}r}{L^2} ~~~ i=1,~2,~3
+\end{equation}
+
+and,
+
+\begin{align}
+   &\sigma^{50} = \begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} = -\sigma^{05}, \quad \nonumber\\
+   &\sigma^{5i} = \begin{pmatrix} 0 & -\sigma^i \\ -\sigma^i & 0 \\ \end{pmatrix}= -\sigma^{i5} ~~~ i=1,~2,~3 
+\end{align}
+
+so we get,
+
+\begin{align}
+   0 =& \left[ \tilde{\gamma}^0 \left(\partial_t - i\frac{2fr+f'r^2}{4L^2}\sigma^{50} \right) + \tilde{\gamma}^1 \left(\partial_x - i\frac{\sqrt{f}r}{2L^2}\sigma^{51} \right) + \tilde{\gamma}^2 \left(\partial_y - i\frac{\sqrt{f}r}{2L^2}\sigma^{52} \right) \right. \nonumber\\
+      & ~~~  \left. + \tilde{\gamma}^3 \left(\partial_z - \frac{\sqrt{f}r}{2L^2}\sigma^{53} \right) + \tilde{\gamma}^5 \partial_r - m\right] \psi
+\end{align}
+
+$\psi$ is a four component vector which represnet ... ?!. Lets derive the equations for each component and try to solve them, 
+
+\begin{align}
+   0 =& \left[ i\frac{L}{\sqrt{f}r} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[ \partial_t - i\frac{2fr+f'r^2}{4L^2}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} \right] \right.\nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix} \left[ \partial_x + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^1 \\ \sigma^1 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix} \left[ \partial_y + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^2 \\ \sigma^2 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix} \left[ \partial_z + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^3 \\ \sigma^3 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ \left. + \frac{\sqrt{f}r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \partial_r - m \begin{pmatrix} I & 0 \\ 0 & I \\ \end{pmatrix} \right] \psi
+\end{align}
+
+For the first step lets assume that we have a plane wave in $x$, $y$, $z$, and $t$ direction, then we try to solve the equations for $r$ and at the end we are able to use fourier trasformation to sum up all plane waves to get the whole answer. $\psi$, which is a for component vector has the form of,
+
+\begin{align}
+   0 =& \left[ i\frac{L}{\sqrt{f}r} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[ P_t - i\frac{2fr+f'r^2}{4L^2}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} \right] \right.\nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix} \left[ P_x + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^1 \\ \sigma^1 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix} \left[ P_y + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^2 \\ \sigma^2 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix} \left[ P_z + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^3 \\ \sigma^3 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ \left. + \frac{\sqrt{f}r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \partial_r - m \begin{pmatrix} I & 0 \\ 0 & I \\ \end{pmatrix} \right] \psi
+\end{align}
+
+and then,
+
+\begin{align}
+   0 =& \left[ i\frac{L}{r} \begin{pmatrix} 0 & \frac{P_t}{\sqrt{f}}I + P_i\sigma^i \\ \frac{P_t}{\sqrt{f}}I - P_i\sigma^i & 0 \\ \end{pmatrix} \right.\nonumber\\
+      & ~~~ \left. + \frac{1}{4L}\begin{pmatrix} \left(\frac{2f+f'r}{\sqrt{f}} - 3\sqrt{f}\right)I & 0 \\ 0 & -\left(\frac{2f+f'r}{\sqrt{f}} - 3\sqrt{f}\right)I \\ \end{pmatrix} \right] \psi(P,r)\nonumber\\
+      & ~~~ + \left[ \begin{pmatrix} (\frac{\sqrt{f}r}{L}\partial r-m)I & 0 \\ 0 & -(\frac{\sqrt{f}r}{L}\partial r+m)I\\ \end{pmatrix}  \right] \psi(P,r)
+\end{align}
+
+Finaly we get,
+
+\begin{align}
+   0 =& \left[ \frac{f'r-f}{4\sqrt{f}L} + \frac{\sqrt{f}r}{L}\partial_r - m \right]I\Psi_1 + i\frac{L}{r}(\frac{P_t}{\sqrt{f}} I + P_i\sigma^i)\Psi_2 \nonumber\\
+   0 =& \left[ -\frac{f'r-f}{4\sqrt{f}L} - \frac{\sqrt{f}r}{L}\partial_r - m \right]I\Psi_2 + i\frac{L}{r}(\frac{P_t}{\sqrt{f}} I - P_i\sigma^i)\Psi_1
+\end{align}
+
+$\Psi$ is two component vector and its differential equation is,
+
+%\begin{align}
+%   0 =& \left[ \frac{1-3i}{2L} - \frac{r}{L}\partial_r - m \right]\left[ \frac{3i-1}{2L} + \frac{r}{L}\partial_r - m \right]I\Psi_1 + \frac{L}{r}(P_t I + P_i\sigma^i)\frac{L}{r}(P_t I - P_i\sigma^i)\Psi_1 \nonumber\\
+%   0 =& \left[ \frac{1-3i}{2L} - \frac{r}{L}\partial_r - m \right]\left[ \frac{3i-1}{2L} + \frac{r}{L}\partial_r - m \right]I\Psi_1 + \frac{L}{r}(P_t I + P_i\sigma^i)\frac{L}{r}(P_t I - P_i\sigma^i)\Psi_1
+%\end{align}
+
+%\begin{equation}
+%   0 = \left[ m^2 - \left(\frac{3i-1}{2L} + \frac{r}{L}\partial_r \right)^2 + \frac{L^2}{r^2}\left(P_t^2 - P_i^2 \right) \right]\Psi_1
+%\end{equation}
+
