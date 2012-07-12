@@ -38,7 +38,9 @@
 \contentsline {subsection}{\numberline {4.2.1}Gamma matrices in n-dimentional space}{48}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Gamma matrices in Curved space-time}{48}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Dirac Equation for curved space-time}{50}{section.4.3}
-\contentsline {chapter}{\numberline {5}NOT RELATED TO THE PROJECT}{53}{chapter.5}
-\contentsline {section}{\numberline {5.1}SELF NOTES FOR MY RECORD}{53}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Is the nature Lorentz Invariance ?}{53}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Black Rings in $5$-dimention}{53}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {4.3.1}Diran Equation solution for simple $AdS_5$ space}{51}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Diran Equation solution for Charged Black Hole in $AdS_5$ space}{54}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}NOT RELATED TO THE PROJECT}{57}{chapter.5}
+\contentsline {section}{\numberline {5.1}SELF NOTES FOR MY RECORD}{57}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Is the nature Lorentz Invariance ?}{57}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Black Rings in $5$-dimention}{57}{subsection.5.1.2}
