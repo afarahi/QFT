@@ -35,12 +35,14 @@
 \contentsline {chapter}{\numberline {4}Dirac Equation in Black Hole AdS}{45}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{45}{section.4.1}
 \contentsline {section}{\numberline {4.2}Lorentz Lie Algebra}{45}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Gamma matrices in n-dimentional space}{48}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Gamma matrices in Curved space-time}{48}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Dirac Equation for curved space-time}{50}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Diran Equation solution for simple $AdS_5$ space}{51}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Diran Equation solution for Charged Black Hole in $AdS_5$ space}{54}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {5}NOT RELATED TO THE PROJECT}{57}{chapter.5}
-\contentsline {section}{\numberline {5.1}SELF NOTES FOR MY RECORD}{57}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Is the nature Lorentz Invariance ?}{57}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Black Rings in $5$-dimention}{57}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {4.2.1}Gamma matrices in n-dimentional space}{47}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Gamma matrices in Curved space-time}{47}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Dirac Equation for curved space-time}{49}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Diran Equation solution for simple $AdS_5$ space}{50}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}General Note on Diagonal Mertric which depends on just one variable}{53}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Dirac equation in Charged Field}{54}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}solving the Dirac equation}{57}{section.4.4}
+\contentsline {chapter}{\numberline {5}NOT RELATED TO THE PROJECT}{59}{chapter.5}
+\contentsline {section}{\numberline {5.1}SELF NOTES FOR MY RECORD}{59}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Is the nature Lorentz Invariance ?}{59}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Black Rings in $5$-dimention}{59}{subsection.5.1.2}

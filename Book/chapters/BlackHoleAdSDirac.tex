@@ -64,53 +64,11 @@ where $\sigma^i$'s are Pauli's sigma matrices, and by useing the definition of S
    \begin{pmatrix} \sigma^k & 0 \\ 0 & \sigma^k \\ \end{pmatrix}
 \end{equation}
 
-and consequently one can check that for $4$-dimentional curved space for $\gamma^j$ and Spin operator, $S^{ij}$, the following equations hold the Dirac Algebra and Spin operators.
+%Note that metric should be diagonal matrix, $g^{\mu\nu} = g^{\nu\mu}$, in most of physics problems we are interested to curved space which has a diagonal matrix. Also for non-diagonal metrics, as we will show, we can find appropriate basis to change it to diagonal one. So this constrain is not hurting the generality of our problem.\\
 
-\begin{equation}
-   \gamma^0 = \sqrt{-g^{00}} \begin{pmatrix} 0 & 1 \\ 1 & 0 \\ \end{pmatrix}
-   , \quad
-   \gamma^i = \sqrt{g^{ii}} \begin{pmatrix} 0 & \sigma^i \\ -\sigma^i & 0 \\ \end{pmatrix}
-\end{equation}
+%We know that the determinant of matrix of metric is not zero, becasue they are acting on independet basises. And we are able to find the eighen vectores of matrix of the metric, and they are all independent basises. Then by appropriate tranfromation of basis we get the diagonal metric. For eah point of our curveture there, one can respresent its metric with a diagonal matrix. Now we can come back to our main problem.\\
 
-and,
-
-\begin{equation}
-   S^{0i} = -\sqrt{-g^{00}g^{ii}}\frac{i}{2}
-   \begin{pmatrix}
-      \sigma^i &   0 \\
-          0    & \sigma^i \\
-   \end{pmatrix}
-   , \quad
-   S^{ij} = \sqrt{g^{jj}g^{ii}}\frac{1}{2}\epsilon^{ijk}
-   \begin{pmatrix}
-      \sigma^k &    0 \\
-          0    & \sigma^k \\
-   \end{pmatrix}
-\end{equation}
-
-Note that metric should be diagonal matrix, $g^{\mu\nu} = g^{\nu\mu}$, in most of physics problems we are interested to curved space which has a diagonal matrix. Also for non-diagonal metrics, as we will show, we can find appropriate basis to change it to diagonal one. So this constrain is not hurting the generality of our problem.\\
-
-We know that the determinant of matrix of metric is not zero, becasue they are acting on independet basises. And we are able to find the eighen vectores of matrix of the metric, and they are all independent basises. Then by appropriate tranfromation of basis we get the diagonal metric. For eah point of our curveture there, one can respresent its metric with a diagonal matrix. Now we can come back to our main problem.\\
-
-Note that $\gamma^0$ is hermitian and $\gamma^i$'s are anti-hermitian. $\gamma^0$ and $\gamma^i$ are related to timelike coordinate and spacelike coordinate, respectively, so if one want to add another dimention to theory should choose $\gamma^j$, which related to that extra coordinate, hermitian if it is timelike coordinate or anti-hermitian if it is spacelike coordinate.\\  
-
-In $5$-dimention, like $AdS_5$ the representation of $\gamma^i$ matrices is a little different. Because we have 1 more extra dimention, which is spacelike dimention, then we need to define another matrix, say $\gamma^4$,
-
-\begin{align}
-   &\gamma^0 = \sqrt{-g^{00}} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix}, \quad
-   \gamma^1 = \sqrt{g^{11}} \begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix}, \quad
-   \gamma^2 = \sqrt{g^{22}} \begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix}, \nonumber\\
-   &\gamma^3 = \sqrt{g^{33}} \begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix}, \quad
-   \gamma^4 = i\sqrt{g^{44}} \begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix}
-\end{align}
-
-and the $\sigma^i$'s are the Pauli matrices, which given by,
-
-\begin{equation}
-   \sigma^1 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \\ \end{pmatrix}, \quad
-   \sigma^2 = \begin{pmatrix} 0 &-i \\ i & 0 \\ \end{pmatrix}, \quad
-   \sigma^3 = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ \end{pmatrix}
-\end{equation}
+%Note that $\gamma^0$ is hermitian and $\gamma^i$'s are anti-hermitian. $\gamma^0$ and $\gamma^i$ are related to timelike coordinate and spacelike coordinate, respectively, so if one want to add another dimention to theory should choose $\gamma^j$, which related to that extra coordinate, hermitian if it is timelike coordinate or anti-hermitian if it is spacelike coordinate.\\  
 
 \subsection{Gamma matrices in n-dimentional space}
 
@@ -288,8 +246,8 @@ where,
 and,
 
 \begin{equation}
-   \omega^{05}_{0} = -\omega^{50}_{0} = \frac{r}{L^2}, \qquad 
-   \omega^{i5}_{i} = -\omega^{5i}_{i} = \frac{r}{L^2} ~~~ i=1,~2,~3
+   \omega^{50}_{0} = -\omega^{05}_{0} = \frac{r}{L^2}, \qquad 
+   \omega^{5i}_{i} = -\omega^{i5}_{i} = \frac{r}{L^2} ~~~ i=1,~2,~3
 \end{equation}
 
 and,
@@ -302,64 +260,76 @@ and,
 so we get,
 
 \begin{align}
-   0 =& \left[ \tilde{\gamma}^0 \left(\partial_t - i\frac{r}{2L^2}\sigma^{50} \right) + \tilde{\gamma}^1 \left(\partial_x - i\frac{r}{2L^2}\sigma^{51} \right) + \tilde{\gamma}^2 \left(\partial_y - i\frac{r}{2L^2}\sigma^{52} \right) \right. \nonumber\\
-      & ~~~  \left. + \tilde{\gamma}^3 \left(\partial_z - i\frac{r}{2L^2}\sigma^{53} \right) + \tilde{\gamma}^5 \partial_r - m\right] \psi
+   0 =& \left[ \tilde{\gamma}^0 \left(\partial_t + i\frac{r}{2L^2}\sigma^{50} \right) + \tilde{\gamma}^1 \left(\partial_x + i\frac{r}{2L^2}\sigma^{51} \right) + \tilde{\gamma}^2 \left(\partial_y + i\frac{r}{2L^2}\sigma^{52} \right) \right. \nonumber\\
+      & ~~~  \left. + \tilde{\gamma}^3 \left(\partial_z + i\frac{r}{2L^2}\sigma^{53} \right) + \tilde{\gamma}^5 \partial_r - m\right] \psi
 \end{align}
 
 $\psi$ is a four component vector which represnet ... ?!. Lets derive the equations for each component and try to solve them, 
 
 \begin{align}
-   0 =& \left[ i\frac{L}{r} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[ \partial_t - i\frac{r}{2L^2}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} \right] \right.\nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix} \left[ \partial_x + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^1 \\ \sigma^1 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix} \left[ \partial_y + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^2 \\ \sigma^2 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix} \left[ \partial_z + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^3 \\ \sigma^3 & 0 \\ \end{pmatrix} \right] \nonumber\\
+   0 =& \left[ i\frac{L}{r} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[ \partial_t + i\frac{r}{2L^2}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} \right] \right.\nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix} \left[ \partial_x - i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^1 \\ \sigma^1 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix} \left[ \partial_y - i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^2 \\ \sigma^2 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix} \left[ \partial_z - i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^3 \\ \sigma^3 & 0 \\ \end{pmatrix} \right] \nonumber\\
       & ~~~ \left. + \frac{r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \partial_r - m \begin{pmatrix} I & 0 \\ 0 & I \\ \end{pmatrix} \right] \psi
 \end{align}
 
-For the first step lets assume that we have a plane wave in $x$, $y$, $z$, and $t$ direction, then we try to solve the equations for $r$ and at the end we are able to use fourier trasformation to sum up all plane waves to get the whole answer. $\psi$, which is a for component vector has the form of,
+For the first step lets assume that we have a plane wave in $x$, $y$, $z$, and $t$ direction, then we try to solve the equations for $r$ and at the end we are able to use fourier trasformation to sum up all plane waves to get the whole answer. $\tilde{\psi}(\omega,k_i,r) = exp\left\{-i\omega t + ik_i x_i\right\}\psi(\omega,k_i,r)$, which is a for component vector has the form of,
 
 \begin{align}
-   0 =& \left[ i\frac{L}{r} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[ P_t - i\frac{r}{2L^2}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} \right] \right.\nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix} \left[ P_x + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^1 \\ \sigma^1 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix} \left[ P_y + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^2 \\ \sigma^2 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix} \left[ P_z + i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^3 \\ \sigma^3 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ \left. + \frac{r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \partial_r - m \begin{pmatrix} I & 0 \\ 0 & I \\ \end{pmatrix} \right] \psi(P,r)
+   0 =& \left[ i\frac{L}{r} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[-i\omega + i\frac{r}{2L^2}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} \right] \right.\nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix} \left[ik_x - i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^1 \\ \sigma^1 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix} \left[ik_y - i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^2 \\ \sigma^2 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix} \left[ik_z - i\frac{r}{2L^2}\begin{pmatrix} 0 & \sigma^3 \\ \sigma^3 & 0 \\ \end{pmatrix} \right] \nonumber\\
+      & ~~~ \left. + \frac{r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \partial_r - m \begin{pmatrix} I & 0 \\ 0 & I \\ \end{pmatrix} \right] \psi(\omega,k_i,r)
 \end{align}
 
 and then,
 
-\begin{align}
-   0 =& \left[ i\frac{L}{r} \begin{pmatrix} 0 & P_t + P_i\sigma^i \\ P_t - P_i\sigma^i & 0 \\ \end{pmatrix} + \frac{1}{2L}\begin{pmatrix} -2I & 0 \\ 0 & 2I \\ \end{pmatrix} \right] \psi(P,r)\nonumber\\
-      & ~~~ + \left[ \begin{pmatrix} (\frac{r}{L}\partial_r-m)I & 0 \\ 0 & -(\frac{r}{L}\partial_r+m)I \\ \end{pmatrix}  \right] \psi(P,r)
+\begin{align} \label{eq:AdS5spinorequationI}
+   0 =& \left[ \frac{L}{r} \begin{pmatrix} 0 & \omega - k_i\sigma^i \\ \omega + k_i\sigma^i & 0 \\ \end{pmatrix} + \frac{1}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \right] \psi(P,r)\nonumber\\
+      & ~~~ + \left[ \begin{pmatrix} (\frac{r}{L}\partial_r-m)I & 0 \\ 0 & -(\frac{r}{L}\partial_r+m)I \\ \end{pmatrix}  \right] \psi(\omega,k_i,r)
 \end{align}
 
 Finaly we get,
 
 \begin{align}
-   0 =& \left[ -\frac{1}{L} + \frac{r}{L}\partial_r - m \right]I\Psi_1 + i\frac{L}{r}(P_t I + P_i\sigma^i)\Psi_2 \nonumber\\
-   0 =& \left[ \frac{1}{L} - \frac{r}{L}\partial_r - m \right]I\Psi_2 + i\frac{L}{r}(P_t I - P_i\sigma^i)\Psi_1
+   0 =& \left[ \frac{1}{L} + \frac{r}{L}\partial_r - m \right]I\Psi_1 + \frac{L}{r}(\omega I-k_i\sigma^i)\Psi_2 \nonumber\\
+   0 =& \left[-\frac{1}{L} - \frac{r}{L}\partial_r - m \right]I\Psi_2 + \frac{L}{r}(\omega I+k_i\sigma^i)\Psi_1
 \end{align}
 
 $\Psi$ is two component vector and its differential equation is,
 
 \begin{align}
-   0 =& \left[ \frac{1}{L} - \frac{r}{L}\partial_r - m \right]\left[ -\frac{1}{L} + \frac{r}{L}\partial_r - m \right]I\Psi_1 + \frac{L}{r}(P_t I + P_i\sigma^i)\frac{L}{r}(P_t I - P_i\sigma^i)\Psi_1 \nonumber\\
+   0 =& \left[-\frac{1}{L} - \frac{r}{L}\partial_r - m \right]\left[ \frac{1}{L} + \frac{r}{L}\partial_r - m \right]I\Psi_1 - \frac{L}{r}(\omega I - k_i\sigma^i)\frac{L}{r}(\omega I + k_i\sigma^i)\Psi_1 \nonumber\\
 \end{align}
 
 \begin{equation}
-   0 = \left[ m^2 - \left(\frac{1}{2L} - \frac{r}{L}\partial_r \right)^2 + \frac{L^2}{r^2}\left(P_t^2 - P_i^2 \right) \right]\Psi_1
+   0 = \left[ m^2 - \left(\frac{1}{2L} + \frac{r}{L}\partial_r \right)^2 - \frac{L^2}{r^2}\left(\omega^2 - k_i^2 \right) \right]\Psi_1
 \end{equation}
 
+To make our equation simpler we can define $\psi(\omega,k_i,r) = \frac{L}{r}\phi(\omega,k_i,r)$ and plug it into equation \ref{eq:AdS5spinorequationI}, then we get,
 
-\subsection{Diran Equation solution for Charged Black Hole in $AdS_5$ space}
+\begin{align} \label{eq:AdS5spinorequationI}
+   0 =& \left[ \frac{L^2}{r^2} \begin{pmatrix} 0 & \omega - k_i\sigma^i \\ \omega + k_i\sigma^i & 0 \\ \end{pmatrix} - \frac{Lm}{r}\begin{pmatrix} I & 0 \\ 0 & I \\ \end{pmatrix} \right] \phi(\omega,k_i,r)\nonumber\\
+      & ~~~ + \left[ \begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix}  \right] \frac{\partial\phi(\omega,k_i,r)}{\partial r}
+\end{align}
 
-Dirac equation has the form of,
+\subsection{General Note on Diagonal Mertric which depends on just one variable}
+
+In this part we try to simplify the Dirac operator, say $\tilde{\gamma}^\mu D_{\mu}$ for diagonal metrics which depends on just one variable, say $r$. Lets assume that the metric has the form of,
 
 \begin{equation}
-   \left[\tilde{\gamma}^{\mu}D_{\mu} - m\right]\psi = 0
+   ds^2 = - f_0^2(r) dt^2 + f_1^2(r) dx^2 + f_2^2(r) dy^2 + f_3^2(r) dz^2 + f_5^2(r) dr^2  
 \end{equation}
 
-where,
+which, $f^2_i(r)$ is a function of $r$. Now we want to simplify the Dirac operator into something easier to work with. Dirac equation in curved space has the form of,
+
+\begin{equation}
+   \left[\tilde{\gamma}^{\mu}(D_{\mu} - m\right]\psi = 0
+\end{equation}
+
+which,
 
 \begin{equation}
    D_{\mu} \psi = \left(\partial_{\mu} + \frac{i}{4}\omega^{\alpha\beta}_{\mu}\sigma_{\alpha\beta}\right) \psi
@@ -368,67 +338,199 @@ where,
 and,
 
 \begin{equation}
-   \omega^{05}_{0} = -\omega^{50}_{0} = \partial_r \frac{fr^2}{2L^2} = \frac{2fr+f'r^2}{2L^2}, \qquad 
-   \omega^{i5}_{i} = -\omega^{5i}_{i} = \frac{\sqrt{f}r}{L^2} ~~~ i=1,~2,~3
+   \sigma_{\alpha\beta} = \frac{1}{2i}[\gamma_{\alpha},\gamma_{\beta}]
 \end{equation}
 
-and,
+and $\omega^{\alpha\beta}_{\mu}$ for diagonal metric has the form of,
+
+\begin{equation}
+   \omega^{\alpha\beta}_{\mu} = \frac{1}{2}\left[v^{\alpha}_{\alpha}v^{\beta}_{\beta}g^{\alpha\alpha}g^{\beta\beta}(\partial_{\beta}g_{\alpha\mu}-\partial_{\alpha}g_{\beta\mu})\right]
+\end{equation}
+
+this simplifiyed $\omega$ is true for all kind of diagonal metrics. From above equation it is obvious that for diagonal metric $\omega$ is anti-symmetric. In our case $v^{\alpha}_{\beta}$ is,
+
+\begin{equation}
+   v^{i}_{j} = 0 \qquad i \neq j,    \qquad  v^{i}_{i} = f_i(r)  \qquad i = 0,~1,~2,~3,~5
+\end{equation}
+
+Gamma matrices in Minkowski space are,
 
 \begin{align}
-   &\sigma^{50} = \begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} = -\sigma^{05}, \quad \nonumber\\
-   &\sigma^{5i} = \begin{pmatrix} 0 & -\sigma^i \\ -\sigma^i & 0 \\ \end{pmatrix}= -\sigma^{i5} ~~~ i=1,~2,~3 
+   &\gamma^0 = i\begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix}, \quad
+   \gamma^1 = i\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix}, \quad
+   \gamma^2  = i\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix}, \nonumber\\
+   &\gamma^3 = i\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix}, \quad
+   \gamma^5  =  \begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix}
 \end{align}
 
-so we get,
+and Gamma matrices in Curved space are,
 
 \begin{align}
-   0 =& \left[ \tilde{\gamma}^0 \left(\partial_t - i\frac{2fr+f'r^2}{4L^2}\sigma^{50} \right) + \tilde{\gamma}^1 \left(\partial_x - i\frac{\sqrt{f}r}{2L^2}\sigma^{51} \right) + \tilde{\gamma}^2 \left(\partial_y - i\frac{\sqrt{f}r}{2L^2}\sigma^{52} \right) \right. \nonumber\\
-      & ~~~  \left. + \tilde{\gamma}^3 \left(\partial_z - \frac{\sqrt{f}r}{2L^2}\sigma^{53} \right) + \tilde{\gamma}^5 \partial_r - m\right] \psi
+   &\tilde{\gamma}^0 = i\frac{1}{f_0(r)}\begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix}, \quad
+   \tilde{\gamma}^1  = i\frac{1}{f_1(r)}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix}, \quad
+   \tilde{\gamma}^2  = i\frac{1}{f_2(r)}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix}, \nonumber\\
+   &\tilde{\gamma}^3 = i\frac{1}{f_3(r)}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix}, \quad
+   \tilde{\gamma}^5  =  \frac{1}{f_5(r)}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix}
 \end{align}
 
-$\psi$ is a four component vector which represnet ... ?!. Lets derive the equations for each component and try to solve them, 
+and non zero terms of $\omega$ are,
+
+\begin{equation}
+   \omega^{i5}_i = -\omega^{5i}_i = \frac{f'_i(r)}{f_5(r)} 
+\end{equation}
+
+Then the Dirac operator gets the form of,
+
+\begin{equation}
+   \tilde{\gamma}^{\mu}D_{\mu} = \tilde{\gamma}^0 \left(\partial_t + \frac{i}{2}\frac{f'_0}{f_5}\sigma_{05}\right) + \tilde{\gamma}^i \left(\partial_i + \frac{i}{2}\frac{f'_i}{f_5}\sigma_{i5}\right) + \tilde{\gamma}^r\partial_r
+\end{equation}
+
+then we choose our spinor vector, $\psi = \exp(-i\omega_t + ik_jx^j)(-gg^{55})^{-1/4}\phi(r)$, then by applying Dirac operator on $\psi$ we get,
 
 \begin{align}
-   0 =& \left[ i\frac{L}{\sqrt{f}r} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[ \partial_t - i\frac{2fr+f'r^2}{4L^2}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} \right] \right.\nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix} \left[ \partial_x + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^1 \\ \sigma^1 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix} \left[ \partial_y + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^2 \\ \sigma^2 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix} \left[ \partial_z + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^3 \\ \sigma^3 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ \left. + \frac{\sqrt{f}r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \partial_r - m \begin{pmatrix} I & 0 \\ 0 & I \\ \end{pmatrix} \right] \psi
+   \tilde{\gamma}^{\mu}D_{\mu}\psi =& \begin{pmatrix} 0 & \frac{\omega}{f_0} - \frac{k_i\sigma^i}{f_i} \\ \frac{\omega}{f_0} + \frac{k_i\sigma^i}{f_i} & 0 \\ \end{pmatrix}\frac{\exp\left\{-i\omega t + ik_jx^j\right\}}{\sqrt{f_0f_1f_2f_3}}\phi(r) \nonumber\\
+    & ~ - \frac{1}{f_5} \begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \frac{\exp\left\{-i\omega t + ik_jx^j\right\}}{\sqrt{f_0f_1f_2f_3}}\frac{\partial\phi(r)}{\partial r}
 \end{align}
 
-For the first step lets assume that we have a plane wave in $x$, $y$, $z$, and $t$ direction, then we try to solve the equations for $r$ and at the end we are able to use fourier trasformation to sum up all plane waves to get the whole answer. $\psi$, which is a for component vector has the form of,
+\subsection{Dirac equation in Charged Field}
+
+Now assume that there is charge in our Dirac equation so the Dirac Operator chages to,
+
+\begin{equation}
+   \tilde{\gamma}^{\mu}D_{\mu} = \tilde{\gamma}^{\mu}\left[\partial_{\mu} + \frac{i}{4}\omega^{\alpha\beta}_{\mu}\sigma_{\alpha\beta} -iqA_{\mu} \right]
+\end{equation} 
+
+Note that in case which we are interested the Dirac action depends on $q$ only through,
+
+\begin{equation}
+   \mu_q \equiv \mu q
+\end{equation}
+
+and from before we have,
+
+\begin{equation}
+   \sigma_{\alpha\beta} = \frac{1}{2i}[\gamma_{\alpha},\gamma_{\beta}]
+\end{equation}
+
+where,
+
+\begin{equation}
+   \gamma_{\mu} = \left\{-\gamma^0,\gamma^1,\gamma^2,\gamma^3,\gamma^5\right\}
+\end{equation}
+
+Note that these equation are correct in case of, $\mathbf{sgn}(-++++)$. In this section we choose this signs to derive our equations. And $\omega^{\alpha\beta}_{\mu}$ for diagonal metric, lets has say $ds^2 = -f_0(r)dt^2 + \sum_{i=1}^{3} f_i(r)dx_i^2 + f_5(r)dr^2 $, the form of,
+
+\begin{equation}
+   \omega^{\alpha\beta}_{\mu} = \frac{1}{2}\left[v^{\alpha}_{\alpha}v^{\beta}_{\beta}g^{\alpha\alpha}g^{\beta\beta}(\partial_{\beta}g_{\alpha\mu}-\partial_{\alpha}g_{\beta\mu})\right]
+\end{equation}
+
+this simplifiyed $\omega$ is true for all kind of diagonal metrics. From above equation it is obvious that for diagonal metric $\omega$ is anti-symmetric. In our case $v^{\alpha}_{\beta}$ is,
+
+\begin{equation}
+   v^{i}_{j} = 0 \qquad i \neq j,    \qquad  v^{i}_{i} = f_i(r)  \qquad i = 0,~1,~2,~3,~5
+\end{equation}
+
+Gamma matrices in Minkowski space, with $\mathbf{sgn}(-++++)$, are
+
+\begin{equation}
+   \gamma^0 =i\begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix}, \quad
+   \gamma^i =i\begin{pmatrix} 0 & \sigma^i \\ -\sigma^i & 0 \\ \end{pmatrix}, \quad
+   \gamma^5 = \begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix}
+\end{equation}
+
+spinor has two component, lets say $\psi_{\pm}$, and in our study we prefer to use the spinot with following definition to make our equation simpler,
+
+\begin{equation} \label{eq:spinorVectorOriginal}
+    \psi_{\pm} = (-gg^{rr})^{-1/4}\times\exp\left\{-i\omega t +ik_ix^i\right\}\phi_{\pm}
+\end{equation}
+
+Non-vanishing terms for $\omega^{\alpha\beta}_{\mu}$ are,
+
+\begin{equation}
+   \omega^{i5}_i = -\omega^{5i}_i = \frac{f'_i}{f_5} ~, \qquad i=0,~1,~2,~3 
+\end{equation}
+
+and non-vanishing terms for $\sigma_{\alpha\beta}$ are,
+
+\begin{equation}
+   \sigma_{05} = -\sigma_{50} = \begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix}, ~~ \sigma_{i5} = -\sigma_{5i} = \begin{pmatrix} 0 & -\sigma^i \\ -\sigma^i & 0 \\ \end{pmatrix}~~ i=1,~2,~3
+\end{equation}
+
+so in this case dirac operator get the form of,
 
 \begin{align}
-   0 =& \left[ i\frac{L}{\sqrt{f}r} \begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[ P_t - i\frac{2fr+f'r^2}{4L^2}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} \right] \right.\nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^1 \\ -\sigma^1 & 0 \\ \end{pmatrix} \left[ P_x + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^1 \\ \sigma^1 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^2 \\ -\sigma^2 & 0 \\ \end{pmatrix} \left[ P_y + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^2 \\ \sigma^2 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ + i\frac{L}{r}\begin{pmatrix} 0 & \sigma^3 \\ -\sigma^3 & 0 \\ \end{pmatrix} \left[ P_z + i\frac{\sqrt{f}r}{2L^2}\begin{pmatrix} 0 & \sigma^3 \\ \sigma^3 & 0 \\ \end{pmatrix} \right] \nonumber\\
-      & ~~~ \left. + \frac{\sqrt{f}r}{L}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \partial_r - m \begin{pmatrix} I & 0 \\ 0 & I \\ \end{pmatrix} \right] \psi
+   \tilde{\gamma}^{\mu}D_{\mu} =& \frac{i}{f_0}\begin{pmatrix} 0 & I \\ I & 0 \\ \end{pmatrix} \left[\partial_{t} + \frac{i}{2}\frac{f'_0}{f_5}\begin{pmatrix} 0 & I \\ -I & 0 \\ \end{pmatrix} -iqA_{t}\right] + \frac{\partial_{r}}{f_5}\begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} \nonumber\\
+   & + \sum\limits_{3}^{i=1}\frac{i}{f_i}\begin{pmatrix} 0 & \sigma^i \\ -\sigma^i & 0 \\ \end{pmatrix} \left[\partial_{i} - \frac{i}{2}\frac{f'_i}{f_5}\begin{pmatrix} 0 & \sigma^i \\ \sigma^i & 0 \\ \end{pmatrix} \right]
 \end{align}
 
-and then,
+after applying Dirac operator on spinor, equation \ref{eq:spinorVectorOriginal}, we get,
 
 \begin{align}
-   0 =& \left[ i\frac{L}{r} \begin{pmatrix} 0 & \frac{P_t}{\sqrt{f}}I + P_i\sigma^i \\ \frac{P_t}{\sqrt{f}}I - P_i\sigma^i & 0 \\ \end{pmatrix} \right.\nonumber\\
-      & ~~~ \left. + \frac{1}{4L}\begin{pmatrix} \left(\frac{2f+f'r}{\sqrt{f}} - 3\sqrt{f}\right)I & 0 \\ 0 & -\left(\frac{2f+f'r}{\sqrt{f}} - 3\sqrt{f}\right)I \\ \end{pmatrix} \right] \psi(P,r)\nonumber\\
-      & ~~~ + \left[ \begin{pmatrix} (\frac{\sqrt{f}r}{L}\partial r-m)I & 0 \\ 0 & -(\frac{\sqrt{f}r}{L}\partial r+m)I\\ \end{pmatrix}  \right] \psi(P,r)
+   \tilde{\gamma}^{\mu}D_{\mu}\psi =& \begin{pmatrix} 0 & \frac{\omega + qA_t}{f_0} - \frac{k_i\sigma^i}{f_i} \\ \frac{\omega + qA_t}{f_0} + \frac{k_i\sigma^i}{f_i} & 0 \\ \end{pmatrix} (-gg^{rr})^{-\frac{1}{4}}\times\exp\left\{-i\omega t +ik_ix^i\right\}\phi(r)  \nonumber\\
+   & + \frac{1}{f_5} \begin{pmatrix} I & 0 \\ 0 & -I \\ \end{pmatrix} (-gg^{rr})^{-\frac{1}{4}}\times\exp\left\{-i\omega t +ik_ix^i\right\}\frac{\partial\phi(r)}{\partial r}
 \end{align}
 
-Finaly we get,
+Now we are able to write the Dirac equation with mass. After adding mass to our equation and cross $(-gg^{rr})^{-\frac{1}{4}}\times\exp\left\{-i\omega t +ik_ix^i\right\}$ from our spinor, we get,
+
+\begin{equation} \label{eq:matrixDiracEquationChargeI}
+   0 = \begin{pmatrix} \frac{\partial_r}{f_5} - m & \frac{\omega + qA_t}{f_0} - \frac{k_i\sigma^i}{f_i} \\ \frac{\omega + qA_t}{f_0} + \frac{k_i\sigma^i}{f_i} & -\frac{\partial_r}{f_5} - m \\ \end{pmatrix} \begin{pmatrix} \phi_{+} \\ \phi_{-} \\ \end{pmatrix}
+\end{equation}
+
+lets define $\omega + qA_t = \omega + q(1-\frac{1}{r}) \equiv \Omega$ and solve the equation \ref{eq:matrixDiracEquationChargeI} for $\phi_{\pm}$,
 
 \begin{align}
-   0 =& \left[ \frac{f'r-f}{4\sqrt{f}L} + \frac{\sqrt{f}r}{L}\partial_r - m \right]I\Psi_1 + i\frac{L}{r}(\frac{P_t}{\sqrt{f}} I + P_i\sigma^i)\Psi_2 \nonumber\\
-   0 =& \left[ -\frac{f'r-f}{4\sqrt{f}L} - \frac{\sqrt{f}r}{L}\partial_r - m \right]I\Psi_2 + i\frac{L}{r}(\frac{P_t}{\sqrt{f}} I - P_i\sigma^i)\Psi_1
+    0 =& \left( \frac{\partial_r}{f_5} - m \right) \phi_{+} + \left( \frac{\Omega}{f_0} - \frac{k_i\sigma^i}{f_i} \right) \phi_{-} \nonumber\\
+    0 =& \left( - \frac{\partial_r}{f_5} - m \right) \phi_{-} + \left( \frac{\Omega}{f_0} + \frac{k_i\sigma^i}{f_i} \right) \phi_{+}
 \end{align}
 
-$\Psi$ is two component vector and its differential equation is,
+we solved the equation in Chiral representation we can solve the equation for other representations, too. So in general one can prove that the equations has the form of,
 
-%\begin{align}
-%   0 =& \left[ \frac{1-3i}{2L} - \frac{r}{L}\partial_r - m \right]\left[ \frac{3i-1}{2L} + \frac{r}{L}\partial_r - m \right]I\Psi_1 + \frac{L}{r}(P_t I + P_i\sigma^i)\frac{L}{r}(P_t I - P_i\sigma^i)\Psi_1 \nonumber\\
-%   0 =& \left[ \frac{1-3i}{2L} - \frac{r}{L}\partial_r - m \right]\left[ \frac{3i-1}{2L} + \frac{r}{L}\partial_r - m \right]I\Psi_1 + \frac{L}{r}(P_t I + P_i\sigma^i)\frac{L}{r}(P_t I - P_i\sigma^i)\Psi_1
-%\end{align}
+\begin{equation}
+   \sqrt{\frac{g_{ii}}{g_{rr}}} \left(\partial_r\mp m\sqrt{g_{rr}} \right) \phi_{\pm} = \mp i K_{\mu}\gamma^{\mu}\phi_{\mp}
+\end{equation}
 
-%\begin{equation}
-%   0 = \left[ m^2 - \left(\frac{3i-1}{2L} + \frac{r}{L}\partial_r \right)^2 + \frac{L^2}{r^2}\left(P_t^2 - P_i^2 \right) \right]\Psi_1
-%\end{equation}
+with,
 
+\begin{equation}
+   K_{\mu}(r) = (-u(r),k_i)~, \qquad u = \sqrt{\frac{g_{ii}}{-g_{tt}}}\left(\omega + \mu_q(1-\frac{1}{r})\right)
+\end{equation}
+
+\section{solving the Dirac equation}
+
+In this section we try to find the analytical solution of Dirac equation near horizon and boundary of black hole in AdS space. The geometry is,
+
+\begin{equation}
+   ds^2 = -\frac{r^2f(r)}{L^2}dt^2 + \frac{r^2}{L^2}dx^2 + \frac{r^2}{L^2}dy^2 + \frac{r^2}{L^2}dz^2 + \frac{L^2}{r^2f(r)}dr^2 
+\end{equation}
+
+with,
+
+\begin{equation}
+   f = 1 + \frac{Q^2}{r^{2d-2}} - \frac{M}{r^d}
+\end{equation}
+
+for spinor $\psi_{\pm} = \frac{L^2}{r^2f^{1/4}(r)}\times\exp\left\{-i\omega t +ik_ix^i\right\}\phi(r)_{\pm}$ and $\omega + q(1-\frac{1}{r}) \equiv \Omega$  we have,
+
+\begin{align}
+    0 =& \left( \frac{\partial_r}{f_5} - m \right) \phi_{+} + \left( \frac{\Omega}{f_0} - \frac{k_i\sigma^i}{f_i} \right) \phi_{-} \nonumber\\
+    0 =& \left( - \frac{\partial_r}{f_5} - m \right) \phi_{-} + \left( \frac{\Omega}{f_0} + \frac{k_i\sigma^i}{f_i} \right) \phi_{+}
+\end{align}
+
+for black hole geometry in $AdS_5$ one gets,
+
+\begin{align}
+    0 =& \left( \frac{r\sqrt{f(r)}\partial_r}{L} - m \right) \phi_{+} + \left( \frac{L\Omega}{r\sqrt{f(r)}} - \frac{Lk_i\sigma^i}{r} \right) \phi_{-} \nonumber\\
+    0 =& \left(-\frac{r\sqrt{f(r)}\partial_r}{L} - m \right) \phi_{-} + \left( \frac{L\Omega}{r\sqrt{f(r)}} + \frac{Lk_i\sigma^i}{r} \right) \phi_{+}
+\end{align}
+
+Near boundary, $r\rightarrow\infty$ up to second order then answer has the form of,
+
+\begin{equation}
+   \phi(r)_{+} = Ar^{mL} + Br^{-mL-1} + \cdots, \qquad \phi(r)_{-} = Cr^{-mL} + Dr^{mL-1} + \cdots
+\end{equation}
+
+with,
+
+\begin{equation}
+   B = \frac{L\Omega - Lk_i\sigma^i}{2m + 1}C ~~, \qquad D = \frac{L\Omega + Lk_i\sigma^i}{2m-1}A
+\end{equation}
