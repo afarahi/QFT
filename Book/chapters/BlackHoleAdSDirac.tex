@@ -538,24 +538,30 @@ with,
 and close to horizon, $r\rightarrow r_0$ where $f(r_0) = 0$, we get,
 
 \begin{align}
-    0 =& \partial_r\left[(r-r_0)^2\partial_r \phi_{+}\right] + \frac{L^4\omega^2}{144(r-r_0)^2}\phi_{+}\nonumber\\
-    0 =&  (r-r_0)^2 \partial_r \phi_{+} +  \frac{L^2\omega}{12} \phi_{-}
-\end{align}
-
-and the answer has the form of,
-
-\begin{align} \label{eq:NearHorizonSolutionBlackHoleAdS5Dirac}
-   \phi_{+}(r) =& A\exp\left\{\frac{i\theta}{(r-r_0)}\right\} + B\exp\left\{-\frac{i\theta}{(r-r_0)}\right\}, \nonumber\\
-   \phi_{-}(r) =& iA\exp\left\{\frac{i\theta}{(r-r_0)}\right\} - iB\exp\left\{-\frac{i\theta}{(r-r_0)}\right\}
+    0 =& \partial_r\left[(r-r_0)\partial_r\phi_{+}\right] + \frac{L^4\Omega^2(r_0)}{\kappa^2r_0^2(r-r_0)}\phi_{+}\nonumber\\
+    0 =&  (r-r_0) \partial_r \phi_{+} +  \frac{L^2\Omega(r_0)}{r_0^4\kappa} \phi_{-}
 \end{align}
 
 with,
 
 \begin{equation}
-   \theta = \frac{L^2\Omega(r_0)}{12}
+   \kappa = 4\frac{r_0^6 - r_*^6}{r_0^7}
 \end{equation}
 
-Becasue we are intrested in retarded Green function so by applying the in-falling baoundary condition at horizon we are set. Then in equation \ref{eq:NearHorizonSolutionBlackHoleAdS5Dirac} we ignore the second term, $\exp\left\{-\frac{i\theta}{(r-r_0)}\right\}$ so we will use $A=1$ and $B=0$ to get an appropriate boundary condition. 
+and the answer has the form of,
+
+\begin{align} \label{eq:NearHorizonSolutionBlackHoleAdS5Dirac}
+   \phi_{+}(r) =& A\exp\left\{i\beta\ln{(r-r_0)}\right\} + B\exp\left\{-i\beta\ln{(r-r_0)}\right\}, \nonumber\\
+   \phi_{-}(r) =&-iA\exp\left\{i\beta\ln{(r-r_0)}\right\} + iB\exp\left\{-i\beta\ln{(r-r_0)}\right\}
+\end{align}
+
+with,
+
+\begin{equation}
+   \beta = \frac{L^2\Omega(r_0)}{\kappa r_0}
+\end{equation}
+
+Becasue we are intrested in retarded Green function so by applying the in-falling baoundary condition at horizon we are set. Then in equation \ref{eq:NearHorizonSolutionBlackHoleAdS5Dirac} we ignore the second term, $\exp\left\{-i\beta\ln{(r-r_0)}\right\}$ so we will use $A=1$ and $B=0$ to get an appropriate boundary condition. 
 
 \subsection{Green function}
 
@@ -579,3 +585,85 @@ Lets divide the spinors $\phi_{+}$ and $\phi_{-}$ into their components, say $\p
 \end{align}
  
 By changing $k_3$ into $-k_3$ in equation  
+
+....
+
+\subsection{Changing variables}
+
+In this section we change our variabale in the from of, $z=r_0/r$ and for equation \ref{eq:DiracEquationinBlackHoleAdS5}, we get,
+
+\begin{align}
+    0 =& \left(-\frac{\sqrt{f(z)}\partial_z}{zL} - m \right) \phi_{+} + \left( \frac{zL\Omega}{r_0\sqrt{f(z)}} - \frac{zLk_i\sigma^i}{r_0} \right) \phi_{-} \nonumber\\
+    0 =& \left(-\frac{\sqrt{f(z)}\partial_z}{L} - m \right) \phi_{-} + \left( \frac{zL\Omega}{r_0\sqrt{f(z)}} + \frac{zLk_i\sigma^i}{r_0} \right) \phi_{+}
+\end{align}
+
+\subsection{Zero Temprature}
+
+When $r_* = r_0$ then we gets zero temrature. We defined the zero temprature in last chapter so here we just try to derive its formulation for Dirac equations. Note that in zero temprature only redshift factor $f(r)$, or $f(z)$ changing. So we in $r$ coordinate one have Dirac equations,
+
+\begin{align} 
+    0 =& \left( \frac{r\sqrt{f(r)}\partial_r}{L} - m \right) \phi_{+} + \left( \frac{L\Omega}{r\sqrt{f(r)}} - \frac{Lk_i\sigma^i}{r} \right) \phi_{-} \nonumber\\
+    0 =& \left(-\frac{r\sqrt{f(r)}\partial_r}{L} - m \right) \phi_{-} + \left( \frac{L\Omega}{r\sqrt{f(r)}} + \frac{Lk_i\sigma^i}{r} \right) \phi_{+}
+\end{align}
+
+or in $z$ coordinate,
+
+\begin{align}
+    0 =& \left(-\frac{\sqrt{f(z)}\partial_z}{zL} - m \right) \phi_{+} + \left( \frac{zL\Omega}{r_0\sqrt{f(z)}} - \frac{zLk_i\sigma^i}{r_0} \right) \phi_{-} \nonumber\\
+    0 =& \left(-\frac{\sqrt{f(z)}\partial_z}{zL} - m \right) \phi_{-} + \left( \frac{zL\Omega}{r_0\sqrt{f(z)}} + \frac{zLk_i\sigma^i}{r_0} \right) \phi_{+}
+\end{align}
+
+with,
+
+\begin{equation}
+   f = \frac{(r-r_0)^2(r+r_0)^2(r^2+2r_0^2)}{r^6}
+\end{equation}
+
+or,
+
+\begin{equation}
+   f = (1-z)^2(1+z)^2(1+2z^2)
+\end{equation}
+
+so close to boundary, $r\rightarrow \infty$, answer has the form of,
+
+\begin{equation}
+   \phi_{+}(r) = Ar^{mL} + Br^{-mL-1}, \qquad \phi_{-}(r) = Cr^{-mL} + Dr^{mL-1}
+\end{equation}
+
+or for $z$ coordinate,
+
+\begin{equation}
+   \phi_{+}(r) = A\left(\frac{r_0}{z}\right)^{mL} + B\left(\frac{r_0}{z}\right)^{-mL-1}, \qquad \phi_{-}(r) = C\left(\frac{r_0}{z}\right)^{-mL} + D\left(\frac{r_0}{z}\right)^{mL-1}
+\end{equation}
+
+with,
+
+\begin{equation}
+   B = \frac{L\Omega - Lk_i\sigma^i}{2m + 1}C ~~, \qquad D = \frac{L\Omega + Lk_i\sigma^i}{2m-1}A
+\end{equation}
+
+and close to horizon, when $r \rightarrow r_0$, the answer gets the form of,
+
+\begin{equation}
+   \phi_{+}(r) = Ar^{mL} + Br^{-mL-1} + \cdots, \qquad \phi_{-}(r) = Cr^{-mL} + Dr^{mL-1} + \cdots
+\end{equation}
+
+\begin{align}
+    0 =& \partial_r\left[(r-r_0)^2\partial_r \phi_{+}\right] + \frac{r_0^4L^4\Omega^2(r_0)}{144(r-r_0)^2}\phi_{+}\nonumber\\
+    0 =&  (r-r_0)^2 \partial_r \phi_{+} +  \frac{r_0^2L^2\Omega(r_0)}{12} \phi_{-}
+\end{align}
+
+and the answer has the form of,
+
+\begin{align} \label{eq:NearHorizonSolutionBlackHoleAdS5Dirac}
+   \phi_{+}(r) =& A\exp\left\{\frac{i\theta}{(r-r_0)}\right\} + B\exp\left\{-\frac{i\theta}{(r-r_0)}\right\}, \nonumber\\
+   \phi_{-}(r) =& iA\exp\left\{\frac{i\theta}{(r-r_0)}\right\} - iB\exp\left\{-\frac{i\theta}{(r-r_0)}\right\}
+\end{align}
+
+with,
+
+\begin{equation}
+   \theta = \frac{r_0^2L^2\Omega(r_0)}{12}
+\end{equation}
+	
