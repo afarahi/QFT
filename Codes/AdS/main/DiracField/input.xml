@@ -9,12 +9,12 @@
     <kt_complex>0.0</kt_complex>
     <kt_real>1.0</kt_real>
     <muq_complex>0.0</muq_complex>
-    <muq_real>1.73205081</muq_real>
+    <muq_real>1.7320508075688</muq_real>
     <mass>0.0</mass>
   </field_properties>
   <dimention>4</dimention>
   <grid_size>
-    <h>1e-3</h>
+    <h>1e-4</h>
     <rmax>500.0</rmax>
   </grid_size>
 </data>

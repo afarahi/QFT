@@ -44,9 +44,16 @@
 \contentsline {section}{\numberline {4.4}solving the Dirac equation}{57}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Green function}{58}{subsection.4.4.1}
 \contentsline {subsubsection}{Properties of Green function}{59}{section*.9}
-\contentsline {subsection}{\numberline {4.4.2}Changing variables}{59}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Zero Temprature}{59}{subsection.4.4.3}
-\contentsline {chapter}{\numberline {5}NOT RELATED TO THE PROJECT}{63}{chapter.5}
-\contentsline {section}{\numberline {5.1}SELF NOTES FOR MY RECORD}{63}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Is the nature Lorentz Invariance ?}{63}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Black Rings in $5$-dimention}{63}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {4.4.2}Zero Temprature}{59}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Looking more carefully at zero temprature and field without mass}{61}{subsection.4.4.3}
+\contentsline {chapter}{\numberline {5}Spin $3/2$ particles}{63}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{63}{section.5.1}
+\contentsline {section}{\numberline {5.2}Rarita-Schwinger Formalism}{63}{section.5.2}
+\contentsline {section}{\numberline {5.3}Equation of motion for $3/2$ spin particles}{64}{section.5.3}
+\contentsline {section}{\numberline {5.4}Rarita–Schwinger equation}{65}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Rarita–Schwinger equation in $4$-dimentional Minkowskispace}{66}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}Spin $3/2$ in curved space}{68}{section.5.5}
+\contentsline {chapter}{\numberline {6}NOT RELATED TO THE PROJECT}{71}{chapter.6}
+\contentsline {section}{\numberline {6.1}SELF NOTES FOR MY RECORD}{71}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Is the nature Lorentz Invariance ?}{71}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Black Rings in $5$-dimention}{71}{subsection.6.1.2}

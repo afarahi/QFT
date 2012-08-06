@@ -1,0 +1,255 @@
+\chapter{Spin $3/2$ particles}
+\label{ch:Spin3o2particles}
+
+\section{Introduction}
+
+\section{Rarita-Schwinger Formalism}
+ 
+Spin $3/2$ particles represented by Rarita-Schwinger field that is a tensor product between the first rank rank tensor and Dirac bispinor. Dirac bispinor can be denoted by $SU(2)\oplus SU(2)$ representation in the usual way,
+
+\begin{equation}
+   \psi ~~ : ~~ (\frac{1}{2},0) \oplus (0,\frac{1}{2})
+\end{equation}
+
+A spin 1-field or Lorentz vector $A_{\mu}$ can be constructed as the direct product $(\frac{1}{2},0) \otimes (0,\frac{1}{2})$ by following,
+
+\begin{equation}
+   A_{\mu} ~~ : ~~ (\frac{1}{2},0) \otimes (0,\frac{1}{2})  = (\frac{1}{2},\frac{1}{2}) 
+\end{equation}
+
+The spin $3/2$ vector spinor $\psi_{\mu}$, according to Rarita-Schwinger can be written as,
+
+\begin{equation}
+   \psi_{\mu} \sim A_{\mu} \otimes \psi ~~ : ~~ (\frac{1}{2},\frac{1}{2}) \otimes \left( (\frac{1}{2},0) \oplus (0,\frac{1}{2}) \right)
+\end{equation}
+
+Rarita and Schwinger proposed an equation to describe free spin $3/2$ particle as following,
+
+\begin{equation}
+   (i\gamma^{\mu}\partial_{\mu} - m) \psi_{\nu}(x) = 0
+\end{equation}
+
+with two constrains,
+
+\begin{equation}
+   \gamma^{\mu} \psi_{\mu} = 0 \quad \text{and} \quad \partial^{\mu}\psi_{\mu} = 0 
+\end{equation}
+
+This constrains allow us to cancle the extra degree of freedom of our theory.
+
+\section{Equation of motion for $3/2$ spin particles}
+
+A spin $3/2$ field can be described by the Rarita-Schwinger Lagrangian given by the following formalism,
+
+\begin{equation}
+   \mathcal{L} (A) = \bar{\psi}^{\mu} \left(i \partial_{\alpha} \Gamma_{\mu~~\nu}^{~~\alpha}(A) - mB_{\mu\nu}(A) \right)\psi^{\nu},
+\end{equation}
+
+where $\bar{\psi}^{\mu} = (\psi^{\mu})^{\dagger}\gamma^0$ is the adjoint vector spinor, $m$ is the particle mass, $\psi^{\mu}$ is the vector spinor and the matrices $\Gamma_{\mu~~\nu}^{~~\alpha}$ and $B_{\mu\nu}$ are given by,
+
+\begin{equation}
+   \Gamma_{\mu~~\nu}^{~~\alpha}(A) = g_{\mu\nu} \gamma^{\alpha} + A(\gamma_{\mu}g_{\mu}^{~~\alpha}\gamma_{\nu}) + B\gamma_{\mu}\gamma^{\alpha}\gamma_{\nu},
+\end{equation}
+
+and 
+
+\begin{equation}
+   B_{\mu\nu}(A) = g_{\mu\nu} -C \gamma_{\mu}\gamma_{\nu}
+\end{equation}
+
+with
+
+\begin{equation}
+   B \equiv \frac{3}{2}A^2 + A + \frac{1}{2}
+\end{equation}
+
+and
+
+\begin{equation}
+   C \equiv 3A^2 + 3A + 1.
+\end{equation}
+
+in case of Minkowski space and \textbf{Sgn}$(-+++)$, $\gamma^{\mu}$ are Dirac matrices and $A$ is an arbitrary parameter (except that $A \neq-1/2$). The parameter $A$ has no physical meaning and the conventional choices made in the litrature are $A=-1/3$, or $A=0$, or $A=-1$. For $A=-1$ the Lagrangian reduces to:
+
+\begin{equation}
+   \mathcal{L} = -\frac{i}{2}\bar{\psi}_{\mu} (\epsilon^{\mu\nu\rho\sigma}\gamma_{5}\gamma_{\mu}\partial_{\rho}+m\sigma^{\mu\sigma}) \psi_{\sigma}
+\end{equation}
+
+where $\epsilon^{\mu\nu\rho\sigma}$ is the Levi-Civita symbole, $\gamma^{5}=i\gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}$, and $\sigma^{\mu\sigma}=\frac{i}{2}[\gamma^{\mu},\gamma^{\sigma}]$. By applying the Euler-Lagrangian equation to the Lagrangian, the equation of motion gets the form of,
+
+\begin{equation}
+   \left( \epsilon^{\mu\nu\rho\sigma} \gamma_{5}\gamma_{\mu} \partial_{\rho} + m\sigma \right) \psi_{\sigma} = 0
+\end{equation}
+
+while the above equation can be written in a simpler form plus supplementary conditions
+
+\begin{equation}
+   ( i\gamma^{\mu}\partial_{\mu} - m ) \psi_{\nu} = 0
+\end{equation}
+
+with conditions,
+
+\begin{align}
+   \gamma^{\nu} \psi_{\mu} &= 0 \\
+   \partial^{\mu} \psi_{\mu} &= 0
+\end{align}
+
+
+-------------------------------------------------------------------
+
+
+These requirements lead to the Rarita-Schwinger equation given [Rarita-Schwinger paper] by,
+
+\begin{equation}
+   \left(\gamma_{\mu}\partial^{\mu} + M \right) \psi^{\mu}(X)= 0
+\end{equation}
+
+with condition,
+
+\begin{equation} \label{eq:spin3/2constraintequation}
+   \gamma_{\mu}\psi^{\mu} = 0
+\end{equation}
+
+The completely symmetric function $\Psi_{\alpha\beta\gamma}(x)$ can be built from $\psi^{\mu}(x)$. As it is seen all of the vector component of $\psi^{\mu}(x)$ satisfy Dirac-type equations, however they are not independent. they must fullfil the constraint given by equation \ref{eq:spin3/2constraintequation}. This constraint coming from the symmetry condition projects out to spin $1/2$ component and the remaining components describe particles with spin $3/2$.\\
+
+Here we use the Einstein summatin rule. The Dirac matrics, as we have seen in last chapter, $\gamma_{\mu}$ satisfy the anticommuter relation,
+
+\begin{equation}
+   \gamma_{\mu}\gamma_{\nu} + \gamma_{\nu}\gamma_{\mu} = 2\delta_{\mu\nu}
+\end{equation}
+
+
+-----------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rarita–Schwinger equation}
+
+In theoretical physics, the Rarita–Schwinger equation is the relativistic field equation of spin-3/2 fermions. It is similar to the Dirac equation for spin-1/2 fermions. This equation was first introduced by William Rarita and Julian Schwinger in 1941. In modern notation it can be written as:
+
+\begin{equation} \label{eq:Rarita–Schwingerequation}
+   \left( \epsilon^{\mu \nu \rho \sigma} \gamma_5 \gamma_\nu \partial_\rho + m \sigma^{\mu \sigma} \right)\psi_\sigma = 0
+\end{equation}
+
+where $\epsilon^{\mu \nu \rho \sigma}$ is the Levi-Civita symbol, $\gamma_5$ and $\gamma_{\nu}$ are Dirac matrices, $m$ is the mass, $\sigma^{\mu \nu} \equiv i/2\left[ \gamma^{\mu} , \gamma^{\nu} \right]$, and $\psi_{\sigma}$ is a vector-valued spinor with additional components compared to the four component spinor in the Dirac equation. It corresponds to the $\left(\tfrac{1}{2},\tfrac{1}{2}\right)\otimes \left(\left(\tfrac{1}{2},0\right)\oplus \left(0,\tfrac{1}{2}\right)\right)$ representation of the Lorentz group, or rather, its $\left(1,\tfrac{1}{2}\right) \oplus \left(\tfrac{1}{2},1 \right)$ part. This field equation can be derived as the Euler–Lagrange equation corresponding to the Rarita-Schwinger Lagrangian:
+
+\begin{equation}
+   \mathcal{L} =-\frac{i}{2}\bar{\psi}_\mu \left( \epsilon^{\mu \nu \rho \sigma} \gamma_5 \gamma_{\nu} \partial_{\rho} + m \sigma^{\mu \sigma} \right)\psi_\sigma
+\end{equation}
+
+where the bar above $\psi_{\mu}$ denotes the Dirac adjoint.\\
+
+This equation is useful for the wave function of composite objects such as the delta baryons $\Delta$ or for the hypothetical gravitino. So far, no elementary particle with spin $3/2$ has been found experimentally.\\
+
+The massless Rarita–Schwinger equation has a gauge symmetry, under the gauge transformation of $\psi_{\mu} \rightarrow \psi_{\mu} + \partial_{\mu} \epsilon$, where $\mathcal{\epsilon}$ is an arbitrary spinor field.\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Rarita–Schwinger equation in $4$-dimentional Minkowskispace}
+
+In $4$-dimentional Minkowski sapce, Dirac matrices are obeying the following anti-symmetric rule,
+
+\begin{equation}
+   \left\{\gamma_{\mu},\gamma_{\nu}\right\} = 2\eta_{\mu\nu} I_{4\times 4}
+\end{equation}
+
+$\psi_{\sigma}$ has for component, $\sigma = 0,~1,~2,~3$, and each component has $4$ element, lets write the equations for each component in Minkowski space and solve it. For Simplicity assume that $m=0$ and we have a wave equation which is traveling in $x_3$ direction the wave has the form of,
+
+\begin{equation}
+   \psi_{\mu}(X) = \exp\left\{-i\omega t+ik_3x_3 \right\} \phi_{\mu}(\omega,k_3)
+\end{equation}
+
+lets define $\gamma_{ijk}\equiv\gamma_{i}\gamma_{j}\gamma_{k}$, and $\gamma_{ij} \equiv \gamma_{i}\gamma_{j}$, then for we get four equations,
+
+\begin{align}
+   -\gamma_{51}k_3\phi_{2} + \gamma_{52}k_3\phi_{1} =0 \quad \rightarrow \quad \phi_{2} = \gamma_{12}\phi_{1}\nonumber\\
+   -\gamma_{52}\omega\phi_{3} - \gamma_{52}k_3\phi_{0} + \gamma_{53}\omega\phi_{2} + \gamma_{50}k_3\phi_{2} =0 \nonumber\\
+   \gamma_{51}\omega\phi_{3} - \gamma_{50}k_3\phi_{1} - \gamma_{53}\omega\phi_{1} + \gamma_{51}k_3\phi_{0} =0 
+\end{align}
+
+By choosing the \textbf{Sgn}$(-+++)$  we get,
+
+\begin{align}
+   \phi_{2} &= \gamma_{12}\phi_{1} \nonumber\\
+   \phi_{3} &= -\frac{k_3}{\omega}\phi_{1} \nonumber\\
+   \gamma_{1}\phi_{0} &= (\gamma_{0} + \gamma_{1} + \gamma_{3}\frac{\omega}{k_3})\phi_{1} \nonumber\\
+   (\gamma_{3}\omega + \gamma_{0}k_3)\phi_{1} &= 0
+\end{align}
+
+For holding the above equations one needs to get $k_{3} =\pm \omega$, which based on Special relativity point of view this is correct. Lets assume that $k_{3} = \omega$ and move to the next part. Lets choose Chiral representation for Gamma matrices and solve the equations. Once we have $\phi_{1}$, $\phi_{2}$, $\phi_{3}$, and $\phi_{0}$ are not arbitrary any more. We have,
+
+\begin{equation}
+   (\gamma_{3}\omega + \gamma_{0}k_3)\phi_{1} = 0
+\end{equation}
+
+and we should find the eigenvector of this equation,
+
+\begin{equation}
+   \gamma_{0}\gamma_{3}\omega\phi_{1} = k_3\phi_{1}
+\end{equation}
+
+and in Chiral representation we have,
+
+\begin{equation}
+   \left[ \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{pmatrix} \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & -1 \\ 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \end{pmatrix} \right] \phi_{1} = \phi_{1}
+\end{equation} 
+
+so the eigenvectors for both $\omega=k_3$ and $\omega=-k_3$ are,
+
+\begin{equation}
+    \phi_{1} = \phi_{1a}\begin{pmatrix} 1 \\ 0 \\  0 \\ 0 \end{pmatrix} + \phi_{1b}\begin{pmatrix} 0 \\ 1 \\  0 \\ 0 \end{pmatrix} + \phi_{1c}\begin{pmatrix} 0 \\ 0 \\  1 \\ 0 \end{pmatrix} + \phi_{1a}\begin{pmatrix} 0 \\ 0 \\  0 \\ 1 \end{pmatrix}
+\end{equation} 
+
+Now lets assume that we have some mass and compute the whole thing one more time. Our equation of motion has the form of,
+
+\begin{equation}
+   \left( \epsilon^{\mu \nu \rho \sigma} \gamma_5 \gamma_\nu \partial_\rho + m_1\sigma^{\mu \sigma} + im_2g^{\mu\sigma} \right)\psi_\sigma = 0
+\end{equation}
+
+and we get,
+
+\begin{align}
+   0 =& -\gamma_{51}k_3\phi_{2} + \gamma_{52}k_3\phi_{1} + m_1 \gamma^{01}\phi_{1} + m_1 \gamma^{02}\phi_{2} + m_1 \gamma^{03}\phi_{3} - m_2\phi_{0} \nonumber\\
+   0 =& -\gamma_{52}\omega\phi_{3} - \gamma_{52}k_3\phi_{0} + \gamma_{53}\omega\phi_{2} + \gamma_{50}k_3\phi_{2} + m_1 \gamma^{10}\phi_{0} + m_1 \gamma^{12}\phi_{2} + m_1 \gamma^{13}\phi_{3} + m_2\phi_{1} \nonumber\\
+   0 =& \gamma_{51}\omega\phi_{3} - \gamma_{50}k_3\phi_{1} - \gamma_{53}\omega\phi_{1} + \gamma_{51}k_3\phi_{0} + + m_1 \gamma^{20}\phi_{0} + m_1 \gamma^{21}\phi_{1} + m_1 \gamma^{23}\phi_{3} + m_2\phi_{2} \nonumber\\
+   0 =& -\gamma_{51}\omega\phi_{2} + \gamma_{52}\omega\phi_{1} + m_1 \gamma^{30}\phi_{0} + m_1 \gamma^{31}\phi_{1} + m_1 \gamma^{32}\phi_{2} + m_2\phi_{3}
+\end{align}
+
+or,
+
+\begin{align}
+   &-m_2\begin{pmatrix} -\phi_0 \\ \phi_1 \\  \phi_2 \\ \phi_2 \end{pmatrix} = \\
+   &\begin{pmatrix} 0 & \gamma_{52}k_3+m_1\gamma^{01} & m_1\gamma^{02}-\gamma_{51}k_3 &  m_1\gamma^{03} \\    
+    \gamma_{52}k_3-m_1\gamma^{10} & 0 & \gamma_{53}\omega+\gamma_{50}k_3+m_1\gamma^{12} & m_1\gamma^{13}-\gamma_{52} \\
+    -\gamma_{51}k_3-m_1 \gamma^{20} & m_1\gamma^{21}-\gamma_{50}k_3-\gamma_{53}\omega & 0 & \gamma_{51}\omega+m_1\gamma^{23}\\
+    -m_1\gamma^{30} & m_1\gamma^{31}+\gamma_{52}\omega & m_1\gamma^{32}-\gamma_{51}\omega & 0 \end{pmatrix} \nonumber\\
+    &\quad \qquad \times \begin{pmatrix} -\phi_0 \\ \phi_1 \\  \phi_2 \\ \phi_2 \end{pmatrix} \nonumber
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Spin $3/2$ in curved space}
+
+In the $d+1$-dimentional curved space Rarita–Schwinger action has the form of,
+
+\begin{equation} \label{eq:ActionSpin3o2Curved}
+   I = \int d^{d+1}x \sqrt{g} \bar{\psi}_{\mu} \left[\Gamma^{\mu\nu\sigma} D_{\nu} - m_1\Gamma^{\mu\sigma} - m_2 g^{\mu\sigma} \right] \psi_{\sigma}
+\end{equation}
+
+$D_{\nu}$ is the covariant derivative, and $\Gamma_{\mu}$'s are curved space Dirac matrices so that $\gamma_{\mu} = e^{a}_{\mu}\gamma_{a}$ where $\gamma_{a}$ is the Dirac matrix in Minkowski space with relation $\left\{\gamma_{a},\gamma_{b}\right\}=2\delta_{ab}$. $\Gamma^{\mu\nu\sigma} \equiv \Gamma^{[\mu}\Gamma^{\nu}\Gamma^{\sigma]}$ and $\Gamma^{\mu\sigma} \equiv \Gamma^{[\mu}\Gamma^{\sigma]}$. The action of \ref{eq:ActionSpin3o2Curved} gets the equation of motion in the form of,
+
+\begin{equation} \label{eq:MotionSpin3o2Curved}
+   \left[\Gamma^{\mu\nu\sigma} D_{\nu} - m_1\Gamma^{\mu\sigma} - m_2 g^{\mu\sigma} \right] \psi_{\sigma} = 0
+\end{equation}
+
+and for its conjugate one gets,
+
+\begin{equation}
+   \bar{\psi}_{\mu} \left[\Gamma^{\mu\nu\sigma} \overleftarrow{D}_{\nu} + m_1\Gamma^{\mu\sigma} + m_2 g^{\mu\sigma} \right] = 0
+\end{equation}
+
+and we can show that by defining $m_{\pm} = m_1 \pm m_2$, equation \ref{eq:MotionSpin3o2Curved} can be simplified to,
+
+\begin{equation}
+   \Gamma^{\nu}\left[D_{\nu}\psi_{\mu} - D_{\mu}\psi_{\nu}\right] + \frac{m_{+}}{d-1}\Gamma_{\mu}\Gamma^{\nu}\psi_{\nu} - m_{-}\psi_{\mu} = 0
+\end{equation}
+

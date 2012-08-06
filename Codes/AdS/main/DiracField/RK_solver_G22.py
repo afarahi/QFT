@@ -5,7 +5,7 @@ from matplotlib        import rc
 from cmath             import exp, cos, sin, sqrt
 from readdata          import read_data
 
-#Green Function_{22}
+#Green Function_{22} Solver
 
 #phip = \phi_{+}
 #phin = \phi_{-}
@@ -19,12 +19,12 @@ def redshift_f(r,d,Q,M):
 
 #Right hand constraction for Phi'_{+}
 def RHp_cons(r,phip,phin,r0,L,kx,kt,ms,d,Q,M,muq):
-    phipp = L*( ms*phip +  (L*kx/r - L*kt*(1.0+muq*(1.0-1.0/r))/(r*sqrt(redshift_f(r,d,Q,M))))*phin ) / ( r*sqrt(redshift_f(r,d,Q,M)) )
+    phipp = L*( ms*phip + (L*kx/r - L*kt*(1.0+muq*(1.0-(r0/r)**2))/(r*sqrt(redshift_f(r,d,Q,M))))*phin ) / ( r*sqrt(redshift_f(r,d,Q,M)) )
     return phipp
 
 #Right hand constraction for Phi'_{-}
 def RHn_cons(r,phip,phin,r0,L,kx,kt,ms,d,Q,M,muq):
-    phinp = L*( -ms*phin + (L*kx/r + L*kt*(1.0+muq*(1.0-1.0/r))/(r*sqrt(redshift_f(r,d,Q,M))))*phip ) / ( r*sqrt(redshift_f(r,d,Q,M)) )
+    phinp = L*( -ms*phin + (L*kx/r + L*kt*(1.0+muq*(1.0-(r0/r)**2))/(r*sqrt(redshift_f(r,d,Q,M))))*phip ) / ( r*sqrt(redshift_f(r,d,Q,M)) )
     return phinp
 
 #Boundary condition 
@@ -33,14 +33,16 @@ def appl_bondary(h,r0,rs,L,kx,kt,ms,d,muq):
     if (rs != r0):
        # Finite Temprature
        kappa = 4.0*(r0**6-rs**6)/(r0**7)
-       beta  = L*L*kt*(1.0+muq*(1.0-1.0/r0))/(kappa*r0)
+       beta  = L*L*kt/(kappa*r0)
        phip  = exp(-1.0j*beta*log(r-r0))
        phin  = 1.0j*exp(-1.0j*beta*log(r-r0))
     else:
        # Zero   Temprature
-       beta  = r0*r0*L*L*kt*(1.0+muq*(1.0-1.0/r0))/12.0
-       phip  = exp(1.0j*beta/(r-r0))
-       phin  = 1.0j*exp(1.0j*beta/(r-r0))
+       beta  = L*L*kt/12.0
+       a1p   = 0.0 #( - 12.0*beta/L * (-28.0*beta/(r0*L)-2.0*L*muq+2.0*L*kx*sqrt(3)/r0) - L*kt * (-28.0*beta/(r0*L)-2.0*L*muq-2.0*L*kx*sqrt(3)/r0)  ) / ( 144.0*beta**2/L**2 - L**2*kt**2 )
+       a1n   = 0.0 #( - L*kt * ( -28.0*beta/(r0*L) - 2.0*L*muq + 2.0*L*kx*sqrt(3)/r0  ) - 12.0*beta/L * (-28.0*beta/(r0*L)-2.0*L*muq-2.0*L*kx*sqrt(3)/r0)  ) / ( 144.0*beta**2/L**2 - L**2*kt**2 )
+       phip  = exp(1.0j*beta/(r-r0)) * (1.0 + a1p*(r-r0) )
+       phin  = 1.0j*exp(1.0j*beta/(r-r0)) * (1.0 + a1n*(r-r0))
     return (phip,phin)
 
 #Runge-Kutta coefficient
@@ -63,13 +65,13 @@ def LH_cons(r,phip,phin,h,r0,L,kx,kt,ms,d,Q,M,muq):
     return (phipnew,phinnew)
 
 #Solver
-def RK4_solver(rs,r0,L,kx,kt,ms,d,h3,h2,h1,rmax,Q,M,muq,scale=1):
+def RK4_solver_G22(rs,r0,L,kx,kt,ms,d,h3,h2,h1,rmax,Q,M,muq,scale=1):
     # r is changing from r0 to infty w = [r0 inf[
     # r is not defined in r = r0 so we need to use somewhere close to r = r0
     # so we would start from point r = r0 + h
 
     #Apply Boundary condition
-    h       = 1e-8
+    h       = 1e-5
     (fp,fn) = appl_bondary(h,r0,rs,L,kx,kt,ms,d,muq)
     fpr     = [fp]
     fnr     = [fn]
@@ -77,6 +79,29 @@ def RK4_solver(rs,r0,L,kx,kt,ms,d,h3,h2,h1,rmax,Q,M,muq,scale=1):
     rp      = r[0]
 
     #Solver
+    #Mesh Grid Size
+    h = h3/scale/100000
+    while (rp<1.0001*r0):
+      (fpnew,fnnew) = LH_cons(rp,fp,fn,h,r0,L,kx,kt,ms,d,Q,M,muq)
+      rp = rp+h
+      r.append(rp)
+      fpr.append(fpnew)
+      fnr.append(fnnew)
+      fp  = fpnew
+      fn  = fnnew
+
+
+    #Mesh Grid Size
+    h = h3/scale/1000
+    while (rp<1.01*r0):
+      (fpnew,fnnew) = LH_cons(rp,fp,fn,h,r0,L,kx,kt,ms,d,Q,M,muq)
+      rp = rp+h
+      r.append(rp)
+      fpr.append(fpnew)
+      fnr.append(fnnew)
+      fp  = fpnew
+      fn  = fnnew
+
     #Mesh Grid Size
     h = h3/scale/10
     while (rp<1.1*r0):
