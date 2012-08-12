@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.1.7)  5 AUG 2012 18:40
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2012.1.7)  11 AUG 2012 19:25
 entering extended mode
  %&-line parsing enabled.
 **QFT.tex
@@ -461,18 +461,18 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 
-Overfull \hbox (9.87619pt too wide) in paragraph at lines 54--54
+Overfull \hbox (9.87619pt too wide) in paragraph at lines 61--61
  [][] [][]\OT1/ptm/m/n/10 RaritaSchwinger equa-tion in $\OT1/ztmcm/m/n/10 4$\OT
 1/ptm/m/n/10 -dimentional Minkowskispace[] [][]  
  []
 
-)
+[6])
 \tf@toc=\write4
 \openout4 = `QFT.toc'.
 
- [6] (./chapters/scalarfield.tex [1
+ [7] [8
 
-] [2
+] (./chapters/scalarfield.tex [1] [2
 
 ]
 Chapter 1.
@@ -1230,8 +1230,14 @@ Overfull \hbox (2.86833pt too wide) in paragraph at lines 471--471
 Underfull \vbox (badness 1642) has occurred while \output is active []
 
  [61])
-(./chapters/Spin3o2Particles.tex [62]
+(./chapters/GammaMatricesProperties.tex [62]
 Chapter 5.
+[63
+
+] [64]) (./chapters/Spin3o2Particles.tex [65] [66
+
+]
+Chapter 6.
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 1.
@@ -1242,9 +1248,7 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-[63
-
-]
+[67]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 40.
@@ -1262,7 +1266,7 @@ tmcm/m/n/10 = [][\OML/ztmcm/m/it/10 ^^M[]; ^^M[]\OT1/ztmcm/m/n/10 ]$\OT1/ptm/m/
 n/10 .
  []
 
-[64]
+[68]
 Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
@@ -1291,7 +1295,7 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no Â in font ptmro7t!
 Missing character: There is no € in font ptmro7t!
 Missing character: There is no “ in font ptmro7t!
-[65]
+[69]
 Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
@@ -1326,34 +1330,40 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 147.
 
-[66]
-Overfull \hbox (23.3707pt too wide) in paragraph at lines 215--215
+[70]
+Overfull \hbox (23.3707pt too wide) in paragraph at lines 214--214
+[] 
+ []
+
+
+Overfull \hbox (21.57451pt too wide) in paragraph at lines 225--225
 [] 
  []
 
 Missing character: There is no Â in font ptmro7t!
 Missing character: There is no € in font ptmro7t!
 Missing character: There is no “ in font ptmro7t!
-[67]
-Overfull \hbox (21.57451pt too wide) in paragraph at lines 226--226
-[] 
- []
+[71]
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 229.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 230.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 230.
+(hyperref)                removing `math shift' on input line 229.
 
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-[68]) (./chapters/SELFNOTES.tex [69] [70
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
+
+ []
+
+) (./chapters/SELFNOTES.tex [73] [74
 
 ]
-Chapter 6.
+Chapter 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
@@ -1367,11 +1377,11 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 12.
 
-[71]) (./QFT.bbl [72]
+[75]) (./QFT.bbl [76]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [73
+) [77
 
 ] (./QFT.aux)
 
@@ -1385,13 +1395,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5116 strings out of 256216
- 69618 string characters out of 1917073
+ 5165 strings out of 256216
+ 70355 string characters out of 1917073
  136023 words of memory out of 1500000
- 7826 multiletter control sequences out of 10000+200000
+ 7837 multiletter control sequences out of 10000+200000
  75713 words of font info for 167 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 33i,16n,39p,1479b,345s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 33i,16n,39p,1485b,345s stack positions out of 5000i,500n,6000p,200000b,15000s
 {/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/b
 luesky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/
 share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/blue
@@ -1401,9 +1411,9 @@ rw/symbol/usyr.pfb></usr/share/texmf/fonts/type1/urw/symbol/usyr.pfb></usr/shar
 e/texmf/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/time
 s/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 mf/fonts/type1/urw/times/utmri8a.pfb>
-Output written on QFT.pdf (79 pages, 414124 bytes).
+Output written on QFT.pdf (85 pages, 432140 bytes).
 PDF statistics:
- 1137 PDF objects out of 1200 (max. 8388607)
- 444 named destinations out of 1000 (max. 131072)
- 481 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1234 PDF objects out of 1440 (max. 8388607)
+ 479 named destinations out of 1000 (max. 131072)
+ 537 words of extra memory for PDF output out of 10000 (max. 10000000)
 

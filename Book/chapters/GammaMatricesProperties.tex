@@ -1,0 +1,114 @@
+\chapter{Gamma Matrices Properties}
+\label{ch:GammaMatricesProperties}
+
+\section{Introduction}
+
+In this chapter we will review some properties of gamma matrices in curved space time. We will use the fact,
+
+\begin{equation}
+   \{\Gamma^{\mu},\Gamma^{\nu}\} = \Gamma^{\mu}\Gamma^{\nu} + \Gamma^{\mu}\Gamma^{\nu} = 2 g^{\mu\nu}I_{n\times n}
+\end{equation}
+
+in $4$-dimentional and $5-dimentional$ case $n=4$ and during this chapter always we assume \textbf{Sgn}$(-+++)$. $g^{\mu\nu}$ is a metric tensor and it is symmetric so we have: $g^{\mu\nu}=g^{\nu\mu}$. Also during the discussion we will use the fact,
+
+\begin{equation}
+   g^{\mu\nu}\Gamma_{\mu} = \Gamma^{\nu}
+\end{equation}
+
+and,
+   
+\begin{equation}
+   g_{\mu\nu}\Gamma^{\mu} = \Gamma_{\nu}
+\end{equation}
+
+\section{Gamma Matrices properties}
+
+\subsection{}
+
+One can show that,
+
+\begin{equation}
+   \Gamma^{[\mu\nu\sigma]} = \Gamma^{\mu}\Gamma^{\nu}\Gamma^{\sigma} + g^{\mu\sigma}\Gamma^{\nu} - g^{\mu\nu}\Gamma^{\sigma} - g^{\nu\sigma} \Gamma^{\mu}
+\end{equation}
+
+or, 
+
+\begin{equation}
+   \Gamma^{[\mu\nu\sigma]} = \frac{1}{2}\left(\Gamma^{\mu}\Gamma^{\nu}\Gamma^{\sigma} - \Gamma^{\sigma}\Gamma^{\nu}\Gamma^{\mu}\right)
+\end{equation}
+
+\subsection{}
+
+Claim,
+
+\begin{equation}
+   \Gamma_{\mu}\Gamma^{\mu} = \Gamma^{\mu}\Gamma_{\mu} = d I_{n\times n}
+\end{equation}
+
+where $d$ is the dimention of the space-time. Proof,
+
+\begin{align}
+   \Gamma_{\mu}\Gamma^{\mu} &= g_{\mu\nu}\Gamma^{\nu}\Gamma^{\mu} = \frac{1}{2}(g_{\mu\nu}+g_{\nu\mu})\Gamma^{\nu}\Gamma^{\mu} \nonumber\\
+    &= \frac{1}{2} g_{\mu\nu} \Gamma^{\nu}\Gamma^{\mu} + \frac{1}{2} g_{\nu\mu} \Gamma^{\nu}\Gamma^{\mu} = \frac{1}{2} g_{\mu\nu} \Gamma^{\nu}\Gamma^{\mu} + \frac{1}{2} g_{\mu\nu} \Gamma^{\mu}\Gamma^{\nu} \nonumber\\
+    &= \frac{1}{2} g_{\mu\nu} \left\{ \Gamma^{\nu},\Gamma^{\mu} \right\} = \frac{1}{2} g_{\mu\nu} \times 2 g^{\mu\nu} I_{n \times n} = d I_{n \times n}
+\end{align}
+
+Claim,
+
+\begin{equation}
+   \Gamma_{\mu}\Gamma^{\nu}\Gamma^{\mu} = -(d-2) \Gamma^{\nu}
+\end{equation}
+
+Proof,
+
+\begin{align}
+   \Gamma_{\mu}\Gamma^{\nu}\Gamma^{\mu} = \Gamma_{\mu}\left(2g^{\mu\nu}I_{n \times n} - \Gamma^{\mu}\Gamma^{\nu}\right) = 2 \Gamma^{\nu} - d \Gamma^{\nu} = -(d-2) \Gamma^{\nu} 
+\end{align}
+
+Claim,
+
+\begin{equation}
+   \Gamma_{\mu}\Gamma^{\nu}\Gamma^{\sigma}\Gamma^{\mu} = 2 \Gamma^{\nu}\Gamma^{\sigma} + (d-2)\Gamma^{\sigma}\Gamma^{\nu}
+\end{equation}
+
+Proof,
+
+\begin{align}
+   \Gamma_{\mu}\Gamma^{\nu}\Gamma^{\sigma}\Gamma^{\mu} = \Gamma_{\mu}\Gamma^{\nu}\left(2g^{\mu\sigma}I_{n \times n} - \Gamma^{\mu}\Gamma^{\sigma}\right) = 2 \Gamma^{\sigma}\Gamma^{\nu} + (d-2)\Gamma^{\nu}\Gamma^{\sigma} 
+\end{align}
+
+in case $d = 4$ one gets,
+
+\begin{equation}
+   \Gamma_{\mu}\Gamma^{\nu}\Gamma^{\sigma}\Gamma^{\mu} = 2 \Gamma^{\nu}\Gamma^{\sigma} + 2\Gamma^{\sigma}\Gamma^{\nu} = 4 g^{\nu\sigma} I_{n \times n}
+\end{equation}
+
+\subsection{Excersice}
+
+For example, we have,
+
+\begin{equation}
+   g^{\sigma\mu}\Gamma^{\nu}D_{\nu}\psi_{\sigma} = \Gamma^{\nu}D_{\nu}\psi^{\sigma}
+\end{equation}
+
+and,
+
+\begin{equation}
+   g^{\sigma\mu}\Gamma^{\nu}D_{\sigma}\psi_{\nu} = \Gamma^{\nu}D^{\mu}\psi_{\nu}
+\end{equation}
+
+\subsection{Covariant derivative}
+
+One can show that,
+
+\begin{equation}
+   \left[D_{\mu},D_{\nu}\right] \psi_{\sigma} = \frac{1}{2} R_{\mu\nu}\psi_{\sigma}
+\end{equation}
+
+$R_{\mu\nu}$ is Ricci tensor, and for anti-de Sitter space the Ricci tensor is,
+
+\begin{equation}
+   R_{\mu\nu} = \frac{R}{2d(d+1)} \left[\Gamma^{\mu},\Gamma_{\nu}\right]
+\end{equation}
+
+and $R=-d(d+1)$.

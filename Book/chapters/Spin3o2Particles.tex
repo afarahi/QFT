@@ -170,8 +170,7 @@ By choosing the \textbf{Sgn}$(-+++)$  we get,
 
 \begin{align}
    \phi_{2} &= \gamma_{12}\phi_{1} \nonumber\\
-   \phi_{3} &= -\frac{k_3}{\omega}\phi_{1} \nonumber\\
-   \gamma_{1}\phi_{0} &= (\gamma_{0} + \gamma_{1} + \gamma_{3}\frac{\omega}{k_3})\phi_{1} \nonumber\\
+   \phi_{3} &= -\frac{k_3}{\omega}\phi_{0} \nonumber\\
    (\gamma_{3}\omega + \gamma_{0}k_3)\phi_{1} &= 0
 \end{align}
 
@@ -247,9 +246,54 @@ and for its conjugate one gets,
    \bar{\psi}_{\mu} \left[\Gamma^{\mu\nu\sigma} \overleftarrow{D}_{\nu} + m_1\Gamma^{\mu\sigma} + m_2 g^{\mu\sigma} \right] = 0
 \end{equation}
 
-and we can show that by defining $m_{\pm} = m_1 \pm m_2$, equation \ref{eq:MotionSpin3o2Curved} can be simplified to,
+and we can show that by defining $m_{\pm} = m_1 \pm m_2$, for Anti-de Sitter space equation \ref{eq:MotionSpin3o2Curved} can be simplified to,
 
-\begin{equation}
+\begin{equation} \label{eq:equationofmotionspin3o2AdS}
    \Gamma^{\nu}\left[D_{\nu}\psi_{\mu} - D_{\mu}\psi_{\nu}\right] + \frac{m_{+}}{d-1}\Gamma_{\mu}\Gamma^{\nu}\psi_{\nu} - m_{-}\psi_{\mu} = 0
 \end{equation}
+
+Now lets derive equation \ref{eq:equationofmotionspin3o2AdS} from equation of motion \ref{eq:MotionSpin3o2Curved}. We will use some properties of Gamma matrices which discussed in detail in chapter \ref{ch:GammaMatricesProperties}. First lets simplify equation of motion \ref{eq:MotionSpin3o2Curved},
+
+\begin{align} \label{eq:MotionSpin3o2CurvedII}
+   0 &= \left[\Gamma^{\mu\nu\sigma} D_{\nu} - m_1\Gamma^{\mu\sigma} - m_2 g^{\mu\sigma} \right] \psi_{\sigma} \\
+     &= \frac{1}{2} \left[\Gamma^{\mu}\Gamma^{\nu}\Gamma^{\sigma} - \Gamma^{\sigma}\Gamma^{\nu}\Gamma^{\mu}\right] D_{\nu}\psi_{\sigma} - m_1(\Gamma^{\mu}\Gamma^{\sigma} - g^{\mu\sigma}I_{n \times n}) \psi_{\sigma} - m_2 \psi^{\mu} \nonumber\\
+     &= \frac{1}{2}\Gamma^{\mu}\Gamma^{\nu}\Gamma^{\sigma} (D_{\nu}\psi_{\sigma} - D_{\sigma}\psi_{\nu}) + g^{\mu\sigma}\Gamma^{\nu}(D_{\nu}\psi_{\sigma} - D_{\sigma}\psi_{\nu}) \nonumber\\
+     & \quad - m_1(\Gamma^{\mu}\Gamma^{\sigma} - g^{\mu\sigma}) \psi_{\sigma} - m_2 g^{\mu\sigma}\psi_{\sigma} \nonumber
+\end{align}
+
+by contracting equation of motion, \ref{eq:MotionSpin3o2Curved} , with $\Gamma_{\mu}$ one gets,
+
+\begin{align} \label{eq:MotionSpin3o2CurvedIII}
+   \Gamma^{\nu}\Gamma^{\sigma} (D_{\nu}\psi_{\sigma} - D_{\sigma}\psi_{\nu}) = \frac{2}{d-2}(m_2+(d-1)m_1)\Gamma^{\sigma}\psi_{\sigma}
+\end{align}
+
+$d$ is the dimention of space. For example for $AdS_5$ space $d$ is $5$. By pluging $\Gamma^{\nu}\Gamma^{\sigma} (D_{\nu}\psi_{\sigma} - D_{\sigma}\psi_{\nu})$ from euqation \ref{eq:MotionSpin3o2CurvedIII} into equation \ref{eq:MotionSpin3o2CurvedII} one gets,
+
+\begin{equation}
+   \frac{m_1 + m_2}{d-2}\Gamma^{\mu}\Gamma^{\sigma}\psi_{\sigma} + g^{\mu\sigma}\Gamma^{\nu}(D_{\nu}\psi_{\sigma} - D_{\sigma}\psi_{\nu}) + (m_1 - m_2) g^{\mu\sigma}\psi_{\sigma} = 0
+\end{equation}
+
+if the metric is diagonal then we have,
+
+\begin{equation}
+   \frac{m_1 + m_2}{d-2}\Gamma^{\mu}\Gamma^{\nu}\psi_{\nu} + g^{\mu\mu}\Gamma^{\nu}(D_{\nu}\psi_{\mu} - D_{\mu}\psi_{\nu}) + (m_1 - m_2) g^{\mu\mu}\psi_{\mu} = 0
+\end{equation}
+
+by defining $m_{\pm} = m_1 \pm m_2$, and using the fact that for diagonal metrics $\Gamma_{\mu} = \Gamma^{\mu}/g^{\mu\mu}$, we get,
+
+\begin{equation}
+   \Gamma^{\nu}(D_{\nu}\psi_{\mu} - D_{\mu}\psi_{\nu}) + \frac{m_{+}}{d-2}\Gamma_{\mu}\Gamma^{\nu}\psi_{\nu} + m_{-}\psi_{\mu} = 0
+\end{equation}
+
+
+SOMETHING ELSE .... NEXT PART ! \\
+
+and by contracting equation of motion, \ref{eq:MotionSpin3o2Curved} , with $D_{\mu}$ one gets
+
+\begin{equation}
+   \Gamma^{\mu\nu\sigma} [D_{\mu},D_{\nu}] \psi_{\sigma} - 2m_1 D^{\sigma} \psi_{\sigma} - m_2 \Gamma^{\mu\nu} D_{[\mu}\psi_{\nu]} = 0 
+\end{equation}
+
+and using the facts $\Gamma^{\mu\nu\sigma}[D_{\nu},D_{\mu}]\psi_{\sigma} = \frac{d(1-d)}{2}\Gamma^{\sigma}\psi_{\sigma}$
+ 
 
