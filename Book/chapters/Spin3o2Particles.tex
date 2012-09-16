@@ -286,14 +286,63 @@ by defining $m_{\pm} = m_1 \pm m_2$, and using the fact that for diagonal metric
 \end{equation}
 
 
-SOMETHING ELSE .... NEXT PART ! \\
+\subsection{Solution for $AdS_5$}
 
-and by contracting equation of motion, \ref{eq:MotionSpin3o2Curved} , with $D_{\mu}$ one gets
+by defining the metric of,
 
 \begin{equation}
-   \Gamma^{\mu\nu\sigma} [D_{\mu},D_{\nu}] \psi_{\sigma} - 2m_1 D^{\sigma} \psi_{\sigma} - m_2 \Gamma^{\mu\nu} D_{[\mu}\psi_{\nu]} = 0 
+   ds^2 = \frac{-dt^2 + dx^2 + dy^2 + dz^2 + dr^2}{r^2}
 \end{equation}
 
-and using the facts $\Gamma^{\mu\nu\sigma}[D_{\nu},D_{\mu}]\psi_{\sigma} = \frac{d(1-d)}{2}\Gamma^{\sigma}\psi_{\sigma}$
- 
+for $\rho = r$ we get,
 
+\begin{equation}
+   \left(r \partial_r + \frac{m_+}{d-1}\gamma_r\right) \gamma.\psi = \left( r \gamma.\partial - \frac{d}{2} \gamma_r + m_- - \frac{m_+}{d-1}\right) \psi_r
+\end{equation}
+
+and for $\rho = i$ we get,
+
+\begin{align}
+   & \left( r \left(\gamma^r \partial_r + \gamma.\partial \right) - \left(\frac{d}{2}-1\right)\gamma_r + m_- \right) \psi_i = \\
+   & \left( r \gamma^r \partial_i + \frac{1}{2}\gamma_i + \frac{m_+}{d-1}\gamma_i\gamma^r \right) \psi_r + \left(x^r \partial_i - \frac{1}{2}\gamma_i\gamma_r + \frac{m_+}{d-1}\gamma_i\right) \gamma.\psi \nonumber
+\end{align}
+
+here in this part in our notation we have $d=4$. Now we move to Fourier space, for $\rho = r$ we get,
+
+\begin{equation} \label{eq:AdS5gravitinisolution1}
+   \left(r \partial_r + \frac{m_+}{d-1}\gamma_r\right) \gamma.\tilde{\psi} = \left( i r \gamma.k - \frac{d}{2} \gamma_r + m_- - \frac{m_+}{d-1}\right) \tilde{\psi}_r
+\end{equation}
+
+and for $\rho = i$ we get,
+
+\begin{align} \label{eq:AdS5gravitinisolution2}
+   & \left( r\partial_r -ir\gamma.k\gamma^r - \left(\frac{d}{2}-1\right) + m_-\gamma^r \right) \tilde{\psi}_i = \\
+   & \left( ir \gamma^r k_i + \frac{1}{2}\gamma_i - \frac{m_+}{d-1}\gamma_i\gamma^r \right) \gamma.\tilde{\psi} + \left(ix^r k_i - \frac{1}{2}\gamma_i\gamma_r - \frac{m_+}{d-1}\gamma_i\right) \psi_r \nonumber
+\end{align}
+
+For massless case, $m = 0$, we are able to decouple our equation and find the solution. So we define $m_+=-m_-=\Lambda/2$. And then by finding $\tilde{\psi}_r$ through \ref{eq:AdS5gravitinisolution1} and substituting it into equation \ref{eq:AdS5gravitinisolution2} and contracting with $\gamma^i$ one gets,
+
+\begin{equation}
+   k.\tilde{\psi} = \left( k.\gamma + i\frac{(d-1)\gamma^r - \Lambda}{2r} \right)
+\end{equation}
+
+and then by substituting $k.\tilde{\psi}$ into equation \ref{eq:AdS5gravitinisolution2} and contracting with $k^i$ one get,
+
+\begin{equation}
+   \tilde{\psi}_r = - \gamma^r \gamma.\tilde{\psi}
+\end{equation}
+
+and finaly by substituting $\tilde{\psi}_r$ into equation  \ref{eq:AdS5gravitinisolution1} one gets decoupled equation of motion in form of,
+
+\begin{equation}
+   \left(r \partial_r + ir k.\gamma \gamma^0 - \frac{d}{2} -\frac{\Lambda}{2}\gamma^0 \right) = \gamma.\tilde{\psi}
+\end{equation}
+
+
+\subsection{Solution for general space with diagonal metric}
+
+Lets assume that metric of our space has the form of,
+
+\begin{equation}
+   ds^2 = -f_0^2(r)dt^2 + f_1^2(r)dx^2 + f_2^2(r)dy^2 + f_3^2(r)dz^2 + f_5^2(r)dr^2
+\end{equation}

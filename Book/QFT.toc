@@ -60,6 +60,8 @@
 \contentsline {section}{\numberline {6.4}Rarita–Schwinger equation}{69}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Rarita–Schwinger equation in $4$-dimentional Minkowskispace}{70}{subsection.6.4.1}
 \contentsline {section}{\numberline {6.5}Spin $3/2$ in curved space}{72}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Solution for $AdS_5$}{73}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Solution for general space with diagonal metric}{74}{subsection.6.5.2}
 \contentsline {chapter}{\numberline {7}NOT RELATED TO THE PROJECT}{75}{chapter.7}
 \contentsline {section}{\numberline {7.1}SELF NOTES FOR MY RECORD}{75}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Is the nature Lorentz Invariance ?}{75}{subsection.7.1.1}
